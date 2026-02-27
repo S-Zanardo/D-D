@@ -1,0 +1,116 @@
+{
+  "strumenti": [
+    {
+      "id_str": "str_arnesi_scasso",
+      "nome": "Arnesi da Scasso",
+      "categoria": "Strumenti Vari",
+      "costo": "25 mo",
+      "peso": 0.5,
+      "descrizione": "Necessari per scassinare serrature o disattivare trappole."
+    },
+    {
+      "id_str": "str_alchimista",
+      "nome": "Scorte da Alchimista",
+      "categoria": "Strumenti da Artigiano",
+      "costo": "50 mo",
+      "peso": 4,
+      "descrizione": "Include provette e sostanze per creare composti alchemici."
+    },
+    {
+      "id_str": "str_fabbro",
+      "nome": "Strumenti da Fabbro",
+      "categoria": "Strumenti da Artigiano",
+      "costo": "20 mo",
+      "peso": 4,
+      "descrizione": "Necessari per lavorare il metallo."
+    },
+    {
+      "id_str": "str_erborista",
+      "nome": "Borsa da Erborista",
+      "categoria": "Strumenti Vari",
+      "costo": "5 mo",
+      "peso": 1.5,
+      "descrizione": "Necessaria per creare antidoti e pozioni curative."
+    },
+    {
+      "id_str": "str_navigatore",
+      "nome": "Strumenti da Navigatore",
+      "categoria": "Strumenti Vari",
+      "costo": "25 mo",
+      "peso": 1,
+      "descrizione": "Permettono di tracciare rotte in mare o terre selvagge."
+    },
+    {
+      "id_str": "str_veleni",
+      "nome": "Borsa del Velenista",
+      "categoria": "Strumenti Vari",
+      "costo": "50 mo",
+      "peso": 1,
+      "descrizione": "Necessaria per estrarre e applicare veleni."
+    },
+    {
+      "id_str": "str_camuffamento",
+      "nome": "Kit per Camuffamento",
+      "categoria": "Strumenti Vari",
+      "costo": "25 mo",
+      "peso": 1.5,
+      "descrizione": "Cosmetici e tinture per alterare l'aspetto fisico."
+    },
+    {
+      "id_str": "str_falsificazione",
+      "nome": "Kit per Falsificazione",
+      "categoria": "Strumenti Vari",
+      "costo": "15 mo",
+      "peso": 2.5,
+      "descrizione": "Permette di creare documenti contraffatti."
+    },
+    {
+      "id_str": "str_liuto",
+      "nome": "Liuto",
+      "categoria": "Strumenti Musicali",
+      "costo": "35 mo",
+      "peso": 1,
+      "descrizione": "Strumento a corde classico."
+    },
+    {
+      "id_str": "str_flauto",
+      "nome": "Flauto",
+      "categoria": "Strumenti Musicali",
+      "costo": "2 mo",
+      "peso": 0.5,
+      "descrizione": "Semplice strumento a fiato."
+    },
+    {
+      "id_str": "str_tamburo",
+      "nome": "Tamburo",
+      "categoria": "Strumenti Musicali",
+      "costo": "6 mo",
+      "peso": 1.5,
+      "descrizione": "Strumento a percussione."
+    },
+    {
+      "id_str": "str_dadi",
+      "nome": "Set di Dadi",
+      "categoria": "Set da Gioco",
+      "costo": "1 ma",
+      "peso": 0,
+      "descrizione": "Include dadi in osso o legno."
+    },
+    {
+      "id_str": "str_carte",
+      "nome": "Mazzo di Carte",
+      "categoria": "Set da Gioco",
+      "costo": "5 ma",
+      "peso": 0,
+      "descrizione": "Mazzo completo per giochi d'azzardo."
+    },
+    {
+      "id_str": "str_scacchi_draghi",
+      "nome": "Scacchi del Drago",
+      "categoria": "Set da Gioco",
+      "costo": "1 mo",
+      "peso": 0.5,
+      "descrizione": "Gioco di strategia popolare tra i nobili."
+    }
+  ]
+}
