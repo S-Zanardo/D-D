@@ -1,0 +1,138 @@
+{
+  "origine": {
+    "id_origine": "org_dragonide",
+    "nome": "Dragonide",
+    "asset_carta": "O_dragonide_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 9,
+      "incrementi_caratteristica": {
+        "fissi": { "FOR": 2, "CAR": 1 },
+        "scelte": 0
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Draconico"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "arma_a_soffio",
+          "nome": "Arma a Soffio",
+          "descrizione": "Azione per esalare energia distruttiva. Il danno è 2d6 (aumenta a 3d6 al liv. 6, 4d6 al liv. 11, 5d6 al liv. 16). CD = 8 + mod_COS + bonus_competenza."
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_drag_nero",
+        "nome": "Discendenza Nera",
+        "asset_carta": "C_drag_nero.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Acido",
+          "resistenza_danni": ["Acido"],
+          "soffio_area": "Linea 1.5x9m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_blu",
+        "nome": "Discendenza Blu",
+        "asset_carta": "C_drag_blu.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Fulmine",
+          "resistenza_danni": ["Fulmine"],
+          "soffio_area": "Linea 1.5x9m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_ottone",
+        "nome": "Discendenza Ottone",
+        "asset_carta": "C_drag_ottone.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Fuoco",
+          "resistenza_danni": ["Fuoco"],
+          "soffio_area": "Linea 1.5x9m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_bronzo",
+        "nome": "Discendenza Bronzo",
+        "asset_carta": "C_drag_bronzo.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Fulmine",
+          "resistenza_danni": ["Fulmine"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_rame",
+        "nome": "Discendenza Rame",
+        "asset_carta": "C_drag_rame.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Acido",
+          "resistenza_danni": ["Acido"],
+          "soffio_area": "Linea 1.5x9m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_oro",
+        "nome": "Discendenza Oro",
+        "asset_carta": "C_drag_oro.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Fuoco",
+          "resistenza_danni": ["Fuoco"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_verde",
+        "nome": "Discendenza Verde",
+        "asset_carta": "C_drag_verde.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Veleno",
+          "resistenza_danni": ["Veleno"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "COS"
+        }
+      },
+      {
+        "id_comunita": "com_drag_rosso",
+        "nome": "Discendenza Rosso",
+        "asset_carta": "C_drag_rosso.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Fuoco",
+          "resistenza_danni": ["Fuoco"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "DES"
+        }
+      },
+      {
+        "id_comunita": "com_drag_argento",
+        "nome": "Discendenza Argento",
+        "asset_carta": "C_drag_argento.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Freddo",
+          "resistenza_danni": ["Freddo"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "COS"
+        }
+      },
+      {
+        "id_comunita": "com_drag_bianco",
+        "nome": "Discendenza Bianco",
+        "asset_carta": "C_drag_bianco.png",
+        "automatismi_comunita": {
+          "tipo_danno": "Freddo",
+          "resistenza_danni": ["Freddo"],
+          "soffio_area": "Cono 4.5m",
+          "soffio_ts": "COS"
+        }
+      }
+    ]
+  }
+}
