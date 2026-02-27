@@ -1,71 +1,49 @@
 {
-  "origini": [
-    {
-      "id_origine": "org_tiefling",
-      "nome": "Tiefling",
-      "ui_carosello": {
-        "immagine": "asset_tiefling_origine.png",
-        "titolo_carta": "Origine: Tiefling"
+  "origine": {
+    "id_origine": "org_tiefling",
+    "nome": "Tiefling",
+    "asset_carta": "O_tiefling_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 9,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "CAR": 2 },
+        "scelte": 0
       },
-      "automatismi_scheda": {
-        "taglia": "Media",
-        "velocita_metri": 9.0,
-        "scurovisione_metri": 18,
-        "incrementi_caratteristica": {
-          "fissi": {"CAR": 2, "INT": 1},
-          "scelte": 0
-        },
-        "competenze": {
-          "abilita_fisse": [],
-          "armi_fisse": [],
-          "armature_fisse": [],
-          "strumenti_scelta": null
-        },
-        "linguaggi": {
-          "fissi": ["Comune", "Infernale"],
-          "scelte_extra": 0
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "resistenza_infernale",
-            "effetti": {
-              "resistenza_danni": ["Fuoco"]
-            }
-          },
-          {
-            "id": "retaggio_infernale",
-            "effetti": {
-              "incantesimi_livello_0": ["Taumaturgia"],
-              "incantesimi_livello_3": ["Intimorire_Infernale_1_uso_giorno"],
-              "incantesimi_livello_5": ["Oscurita_1_uso_giorno"],
-              "caratteristica_incantatore": "CAR"
-            }
+      "linguaggi": {
+        "fissi": ["Comune", "Infernale"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "resistenza_infernale",
+          "nome": "Resistenza Infernale",
+          "effetti": {
+            "resistenza_danni": ["Fuoco"]
           }
-        ]
-      },
-      "comunita_collegate": ["com_tiefling_standard"]
-    }
-  ],
-  "comunita": [
-    {
-      "id_comunita": "com_tiefling_standard",
-      "id_origine_padre": "org_tiefling",
-      "nome": "Tiefling Standard",
-      "ui_carosello": {
-        "immagine": "asset_tiefling_standard.png",
-        "titolo_carta": "Comunità: Standard"
-      },
-      "automatismi_scheda": {
-        "incrementi_caratteristica": {
-          "fissi": {},
-          "scelte": 0
-        },
-        "competenze": {
-          "armi_fisse": [],
-          "armature_fisse": []
-        },
-        "privilegi_nascosti": []
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_tiefling_standard",
+        "nome": "Eredità Infernale",
+        "asset_carta": "C_tiefling_std.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "INT": 1 }
+          },
+          "magia_innata": {
+            "incantesimi_fissi": [
+              { "livello_sblocco": 1, "nome": "Taumaturgia" },
+              { "livello_sblocco": 3, "nome": "Rimprovero Infernale (2° livello)" },
+              { "livello_sblocco": 5, "nome": "Oscurità" }
+            ],
+            "caratteristica_da_lancio": "CAR"
+          }
+        }
       }
-    }
-  ]
+    ]
+  }
 }
