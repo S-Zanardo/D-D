@@ -1,0 +1,71 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_tiefling",
+      "nome": "Tiefling",
+      "ui_carosello": {
+        "immagine": "asset_tiefling_origine.png",
+        "titolo_carta": "Origine: Tiefling"
+      },
+      "automatismi_scheda": {
+        "taglia": "Media",
+        "velocita_metri": 9.0,
+        "scurovisione_metri": 18,
+        "incrementi_caratteristica": {
+          "fissi": {"CAR": 2, "INT": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "abilita_fisse": [],
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Infernale"],
+          "scelte_extra": 0
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_infernale",
+            "effetti": {
+              "resistenza_danni": ["Fuoco"]
+            }
+          },
+          {
+            "id": "retaggio_infernale",
+            "effetti": {
+              "incantesimi_livello_0": ["Taumaturgia"],
+              "incantesimi_livello_3": ["Intimorire_Infernale_1_uso_giorno"],
+              "incantesimi_livello_5": ["Oscurita_1_uso_giorno"],
+              "caratteristica_incantatore": "CAR"
+            }
+          }
+        ]
+      },
+      "comunita_collegate": ["com_tiefling_standard"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_tiefling_standard",
+      "id_origine_padre": "org_tiefling",
+      "nome": "Tiefling Standard",
+      "ui_carosello": {
+        "immagine": "asset_tiefling_standard.png",
+        "titolo_carta": "Comunità: Standard"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": []
+      }
+    }
+  ]
+}
