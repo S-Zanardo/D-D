@@ -1,0 +1,107 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_gnomo",
+      "nome": "Gnomo",
+      "ui_carosello": {
+        "immagine": "asset_gnomo_origine.png",
+        "titolo_carta": "Origine: Gnomo"
+      },
+      "automatismi_scheda": {
+        "taglia": "Piccola",
+        "velocita_metri": 7.5,
+        "scurovisione_metri": 18,
+        "incrementi_caratteristica": {
+          "fissi": {"INT": 2},
+          "scelte": 0
+        },
+        "competenze": {
+          "abilita_fisse": [],
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Gnomesco"],
+          "scelte_extra": 0
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "astuzia_gnomesca",
+            "effetti": {
+              "vantaggio_ts_magia": ["INT", "SAG", "CAR"]
+            }
+          }
+        ]
+      },
+      "comunita_collegate": ["com_gnomo_foreste", "com_gnomo_rocce"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_gnomo_foreste",
+      "id_origine_padre": "org_gnomo",
+      "nome": "Gnomo delle Foreste",
+      "ui_carosello": {
+        "immagine": "asset_gnomo_foreste.png",
+        "titolo_carta": "Comunità: Foreste"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {"DES": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": []
+        },
+        "incantesimi_extra": {
+          "trucchetti_fissi": ["Illusione Minore"],
+          "caratteristica_incantatore": "INT"
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "parlare_piccole_bestie",
+            "effetti": {
+              "comunicazione_bestie": ["Piccola", "Minuscola"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_gnomo_rocce",
+      "id_origine_padre": "org_gnomo",
+      "nome": "Gnomo delle Rocce",
+      "ui_carosello": {
+        "immagine": "asset_gnomo_rocce.png",
+        "titolo_carta": "Comunità: Rocce"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {"COS": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_fissi": ["Strumenti da inventore"]
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "conoscenze_artefice",
+            "effetti": {
+              "raddoppia_competenza_storia": ["Oggetti_magici", "Oggetti_alchemici", "Congegni_tecnologici"]
+            }
+          },
+          {
+            "id": "inventore",
+            "effetti": {
+              "creazione_congegni": ["Giocattolo_meccanico", "Accendifuoco", "Carillon"]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
