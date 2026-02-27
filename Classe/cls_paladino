@@ -1,0 +1,461 @@
+{
+  "classe": {
+    "id_classe": "cls_paladino",
+    "nome": "Paladino",
+    "ui_selezione": {
+      "immagine": "asset_paladino.png",
+      "titolo_carta": "Classe: Paladino"
+    },
+    "automatismi_base": {
+      "dado_vita": 10,
+      "tiri_salvezza": ["SAG", "CAR"],
+      "caratteristica_incantatore": "CAR",
+      "competenze": {
+        "armature": ["Leggere", "Medie", "Pesanti", "Scudi"],
+        "armi": ["Semplici", "Marziali"],
+        "strumenti": []
+      },
+      "abilita_scelta": {
+        "quantita": 2,
+        "opzioni": ["Atletica", "Intimidire", "Intuizione", "Medicina", "Persuasione", "Religione"]
+      },
+      "equipaggiamento_partenza": [
+        {"scelta": 1, "opzioni": ["Arma marziale e Scudo", "Due armi marziali"]},
+        {"scelta": 1, "opzioni": ["Giavellotti (5)", "Arma semplice da mischia"]},
+        {"scelta": 1, "opzioni": ["Borsa del sacerdote", "Zaino da esploratore"]},
+        {"fisso": ["Cotta di maglia", "Simbolo sacro"]}
+      ]
+    },
+    "livello_scelta_archetipo": 3,
+    "archetipi_collegati": ["arc_paladino_devozione", "arc_paladino_antichi", "arc_paladino_vendetta"],
+    "progressione": [
+      {
+        "livello": 1,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "riserva_cura_imposizione": "livello_paladino * 5"
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "senso_divino",
+            "effetti": {"usi_per_riposo_lungo": "1 + mod_CAR", "rilevamento_celestiali_immondi_non_morti": true}
+          },
+          {
+            "id": "imposizione_mani",
+            "effetti": {"cura_pf_o_rimuovi_malattia_veleno": true}
+          }
+        ]
+      },
+      {
+        "livello": 2,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "stile_combattimento_paladino",
+            "effetti": {"scelta_stile": 1, "opzioni": ["Difesa", "Duellare", "Armi Grandi", "Protezione"]}
+          },
+          {
+            "id": "incantesimi_paladino",
+            "effetti": {"accesso_lista": "Paladino", "preparazione_incantesimi": "mod_CAR + (livello_paladino / 2)"}
+          },
+          {
+            "id": "punizione_divina",
+            "effetti": {"spendi_slot_danni_radiosi_extra": "2d8_base + 1d8_per_livello_slot_sopra_1", "danno_extra_immondi_non_morti": "1d8"}
+          }
+        ]
+      },
+      {
+        "livello": 3,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 3}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "salute_divina",
+            "effetti": {"immunita_malattie": true}
+          }
+        ]
+      },
+      {
+        "livello": 4,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 3}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_1",
+            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+          }
+        ]
+      },
+      {
+        "livello": 5,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "attacco_extra",
+            "effetti": {"attacchi_azione": 2}
+          }
+        ]
+      },
+      {
+        "livello": 6,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aura_protezione",
+            "effetti": {"bonus_ts_alleati_3m": "mod_CAR"}
+          }
+        ]
+      },
+      {
+        "livello": 7,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3}
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 8,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_2",
+            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+          }
+        ]
+      },
+      {
+        "livello": 9,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 10,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aura_coraggio",
+            "effetti": {"immunita_spaventato_alleati_3m": true}
+          }
+        ]
+      },
+      {
+        "livello": 11,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "punizione_divina_migliorata",
+            "effetti": {"danni_radiosi_extra_attacchi_mischia": "1d8"}
+          }
+        ]
+      },
+      {
+        "livello": 12,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_3",
+            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+          }
+        ]
+      },
+      {
+        "livello": 13,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 14,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "tocco_purificatore",
+            "effetti": {"termina_incantesimo_bersaglio_usi": "mod_CAR"}
+          }
+        ]
+      },
+      {
+        "livello": 15,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2}
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 16,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_4",
+            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+          }
+        ]
+      },
+      {
+        "livello": 17,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 18,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "miglioramento_aure",
+            "effetti": {"raggio_aure_aumentato_metri": 9}
+          }
+        ]
+      },
+      {
+        "livello": 19,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_5",
+            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+          }
+        ]
+      },
+      {
+        "livello": 20,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
+        },
+        "privilegi_nascosti": []
+      }
+    ]
+  },
+  "archetipi": [
+    {
+      "id_archetipo": "arc_paladino_devozione",
+      "id_classe_padre": "cls_paladino",
+      "nome": "Giuramento di Devozione",
+      "progressione_archetipo": [
+        {
+          "livello": 3,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_devozione_3", "effetti": {"incantesimi_preparati_fissi": ["Protezione dal Bene e dal Male", "Santuario"]}},
+            {"id": "incanalare_divinita_arma_sacra", "effetti": {"bonus_colpire_arma": "mod_CAR", "arma_magica_luce": true}},
+            {"id": "incanalare_divinita_scacciare_sacrileghi", "effetti": {"ts_saggezza_scacciare_immondi_non_morti": true}}
+          ]
+        },
+        {
+          "livello": 5,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_devozione_5", "effetti": {"incantesimi_preparati_fissi": ["Ristorare Inferiore", "Zona di Verita"]}}
+          ]
+        },
+        {
+          "livello": 7,
+          "privilegi_nascosti": [
+            {"id": "aura_devozione", "effetti": {"immunita_affascinato_alleati_3m": true}}
+          ]
+        },
+        {
+          "livello": 9,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_devozione_9", "effetti": {"incantesimi_preparati_fissi": ["Dissolvi Magie", "Faro di Speranza"]}}
+          ]
+        },
+        {
+          "livello": 13,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_devozione_13", "effetti": {"incantesimi_preparati_fissi": ["Guardiano della Fede", "Liberta di Movimento"]}}
+          ]
+        },
+        {
+          "livello": 15,
+          "privilegi_nascosti": [
+            {"id": "purezza_spirito", "effetti": {"effetto_protezione_dal_bene_e_dal_male_permanente": true}}
+          ]
+        },
+        {
+          "livello": 17,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_devozione_17", "effetti": {"incantesimi_preparati_fissi": ["Colpo Infuocato", "Comunione"]}}
+          ]
+        },
+        {
+          "livello": 18,
+          "privilegi_nascosti": [
+            {"id": "aura_devozione_migliorata", "effetti": {"raggio_aura_aumentato_metri": 9}}
+          ]
+        },
+        {
+          "livello": 20,
+          "privilegi_nascosti": [
+            {"id": "nimbo_sacro", "effetti": {"danni_radiosi_nemici_vicini": 10, "svantaggio_ts_incantesimi_paladino_immondi_non_morti": true}}
+          ]
+        }
+      ]
+    },
+    {
+      "id_archetipo": "arc_paladino_antichi",
+      "id_classe_padre": "cls_paladino",
+      "nome": "Giuramento degli Antichi",
+      "progressione_archetipo": [
+        {
+          "livello": 3,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_antichi_3", "effetti": {"incantesimi_preparati_fissi": ["Colpo Intrappolante", "Parlare con gli Animali"]}},
+            {"id": "incanalare_divinita_ira_natura", "effetti": {"ts_for_o_des_trattenuto_creatura": true}},
+            {"id": "incanalare_divinita_scacciare_infedeli", "effetti": {"ts_saggezza_scacciare_folletti_immondi": true}}
+          ]
+        },
+        {
+          "livello": 5,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_antichi_5", "effetti": {"incantesimi_preparati_fissi": ["Passo Velato", "Raggio Lunare"]}}
+          ]
+        },
+        {
+          "livello": 7,
+          "privilegi_nascosti": [
+            {"id": "aura_interdizione", "effetti": {"resistenza_danni_incantesimi_alleati_3m": true}}
+          ]
+        },
+        {
+          "livello": 9,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_antichi_9", "effetti": {"incantesimi_preparati_fissi": ["Crescita Vegetale", "Protezione dall'Energia"]}}
+          ]
+        },
+        {
+          "livello": 13,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_antichi_13", "effetti": {"incantesimi_preparati_fissi": ["Pelle di Pietra", "Tempesta di Ghiaccio"]}}
+          ]
+        },
+        {
+          "livello": 15,
+          "privilegi_nascosti": [
+            {"id": "sentinella_immortale", "effetti": {"sopravvivenza_1_pf_riposo_lungo": true, "nessuna_penalita_vecchiaia": true}}
+          ]
+        },
+        {
+          "livello": 17,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_antichi_17", "effetti": {"incantesimi_preparati_fissi": ["Comunione con la Natura", "Traslazione Arborea"]}}
+          ]
+        },
+        {
+          "livello": 18,
+          "privilegi_nascosti": [
+            {"id": "aura_interdizione_migliorata", "effetti": {"raggio_aura_aumentato_metri": 9}}
+          ]
+        },
+        {
+          "livello": 20,
+          "privilegi_nascosti": [
+            {"id": "campione_antico", "effetti": {"rigenerazione_pf_turno": 10, "incantesimi_paladino_azione_rapida": true, "svantaggio_ts_incantesimi_paladino_nemici": true}}
+          ]
+        }
+      ]
+    },
+    {
+      "id_archetipo": "arc_paladino_vendetta",
+      "id_classe_padre": "cls_paladino",
+      "nome": "Giuramento di Vendetta",
+      "progressione_archetipo": [
+        {
+          "livello": 3,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_vendetta_3", "effetti": {"incantesimi_preparati_fissi": ["Anatema", "Marchio del Cacciatore"]}},
+            {"id": "incanalare_divinita_abiurare_nemico", "effetti": {"ts_saggezza_spaventato_velocita_zero": true}},
+            {"id": "incanalare_divinita_voto_inimicizia", "effetti": {"vantaggio_attacchi_contro_bersaglio_1_minuto": true}}
+          ]
+        },
+        {
+          "livello": 5,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_vendetta_5", "effetti": {"incantesimi_preparati_fissi": ["Blocca Persone", "Passo Velato"]}}
+          ]
+        },
+        {
+          "livello": 7,
+          "privilegi_nascosti": [
+            {"id": "vendicatore_implacabile", "effetti": {"movimento_dopo_attacco_opportunita": "velocita / 2"}}
+          ]
+        },
+        {
+          "livello": 9,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_vendetta_9", "effetti": {"incantesimi_preparati_fissi": ["Protezione dall'Energia", "Velocita"]}}
+          ]
+        },
+        {
+          "livello": 13,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_vendetta_13", "effetti": {"incantesimi_preparati_fissi": ["Esilio", "Porta Dimensionale"]}}
+          ]
+        },
+        {
+          "livello": 15,
+          "privilegi_nascosti": [
+            {"id": "anima_vendetta", "effetti": {"attacco_arma_reazione_bersaglio_voto_inimicizia": true}}
+          ]
+        },
+        {
+          "livello": 17,
+          "privilegi_nascosti": [
+            {"id": "incantesimi_giuramento_vendetta_17", "effetti": {"incantesimi_preparati_fissi": ["Blocca Mostri", "Scrutare"]}}
+          ]
+        },
+        {
+          "livello": 20,
+          "privilegi_nascosti": [
+            {"id": "angelo_vendicatore", "effetti": {"velocita_volo": 18, "aura_paura_9m": true}}
+          ]
+        }
+      ]
+    }
+  ]
+}
