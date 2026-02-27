@@ -1,0 +1,77 @@
+{
+  "origine": {
+    "id_origine": "org_halfling",
+    "nome": "Halfling",
+    "asset_carta": "O_halfling_main.png",
+    "automatismi_base": {
+      "taglia": "Piccola",
+      "velocita_metri": 7.5,
+      "incrementi_caratteristica": {
+        "fissi": { "DES": 2 },
+        "scelte": 0
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Halfling"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "fortunato",
+          "nome": "Fortunato",
+          "descrizione": "Quando ottieni un 1 naturale al tiro per colpire, a una prova di caratteristica o a un tiro salvezza, puoi ripetere il dado e devi usare il nuovo risultato."
+        },
+        {
+          "id": "coraggioso",
+          "nome": "Coraggioso",
+          "effetti": {
+            "vantaggio_ts": ["Spaventato"]
+          }
+        },
+        {
+          "id": "agilita_halfling",
+          "nome": "Agilità Halfling",
+          "descrizione": "Puoi muoverti attraverso lo spazio di qualsiasi creatura che sia di una taglia superiore alla tua."
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_half_piedeleggiadro",
+        "nome": "Piedeleggiadro",
+        "asset_carta": "C_half_piedeleggiadro.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "CAR": 1 }
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "furtivita_innata",
+              "nome": "Furtività Innata",
+              "descrizione": "Puoi tentare di nasconderti anche quando sei oscurato solo da una creatura che sia almeno di una taglia più grande di te."
+            }
+          ]
+        }
+      },
+      {
+        "id_comunita": "com_half_stout",
+        "nome": "Tozzo",
+        "asset_carta": "C_half_stout.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "COS": 1 }
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "resilienza_dei_tozzi",
+              "nome": "Resilienza dei Tozzi",
+              "effetti": {
+                "vantaggio_ts": ["Veleno"],
+                "resistenza_danni": ["Veleno"]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
