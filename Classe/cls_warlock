@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_warlock",
     "nome": "Warlock",
-    "ui_selezione": {
-      "immagine": "asset_warlock.png",
-      "titolo_carta": "Classe: Warlock"
+    "carta_info_classe": {
+      "asset_carta": "C_warlock_info.png",
+      "descrizione": "Un incantatore che trae il suo potere da un patto stretto con un'entità ultraterrena, scatenando magie oscure e suppliche occulte."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -12,417 +12,101 @@
       "caratteristica_incantatore": "CAR",
       "competenze": {
         "armature": ["Leggere"],
-        "armi": ["Semplici"],
-        "strumenti": []
+        "armi": ["Semplici"]
       },
       "abilita_scelta": {
         "quantita": 2,
         "opzioni": ["Arcano", "Indagare", "Inganno", "Intimidire", "Natura", "Religione"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Balestra leggera e 20 dardi", "Arma semplice"]},
-        {"scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"]},
-        {"scelta": 1, "opzioni": ["Borsa dello studioso", "Zaino da speleologo"]},
-        {"fisso": ["Armatura di cuoio", "Arma semplice", "Pugnale (2)"]}
+        { "scelta": 1, "opzioni": ["Balestra leggera e 20 dardi", "Arma semplice"] },
+        { "scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"] },
+        { "scelta": 1, "opzioni": ["Borsa dello studioso", "Zaino da speleologo"] },
+        { "fisso": ["Armatura di cuoio", "Arma semplice", "Pugnale (2)"] }
       ]
     },
     "livello_scelta_archetipo": 1,
     "archetipi_collegati": ["arc_warlock_arcifolletto", "arc_warlock_immondo", "arc_warlock_grande_antico"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_warlock_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "incantesimi_noti": 2,
-          "numero_slot": 1,
-          "livello_slot": 1
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "magia_patto",
-            "effetti": {"accesso_lista": "Warlock", "recupero_slot_riposo_breve": true}
-          }
+        "statistiche": { "trucchetti": 2, "incantesimi": 2, "numero_slot": 1, "livello_slot": 1 },
+        "privilegi_sbloccati": [
+          { "id": "patrono_oltremondo", "nome": "Patrono Oltremondo", "descrizione": "Scegli l'entità che ti conferisce i poteri (Archetipo) al 1° livello." },
+          { "id": "magia_patto", "nome": "Magia del Patto", "descrizione": "Recuperi i tuoi slot incantesimo dopo un riposo breve o lungo." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_warlock_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "incantesimi_noti": 3,
-          "numero_slot": 2,
-          "livello_slot": 1,
-          "suppliche_conosciute": 2
-        },
-        "privilegi_nascosti": []
+        "statistiche": { "numero_slot": 2, "suppliche_conosciute": 2 },
+        "privilegi_sbloccati": [
+          { "id": "suppliche_occulte", "nome": "Suppliche Occulte", "descrizione": "Ottieni due frammenti di conoscenza proibita che ti conferiscono capacità magiche permanenti." }
+        ]
       },
       {
         "livello": 3,
+        "asset_carta": "C_warlock_L3.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "incantesimi_noti": 4,
-          "numero_slot": 2,
-          "livello_slot": 2,
-          "suppliche_conosciute": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "dono_del_patto",
-            "effetti": {"scelta_dono": 1, "opzioni": ["Patto della Catena", "Patto della Lama", "Patto del Tomo"]}
-          }
+        "statistiche": { "livello_slot": 2 },
+        "privilegi_sbloccati": [
+          { "id": "dono_del_patto", "nome": "Dono del Patto", "descrizione": "Scegli un dono dal tuo patrono: Patto della Catena, della Lama o del Tomo." }
         ]
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 5,
-          "numero_slot": 2,
-          "livello_slot": 2,
-          "suppliche_conosciute": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 5,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 6,
-          "numero_slot": 2,
-          "livello_slot": 3,
-          "suppliche_conosciute": 3
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 7,
-          "numero_slot": 2,
-          "livello_slot": 3,
-          "suppliche_conosciute": 3
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 8,
-          "numero_slot": 2,
-          "livello_slot": 4,
-          "suppliche_conosciute": 4
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 9,
-          "numero_slot": 2,
-          "livello_slot": 4,
-          "suppliche_conosciute": 4
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 10,
-          "numero_slot": 2,
-          "livello_slot": 5,
-          "suppliche_conosciute": 5
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 10,
-          "numero_slot": 2,
-          "livello_slot": 5,
-          "suppliche_conosciute": 5
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 11,
+        "asset_carta": "C_warlock_L11.png",
         "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 11,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "arcano_mistico_6",
-            "effetti": {"scelta_incantesimo_warlock_livello_6": 1, "lancio_senza_slot_riposo_lungo": true}
-          }
-        ]
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 11,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 6
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 12,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 6
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "arcano_mistico_7",
-            "effetti": {"scelta_incantesimo_warlock_livello_7": 1, "lancio_senza_slot_riposo_lungo": true}
-          }
-        ]
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 12,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 6
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 13,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 7
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "arcano_mistico_8",
-            "effetti": {"scelta_incantesimo_warlock_livello_8": 1, "lancio_senza_slot_riposo_lungo": true}
-          }
-        ]
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 13,
-          "numero_slot": 3,
-          "livello_slot": 5,
-          "suppliche_conosciute": 7
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 14,
-          "numero_slot": 4,
-          "livello_slot": 5,
-          "suppliche_conosciute": 7
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "arcano_mistico_9",
-            "effetti": {"scelta_incantesimo_warlock_livello_9": 1, "lancio_senza_slot_riposo_lungo": true}
-          }
-        ]
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 14,
-          "numero_slot": 4,
-          "livello_slot": 5,
-          "suppliche_conosciute": 8
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 15,
-          "numero_slot": 4,
-          "livello_slot": 5,
-          "suppliche_conosciute": 8
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "numero_slot": 3, "livello_slot": 5 },
+        "privilegi_sbloccati": [
+          { "id": "arcano_mistico_6", "nome": "Arcano Mistico (6° livello)", "descrizione": "Il patrono ti concede un segreto magico; puoi lanciare un incantesimo di 6° livello una volta per riposo lungo." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_warlock_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 15,
-          "numero_slot": 4,
-          "livello_slot": 5,
-          "suppliche_conosciute": 8
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "maestro_occulto",
-            "effetti": {"recupero_slot_warlock_un_minuto_riposo_lungo": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "maestro_occulto", "nome": "Maestro Occulto", "descrizione": "Puoi pregare il tuo patrono per 1 minuto per recuperare tutti i tuoi slot della Magia del Patto." }
         ]
       }
     ]
   },
   "archetipi": [
     {
-      "id_archetipo": "arc_warlock_arcifolletto",
-      "id_classe_padre": "cls_warlock",
-      "nome": "Il Patrono: L'Arcifolletto",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_patrono_arcifolletto", "effetti": {"espansione_lista_warlock": ["Fuoco Feerico", "Sonno", "Calmare Emozioni", "Forza Fantasmatica", "Crescita Vegetale", "Intermittenza", "Dominare Bestie", "Invisibilita Superiore", "Dominare Persone", "Sembrare"]}},
-            {"id": "presenza_feata", "effetti": {"azione_affascinare_o_spaventare_cubo_3m_riposo_breve": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "fuga_nebbiosa", "effetti": {"reazione_teletrasporto_dopo_danno_invisibilita_riposo_breve": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "difese_seducenti", "effetti": {"immunita_affascinato": true, "reazione_rifletti_charme_su_creatore": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "delirio_oscuro", "effetti": {"azione_illusione_mentale_spaventato_o_affascinato_riposo_breve": true}}
-          ]
-        }
-      ]
-    },
-    {
       "id_archetipo": "arc_warlock_immondo",
-      "id_classe_padre": "cls_warlock",
       "nome": "Il Patrono: L'Immondo",
+      "asset_carta": "A_warlock_immondo.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_patrono_immondo", "effetti": {"espansione_lista_warlock": ["Comando", "Mani Brucianti", "Cecita/Sordita", "Raggio Rovente", "Nube Fetida", "Palla di Fuoco", "Muro di Fuoco", "Scudo di Fuoco", "Colpo Infuocato", "Santificare"]}},
-            {"id": "benedizione_oscuro", "effetti": {"uccisione_fornisce_pf_temporanei": "mod_CAR + livello_warlock"}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "fortuna_oscuro", "effetti": {"aggiungi_1d10_a_prova_o_ts_riposo_breve": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "resilienza_immondo", "effetti": {"scelta_resistenza_danni_riposo_breve_o_lungo": 1}}
+          "asset_carta": "A_warlock_immondo_L1.png",
+          "privilegi": [
+            { "id": "benedizione_oscuro", "nome": "Benedizione dell'Oscuro", "descrizione": "Quando riduci una creatura a 0 PF, ottieni PF temporanei pari a mod_CAR + livello." }
           ]
         },
         {
           "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "scagliare_all_inferno", "effetti": {"attacco_colpito_scaglia_bersaglio_inferno_10d10_danni_psichici_riposo_lungo": true}}
+          "asset_carta": "A_warlock_immondo_L14.png",
+          "privilegi": [
+            { "id": "scagliare_inferno", "nome": "Scagliare attraverso l'Inferno", "descrizione": "Colpendo una creatura puoi spedirla istantaneamente nei piani inferiori infliggendo 10d10 danni psichici." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_warlock_grande_antico",
-      "id_classe_padre": "cls_warlock",
       "nome": "Il Patrono: Il Grande Antico",
+      "asset_carta": "A_warlock_antico.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_patrono_grande_antico", "effetti": {"espansione_lista_warlock": ["Sussurri Dissonanti", "Risata Incontenibile di Tasha", "Individuazione dei Pensieri", "Suggestione", "Chiaroveggenza", "Inviare", "Dominare Bestie", "Tentacoli Neri di Evard", "Dominare Persone", "Telecinesi"]}},
-            {"id": "mente_risvegliata", "effetti": {"telepatia_unidirezionale_9m": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "interdizione_entropica", "effetti": {"reazione_svantaggio_attacco_nemico_vantaggio_ritorsione_riposo_breve": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "scudo_mentale", "effetti": {"impossibile_leggere_pensieri_magicamente": true, "resistenza_danni_psichici": true, "rifletti_danni_psichici": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "creare_schiavo", "effetti": {"azione_infezione_incanto_creatura_incapacitata_telepatia_illimitata": true}}
+          "asset_carta": "A_warlock_antico_L1.png",
+          "privilegi": [
+            { "id": "mente_risvegliata", "nome": "Mente Risvegliata", "descrizione": "Puoi comunicare telepaticamente con qualsiasi creatura entro 9 metri che sia in grado di intendere un linguaggio." }
           ]
         }
       ]
