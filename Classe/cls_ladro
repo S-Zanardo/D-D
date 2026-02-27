@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_ladro",
     "nome": "Ladro",
-    "ui_selezione": {
-      "immagine": "asset_ladro.png",
-      "titolo_carta": "Classe: Ladro"
+    "carta_info_classe": {
+      "asset_carta": "C_ladro_info.png",
+      "descrizione": "Un esperto di furtività e precisione, capace di sfruttare le debolezze nemiche per infliggere colpi letali."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -19,241 +19,77 @@
         "opzioni": ["Acrobazia", "Atletica", "Furtivita", "Indagare", "Inganno", "Intimidire", "Intuizione", "Percezione", "Persuasione", "Rapidita di Mano", "Intrattenere"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Stocco", "Spada corta"]},
-        {"scelta": 1, "opzioni": ["Arco corto e faretra con 20 frecce", "Spada corta"]},
-        {"scelta": 1, "opzioni": ["Borsa del ladro", "Zaino da esploratore", "Zaino da speleologo"]},
-        {"fisso": ["Armatura di cuoio", "Pugnale (2)", "Arnesi da scasso"]}
+        { "scelta": 1, "opzioni": ["Stocco", "Spada corta"] },
+        { "scelta": 1, "opzioni": ["Arco corto e 20 frecce", "Spada corta"] },
+        { "scelta": 1, "opzioni": ["Borsa del ladro", "Zaino da esploratore", "Zaino da speleologo"] },
+        { "fisso": ["Armatura di cuoio", "Pugnale (2)", "Arnesi da scasso"] }
       ]
     },
     "livello_scelta_archetipo": 3,
     "archetipi_collegati": ["arc_ladro_furfante", "arc_ladro_assassino", "arc_ladro_mistificatore_arcano"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_ladro_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "1d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "maestria_1",
-            "effetti": {"scelta_maestria_abilita_o_strumenti": 2}
-          },
-          {
-            "id": "attacco_furtivo",
-            "effetti": {"danni_extra_condizioni": "1d6"}
-          },
-          {
-            "id": "gergo_ladresco",
-            "effetti": {"comprensione_messaggi_nascosti": true}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "1d6" },
+        "privilegi_sbloccati": [
+          { "id": "maestria_1", "nome": "Maestria", "effetti": { "scelta_maestria": 2 } },
+          { "id": "attacco_furtivo", "nome": "Attacco Furtivo", "descrizione": "Infliggi danni extra a creature su cui hai vantaggio o che hanno un nemico vicino." },
+          { "id": "gergo_ladresco", "nome": "Gergo Ladresco", "descrizione": "Conosci il linguaggio segreto dei criminali." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_ladro_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "azione_scaltra",
-            "effetti": {"azione_bonus": ["Scatto", "Disimpegno", "Nascondersi"]}
-          }
-        ]
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "2d6"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "azione_scaltra", "nome": "Azione Scaltra", "descrizione": "Puoi usare l'azione bonus per Scatto, Disimpegno o Nascondersi." }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_ladro_L5.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "3d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "schivata_prodigiosa",
-            "effetti": {"reazione_dimezza_danni_attacco": true}
-          }
-        ]
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "maestria_2",
-            "effetti": {"scelta_maestria_abilita_o_strumenti": 2}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "3d6" },
+        "privilegi_sbloccati": [
+          { "id": "schivata_prodigiosa", "nome": "Schivata Prodigiosa", "descrizione": "Usa la reazione per dimezzare il danno di un attacco che ti colpisce." }
         ]
       },
       {
         "livello": 7,
+        "asset_carta": "C_ladro_L7.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "4d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "elusione",
-            "effetti": {"ts_des_danni_dimezzati_o_nulli": true}
-          }
-        ]
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "5d6"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "4d6" },
+        "privilegi_sbloccati": [
+          { "id": "elusione", "nome": "Elusione", "descrizione": "Non subisci danni se superi un TS su DES, e solo la metà se lo fallisci." }
         ]
       },
       {
         "livello": 11,
+        "asset_carta": "C_ladro_L11.png",
         "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "6d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "talento_affidabile",
-            "effetti": {"tiro_dado_minimo_10_abilita_competenti": true}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "6d6" },
+        "privilegi_sbloccati": [
+          { "id": "talento_affidabile", "nome": "Talento Affidabile", "descrizione": "Ogni tiro di dado inferiore a 10 per un'abilità competente diventa 10." }
         ]
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "7d6"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "8d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "senso_cieco",
-            "effetti": {"percezione_creature_nascoste_invisibili_3m": true}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "mente_sfuggente",
-            "effetti": {"competenza_ts": ["SAG"]}
-          }
-        ]
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "9d6"
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 18,
+        "asset_carta": "C_ladro_L18.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "sfuggente",
-            "effetti": {"nega_vantaggio_attaccanti": true}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dadi_attacco_furtivo": "10d6"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_6",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "9d6" },
+        "privilegi_sbloccati": [
+          { "id": "sfuggente", "nome": "Sfuggente", "descrizione": "Nessun tiro per colpire può avere vantaggio contro di te finché sei cosciente." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_ladro_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "colpo_fortuna",
-            "effetti": {"fallimento_diventa_successo_20_una_volta_per_riposo": true}
-          }
+        "statistiche": { "dadi_attacco_furtivo": "10d6" },
+        "privilegi_sbloccati": [
+          { "id": "colpo_fortuna", "nome": "Colpo di Fortuna", "descrizione": "Puoi trasformare un fallimento in un successo (una volta per riposo)." }
         ]
       }
     ]
@@ -261,141 +97,45 @@
   "archetipi": [
     {
       "id_archetipo": "arc_ladro_furfante",
-      "id_classe_padre": "cls_ladro",
       "nome": "Furfante",
+      "asset_carta": "A_ladro_furfante.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "mani_veloci", "effetti": {"azione_bonus_utilizzare_oggetto_disarmare_scassinare": true}},
-            {"id": "lavoro_secondo_piano", "effetti": {"arrampicare_velocita_normale": true, "salto_corsa_aumentato": "mod_DES"}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "furtivita_suprema", "effetti": {"vantaggio_furtivita_se_movimento_dimezzato": true}}
-          ]
-        },
-        {
-          "livello": 13,
-          "privilegi_nascosti": [
-            {"id": "utilizzare_congegni_magici", "effetti": {"ignora_requisiti_oggetti_magici": true}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "riflessi_furfante", "effetti": {"due_turni_primo_round_combattimento": true}}
+          "asset_carta": "A_ladro_furfante_L3.png",
+          "privilegi": [
+            { "id": "mani_veloci", "nome": "Mani Veloci", "descrizione": "Azione bonus per Arnesi da scasso o Utilizzare Oggetto." },
+            { "id": "lavoro_secondo_piano", "nome": "Lavoro al Secondo Piano", "descrizione": "Scali più velocemente e salti più lontano." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_ladro_assassino",
-      "id_classe_padre": "cls_ladro",
       "nome": "Assassino",
+      "asset_carta": "A_ladro_assassino.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "competenze_bonus_assassino", "effetti": {"competenza_strumenti": ["Kit da camuffamento", "Borsa del velenoso"]}},
-            {"id": "assassinare", "effetti": {"vantaggio_creature_non_hanno_agito": true, "colpo_critico_creature_sorprese": true}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "esperto_infiltrazione", "effetti": {"creazione_false_identita": true}}
-          ]
-        },
-        {
-          "livello": 13,
-          "privilegi_nascosti": [
-            {"id": "impostore", "effetti": {"imitazione_parlata_e_scrittura": true}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "colpo_mortale", "effetti": {"ts_costituzione_o_danni_raddoppiati_su_creature_sorprese": true}}
+          "asset_carta": "A_ladro_assassino_L3.png",
+          "privilegi": [
+            { "id": "assassinare", "nome": "Assassinare", "descrizione": "Vantaggio contro chi non ha agito e critico automatico contro i sorpresi." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_ladro_mistificatore_arcano",
-      "id_classe_padre": "cls_ladro",
       "nome": "Mistificatore Arcano",
+      "asset_carta": "A_ladro_mistificatore.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "statistiche_classe_archetipo": {
-            "trucchetti_noti": 3,
-            "incantesimi_noti": 3,
-            "slot_incantesimi": {"1": 2}
-          },
-          "privilegi_nascosti": [
-            {"id": "incantesimi_mistificatore", "effetti": {"accesso_lista": "Mago", "restrizione_scuole": ["Ammaliamento", "Illusione"], "caratteristica_incantatore": "INT"}},
-            {"id": "gioco_prestigio_mano_magica", "effetti": {"trucchetti_noti_fissi": ["Mano Magica"], "mano_magica_invisibile_scassinare_rubare": true}}
+          "asset_carta": "A_ladro_mistificatore_L3.png",
+          "statistiche": { "trucchetti": 3, "incantesimi": 3, "slot_L1": 2 },
+          "privilegi": [
+            { "id": "mano_magica_m", "nome": "Mano Magica Superiore", "descrizione": "La tua Mano Magica è invisibile e può rubare o scassinare." }
           ]
-        },
-        {
-          "livello": 4,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 4, "slot_incantesimi": {"1": 3}}
-        },
-        {
-          "livello": 7,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 5, "slot_incantesimi": {"1": 4, "2": 2}}
-        },
-        {
-          "livello": 8,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 6, "slot_incantesimi": {"1": 4, "2": 2}}
-        },
-        {
-          "livello": 9,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 6, "slot_incantesimi": {"1": 4, "2": 2}},
-          "privilegi_nascosti": [
-            {"id": "imboscata_magica", "effetti": {"svantaggio_ts_incantesimi_se_nascosto": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 7, "slot_incantesimi": {"1": 4, "2": 3}}
-        },
-        {
-          "livello": 11,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 8, "slot_incantesimi": {"1": 4, "2": 3}}
-        },
-        {
-          "livello": 13,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 9, "slot_incantesimi": {"1": 4, "2": 3, "3": 2}},
-          "privilegi_nascosti": [
-            {"id": "ingannatore_versatile", "effetti": {"vantaggio_attacco_distrazione_mano_magica_azione_bonus": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 10, "slot_incantesimi": {"1": 4, "2": 3, "3": 2}}
-        },
-        {
-          "livello": 16,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 11, "slot_incantesimi": {"1": 4, "2": 3, "3": 3}}
-        },
-        {
-          "livello": 17,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 11, "slot_incantesimi": {"1": 4, "2": 3, "3": 3}},
-          "privilegi_nascosti": [
-            {"id": "ladro_incantesimi", "effetti": {"ruba_conoscenza_incantesimo_bersaglio": true}}
-          ]
-        },
-        {
-          "livello": 19,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 12, "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}}
-        },
-        {
-          "livello": 20,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 4, "incantesimi_noti": 13, "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}}
         }
       ]
     }
