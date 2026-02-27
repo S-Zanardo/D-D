@@ -1,0 +1,144 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_elfo",
+      "nome": "Elfo",
+      "ui_carosello": {
+        "immagine": "asset_elfo_origine.png",
+        "titolo_carta": "Origine: Elfo"
+      },
+      "automatismi_scheda": {
+        "taglia": "Media",
+        "velocita_metri": 9.0,
+        "scurovisione_metri": 18,
+        "incrementi_caratteristica": {
+          "fissi": {"DES": 2},
+          "scelte": 0
+        },
+        "competenze": {
+          "abilita_fisse": ["Percezione"],
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Elfico"],
+          "scelte_extra": 0
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "retaggio_feerico",
+            "effetti": {
+              "vantaggio_ts": ["Affascinato"],
+              "immunita_condizione": ["Sonno_magico"]
+            }
+          },
+          {
+            "id": "trance",
+            "effetti": {
+              "riposo_esteso_ore": 4
+            }
+          }
+        ]
+      },
+      "comunita_collegate": ["com_elfo_alto", "com_elfo_boschi", "com_elfo_oscuro"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_elfo_alto",
+      "id_origine_padre": "org_elfo",
+      "nome": "Elfo Alto",
+      "ui_carosello": {
+        "immagine": "asset_elfo_alto.png",
+        "titolo_carta": "Comunità: Elfo Alto"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {"INT": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": ["Spada lunga", "Spada corta", "Arco lungo", "Arco corto"],
+          "armature_fisse": []
+        },
+        "linguaggi": {
+          "fissi": [],
+          "scelte_extra": 1
+        },
+        "incantesimi_extra": {
+          "trucchetti_scelta": 1,
+          "lista_riferimento": "mago",
+          "caratteristica_incantatore": "INT"
+        },
+        "privilegi_nascosti": []
+      }
+    },
+    {
+      "id_comunita": "com_elfo_boschi",
+      "id_origine_padre": "org_elfo",
+      "nome": "Elfo dei Boschi",
+      "ui_carosello": {
+        "immagine": "asset_elfo_boschi.png",
+        "titolo_carta": "Comunità: Elfo dei Boschi"
+      },
+      "automatismi_scheda": {
+        "velocita_metri_sovrascrittura": 10.5,
+        "incrementi_caratteristica": {
+          "fissi": {"SAG": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": ["Spada lunga", "Spada corta", "Arco lungo", "Arco corto"],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "maschera_natura",
+            "effetti": {
+              "nascondersi_occultamento_leggero": ["Fogliame", "Pioggia", "Neve", "Nebbia"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_elfo_oscuro",
+      "id_origine_padre": "org_elfo",
+      "nome": "Elfo Oscuro (Drow)",
+      "ui_carosello": {
+        "immagine": "asset_elfo_oscuro.png",
+        "titolo_carta": "Comunità: Elfo Oscuro"
+      },
+      "automatismi_scheda": {
+        "scurovisione_metri_sovrascrittura": 36,
+        "incrementi_caratteristica": {
+          "fissi": {"CAR": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": ["Stocco", "Spada corta", "Balestra a mano"],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "sensibilita_luce_sole",
+            "effetti": {
+              "svantaggio_tiri_colpire": ["Luce_solare_diretta"],
+              "svantaggio_percezione_visiva": ["Luce_solare_diretta"]
+            }
+          },
+          {
+            "id": "magia_drow",
+            "effetti": {
+              "incantesimi_livello_1": ["Luci_Danzanti"],
+              "incantesimi_livello_3": ["Fuoco_Feerico_1_uso_giorno"],
+              "incantesimi_livello_5": ["Oscurita_1_uso_giorno"],
+              "caratteristica_incantatore": "CAR"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
