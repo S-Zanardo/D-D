@@ -1,0 +1,22 @@
+{
+  "origine": {
+    "id_ori": "ori_elfo",
+    "nome": "Elfo",
+    "asset_carta": "O_elfo.png",
+    "descrizione": "Creature magiche dalla vita longeva, legate alla natura o alle arti arcane, note per la loro grazia ed eleganza.",
+    "tratti_base": [
+      { "nome": "Taglia", "valore": "Media" },
+      { "nome": "Velocità", "valore": "9m" },
+      { "nome": "Scurovisione", "valore": "18m" },
+      { "nome": "Sensi Acuti", "valore": "Competenza in Percezione" },
+      { "nome": "Antenato Feerico", "valore": "Vantaggio contro Charme, immunità al sonno magico" },
+      { "nome": "Trance", "valore": "4 ore di meditazione equivalgono a 8 ore di riposo umano" },
+      { "nome": "Linguaggi", "valore": "Comune, Elfico" }
+    ],
+    "comunita": [
+      { "id_com": "com_elfo_alto", "nome": "Elfo Alto", "asset_carta": "C_elfo_alto.png", "bonus": {"DES": 2, "INT": 1}, "tratti_comunitari": ["Addestramento Armi Elfiche", "Trucchetto Extra (Mago)", "Linguaggio Extra"] },
+      { "id_com": "com_elfo_boschi", "nome": "Elfo dei Boschi", "asset_carta": "C_elfo_boschi.png", "bonus": {"DES": 2, "SAG": 1}, "tratti_comunitari": ["Addestramento Armi Elfiche", "Piede Leggero (10.5m)", "Maschera della Selva"] },
+      { "id_com": "com_elfo_oscuro", "nome": "Drow", "asset_carta": "C_elfo_oscuro.png", "bonus": {"DES": 2, "CAR": 1}, "tratti_comunitari": ["Scurovisione Superiore (36m)", "Sensibilità Luce Solare", "Magia Drow", "Addestramento Armi Drow"] }
+    ]
+  }
+}
