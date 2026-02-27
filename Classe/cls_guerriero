@@ -2,353 +2,118 @@
   "classe": {
     "id_classe": "cls_guerriero",
     "nome": "Guerriero",
-    "ui_selezione": {
-      "immagine": "asset_guerriero.png",
-      "titolo_carta": "Classe: Guerriero"
+    "carta_info_classe": {
+      "asset_carta": "C_guerriero_info.png",
+      "descrizione": "Un maestro del combattimento armato, capace di resistere a ferite letali e colpire con velocità sovrumana."
     },
     "automatismi_base": {
       "dado_vita": 10,
       "tiri_salvezza": ["FOR", "COS"],
       "competenze": {
         "armature": ["Leggere", "Medie", "Pesanti", "Scudi"],
-        "armi": ["Semplici", "Marziali"],
-        "strumenti": []
+        "armi": ["Semplici", "Marziali"]
       },
       "abilita_scelta": {
         "quantita": 2,
         "opzioni": ["Acrobazia", "Addestrare Animali", "Atletica", "Indagare", "Intimidire", "Intuizione", "Percezione", "Sopravvivenza", "Storia"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Cotta di maglia", "Armatura di cuoio, Arco lungo, 20 Frecce"]},
-        {"scelta": 1, "opzioni": ["Arma marziale, Scudo", "Arma marziale, Arma marziale"]},
-        {"scelta": 1, "opzioni": ["Balestra leggera, 20 Dardi", "Ascia (2)"]},
-        {"scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da avventuriero"]}
+        { "scelta": 1, "opzioni": ["Cotta di maglia", "Armatura di cuoio, Arco lungo, 20 Frecce"] },
+        { "scelta": 1, "opzioni": ["Arma marziale, Scudo", "Arma marziale, Arma marziale"] },
+        { "scelta": 1, "opzioni": ["Balestra leggera, 20 Dardi", "Ascia (2)"] },
+        { "scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da avventuriero"] }
       ]
     },
     "livello_scelta_archetipo": 3,
     "archetipi_collegati": ["arc_guerriero_campione", "arc_guerriero_maestro_battaglia", "arc_guerriero_cavaliere_mistico"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_guerriero_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "recuperare_energie": "1d10 + livello_guerriero"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "stile_combattimento_1",
-            "effetti": {"scelta_stile": 1, "opzioni": ["Tiro", "Difesa", "Duellare", "Armi Grandi", "Protezione", "Combattere con Due Armi"]}
-          }
+        "statistiche": { "recuperare_energie": "1d10 + livello" },
+        "privilegi_sbloccati": [
+          { "id": "stile_combattimento", "nome": "Stile di Combattimento", "effetti": { "scelta_stile": 1 } },
+          { "id": "recuperare_energie", "nome": "Recuperare Energie", "descrizione": "Usa un'azione bonus per recuperare PF una volta per riposo." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_guerriero_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "azione_impetuosa_usi": 1
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {},
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "azione_impetuosa_usi": 1 },
+        "privilegi_sbloccati": [
+          { "id": "azione_impetuosa", "nome": "Azione Impetuosa", "descrizione": "Puoi compiere un'azione aggiuntiva nel tuo turno." }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_guerriero_L5.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "attacchi_extra": 1
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {},
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "attacchi_extra": 1 },
+        "privilegi_sbloccati": [
+          { "id": "attacco_extra", "nome": "Attacco Extra", "descrizione": "Puoi attaccare due volte quando usi l'azione di Attacco." }
         ]
       },
       {
         "livello": 9,
+        "asset_carta": "C_guerriero_L9.png",
         "bonus_competenza": 4,
-        "statistiche_classe": {
-          "indomabile_usi": 1
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {},
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "attacchi_extra": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "indomabile_usi": 1 },
+        "privilegi_sbloccati": [
+          { "id": "indomabile", "nome": "Indomabile", "descrizione": "Puoi ritirare un tiro salvezza fallito." }
         ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "indomabile_usi": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {},
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_6",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "azione_impetuosa_usi": 2,
-          "indomabile_usi": 3
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {},
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_7",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 20,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "attacchi_extra": 3
-        },
-        "privilegi_nascosti": []
       }
     ]
   },
   "archetipi": [
     {
       "id_archetipo": "arc_guerriero_campione",
-      "id_classe_padre": "cls_guerriero",
       "nome": "Campione",
+      "asset_carta": "A_guerriero_campione.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "critico_migliorato", "effetti": {"soglia_critico": 19}}
+          "asset_carta": "A_guerriero_campione_L3.png",
+          "privilegi": [
+            { "id": "critico_migliorato", "nome": "Critico Migliorato", "effetti": { "soglia_critico": 19 } }
           ]
         },
         {
           "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "atleta_straordinario", "effetti": {"aggiungi_meta_competenza_prove_for_des_cos": true, "bonus_salto_lungo_metri": "mod_FOR * 0.3"}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "stile_combattimento_2", "effetti": {"scelta_stile": 1, "opzioni": ["Tiro", "Difesa", "Duellare", "Armi Grandi", "Protezione", "Combattere con Due Armi"]}}
-          ]
-        },
-        {
-          "livello": 15,
-          "privilegi_nascosti": [
-            {"id": "critico_superiore", "effetti": {"soglia_critico": 18}}
-          ]
-        },
-        {
-          "livello": 18,
-          "privilegi_nascosti": [
-            {"id": "sopravvissuto", "effetti": {"cura_inizio_turno_sotto_meta_pf": "5 + mod_COS"}}
+          "asset_carta": "A_guerriero_campione_L7.png",
+          "privilegi": [
+            { "id": "atleta_straordinario", "nome": "Atleta Straordinario", "descrizione": "Bonus alle prove fisiche e al salto lungo." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_guerriero_maestro_battaglia",
-      "id_classe_padre": "cls_guerriero",
       "nome": "Maestro di Battaglia",
+      "asset_carta": "A_guerriero_maestro.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "manovre_1", "effetti": {"scelta_manovre": 3}},
-            {"id": "dadi_superiorita_1", "effetti": {"dadi_superiorita_quantita": 4, "dadi_superiorita_tipo": "1d8"}},
-            {"id": "studioso_guerra", "effetti": {"competenza_strumenti_artigiano": 1}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "conosci_tuo_nemico", "effetti": {"confronto_statistiche_nemico_osservato": true}},
-            {"id": "manovre_2", "effetti": {"scelta_manovre": 2}},
-            {"id": "dadi_superiorita_2", "effetti": {"dadi_superiorita_quantita": 5}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "superiorita_combattimento_migliorata_1", "effetti": {"dadi_superiorita_tipo": "1d10"}},
-            {"id": "manovre_3", "effetti": {"scelta_manovre": 2}}
-          ]
-        },
-        {
-          "livello": 15,
-          "privilegi_nascosti": [
-            {"id": "implacabile", "effetti": {"recupero_dado_superiorita_iniziativa_se_vuoto": 1}},
-            {"id": "manovre_4", "effetti": {"scelta_manovre": 2}},
-            {"id": "dadi_superiorita_3", "effetti": {"dadi_superiorita_quantita": 6}}
-          ]
-        },
-        {
-          "livello": 18,
-          "privilegi_nascosti": [
-            {"id": "superiorita_combattimento_migliorata_2", "effetti": {"dadi_superiorita_tipo": "1d12"}}
+          "asset_carta": "A_guerriero_maestro_L3.png",
+          "privilegi": [
+            { "id": "superiorita_combattimento", "nome": "Superiorità in Combattimento", "effetti": { "dadi": 4, "tipo": "1d8", "manovre": 3 } }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_guerriero_cavaliere_mistico",
-      "id_classe_padre": "cls_guerriero",
       "nome": "Cavaliere Mistico",
+      "asset_carta": "A_guerriero_mistico.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "statistiche_classe_archetipo": {
-            "trucchetti_noti": 2,
-            "incantesimi_noti": 3,
-            "slot_incantesimi": {"1": 2}
-          },
-          "privilegi_nascosti": [
-            {"id": "incantesimi_cavaliere_mistico", "effetti": {"accesso_lista": "Mago", "restrizione_scuole": ["Abiurazione", "Invocazione"], "caratteristica_incantatore": "INT"}},
-            {"id": "vincolo_arma", "effetti": {"immagazzina_arma_richiamo_bonus": 2}}
+          "asset_carta": "A_guerriero_mistico_L3.png",
+          "statistiche": { "trucchetti": 2, "incantesimi": 3, "slot_L1": 2 },
+          "privilegi": [
+            { "id": "vincolo_arma", "nome": "Vincolo con l'Arma", "descrizione": "Puoi richiamare la tua arma istantaneamente." }
           ]
-        },
-        {
-          "livello": 4,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 2, "incantesimi_noti": 4, "slot_incantesimi": {"1": 3}}
-        },
-        {
-          "livello": 7,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 2, "incantesimi_noti": 5, "slot_incantesimi": {"1": 4, "2": 2}},
-          "privilegi_nascosti": [
-            {"id": "magia_guerra", "effetti": {"attacco_arma_bonus_dopo_trucchetto": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 7, "slot_incantesimi": {"1": 4, "2": 3}},
-          "privilegi_nascosti": [
-            {"id": "colpo_mistico", "effetti": {"svantaggio_ts_incantesimi_dopo_colpo_arma": true}}
-          ]
-        },
-        {
-          "livello": 13,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 9, "slot_incantesimi": {"1": 4, "2": 3, "3": 2}}
-        },
-        {
-          "livello": 15,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 10, "slot_incantesimi": {"1": 4, "2": 3, "3": 2}},
-          "privilegi_nascosti": [
-            {"id": "carica_arcana", "effetti": {"teletrasporto_9m_azione_impetuosa": true}}
-          ]
-        },
-        {
-          "livello": 18,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 11, "slot_incantesimi": {"1": 4, "2": 3, "3": 3}},
-          "privilegi_nascosti": [
-            {"id": "magia_guerra_migliorata", "effetti": {"attacco_arma_bonus_dopo_incantesimo": true}}
-          ]
-        },
-        {
-          "livello": 19,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 12, "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}}
-        },
-        {
-          "livello": 20,
-          "statistiche_classe_archetipo": {"trucchetti_noti": 3, "incantesimi_noti": 13, "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}}
         }
       ]
     }
