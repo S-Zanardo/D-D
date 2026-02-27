@@ -1,0 +1,19 @@
+{
+  "origine": {
+    "id_ori": "ori_gnomo",
+    "nome": "Gnomo",
+    "asset_carta": "O_gnomo.png",
+    "descrizione": "Creature vivaci ed estremamente curiose, gli gnomi celebrano la vita attraverso l'invenzione, la magia o l'esplorazione del mondo.",
+    "tratti_base": [
+      { "nome": "Taglia", "valore": "Piccola" },
+      { "nome": "Velocità", "valore": "7.5m" },
+      { "nome": "Scurovisione", "valore": "18m" },
+      { "nome": "Astuzia Gnomica", "valore": "Vantaggio ai TS su INT, SAG e CAR contro la magia" },
+      { "nome": "Linguaggi", "valore": "Comune, Gnomesco" }
+    ],
+    "comunita": [
+      { "id_com": "com_gnomo_foreste", "nome": "Gnomo delle Foreste", "asset_carta": "C_gnomo_foreste.png", "bonus": {"INT": 2, "DES": 1}, "tratti_comunitari": ["Illusionista Nato (Trucchetto: Illusione Minore)", "Parlare con le Piccole Bestie"] },
+      { "id_com": "com_gnomo_rocce", "nome": "Gnomo delle Rocce", "asset_carta": "C_gnomo_rocce.png", "bonus": {"INT": 2, "COS": 1}, "tratti_comunitari": ["Conoscenza degli Artefici", "Mastro Inventore (Strumenti da Inventore)"] }
+    ]
+  }
+}
