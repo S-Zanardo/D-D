@@ -3,10 +3,11 @@
     {
       "id_bg": "bg_accolito",
       "nome": "Accolito",
+      "asset_carta": "B_accolito.png",
       "competenze": {
         "abilita": ["Intuizione", "Religione"],
         "strumenti": [],
-        "linguaggi": {"quantita": 2, "scelta": "Qualsiasi"}
+        "linguaggi": { "quantita": 2, "scelta": "Qualsiasi" }
       },
       "equipaggiamento": ["Simbolo sacro", "Libro di preghiere", "5 bastoncini di incenso", "Vesti sacerdotali", "Abiti comuni", "Saccoccia con 15 mo"],
       "privilegio": {
@@ -23,10 +24,11 @@
     {
       "id_bg": "bg_ciarlatano",
       "nome": "Ciarlatano",
+      "asset_carta": "B_ciarlatano.png",
       "competenze": {
         "abilita": ["Inganno", "Rapidita di Mano"],
         "strumenti": ["Kit per camuffamento", "Kit per falsificazione"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Abiti eleganti", "Kit per camuffamento", "Strumenti per truffa (dadi truccati, carte segnate, ecc.)", "Saccoccia con 15 mo"],
       "privilegio": {
@@ -43,10 +45,11 @@
     {
       "id_bg": "bg_criminale",
       "nome": "Criminale",
+      "asset_carta": "B_criminale.png",
       "competenze": {
         "abilita": ["Inganno", "Furtivita"],
         "strumenti": ["Un tipo di set da gioco", "Arnesi da scasso"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Piede di porco", "Abiti comuni scuri con cappuccio", "Saccoccia con 15 mo"],
       "privilegio": {
@@ -63,10 +66,11 @@
     {
       "id_bg": "bg_eremita",
       "nome": "Eremita",
+      "asset_carta": "B_eremita.png",
       "competenze": {
         "abilita": ["Medicina", "Religione"],
         "strumenti": ["Borsa da erborista"],
-        "linguaggi": {"quantita": 1, "scelta": "Qualsiasi"}
+        "linguaggi": { "quantita": 1, "scelta": "Qualsiasi" }
       },
       "equipaggiamento": ["Custodia per pergamene ricolma di appunti", "Coperta invernale", "Abiti comuni", "Borsa da erborista", "5 mo"],
       "privilegio": {
@@ -83,10 +87,11 @@
     {
       "id_bg": "bg_eroe_popolare",
       "nome": "Eroe Popolare",
+      "asset_carta": "B_eroe_popolare.png",
       "competenze": {
         "abilita": ["Addestrare Animali", "Sopravvivenza"],
         "strumenti": ["Un tipo di strumenti da artigiano", "Veicoli (terrestri)"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Set di strumenti da artigiano", "Pala", "Pentola di ferro", "Abiti comuni", "Saccoccia con 10 mo"],
       "privilegio": {
@@ -103,10 +108,11 @@
     {
       "id_bg": "bg_forestiero",
       "nome": "Forestiero",
+      "asset_carta": "B_forestiero.png",
       "competenze": {
         "abilita": ["Atletica", "Sopravvivenza"],
         "strumenti": ["Un tipo di strumento musicale"],
-        "linguaggi": {"quantita": 1, "scelta": "Qualsiasi"}
+        "linguaggi": { "quantita": 1, "scelta": "Qualsiasi" }
       },
       "equipaggiamento": ["Bastone", "Tagliola", "Trofeo di un animale ucciso", "Abiti da viaggiatore", "Saccoccia con 10 mo"],
       "privilegio": {
@@ -123,10 +129,11 @@
     {
       "id_bg": "bg_intrattenitore",
       "nome": "Intrattenitore",
+      "asset_carta": "B_intrattenitore.png",
       "competenze": {
         "abilita": ["Acrobazia", "Intrattenere"],
         "strumenti": ["Kit per camuffamento", "Un tipo di strumento musicale"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Uno strumento musicale", "Dono di un ammiratore", "Costume", "Saccoccia con 15 mo"],
       "privilegio": {
@@ -143,10 +150,11 @@
     {
       "id_bg": "bg_marinaio",
       "nome": "Marinaio",
+      "asset_carta": "B_marinaio.png",
       "competenze": {
         "abilita": ["Atletica", "Percezione"],
         "strumenti": ["Strumenti da navigatore", "Veicoli (acquatici)"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Caviglia da mola (randello)", "50 metri di corda di seta", "Portafortuna", "Abiti comuni", "Saccoccia con 10 mo"],
       "privilegio": {
@@ -163,10 +171,11 @@
     {
       "id_bg": "bg_nobile",
       "nome": "Nobile",
+      "asset_carta": "B_nobile.png",
       "competenze": {
         "abilita": ["Storia", "Persuasione"],
         "strumenti": ["Un tipo di set da gioco"],
-        "linguaggi": {"quantita": 1, "scelta": "Qualsiasi"}
+        "linguaggi": { "quantita": 1, "scelta": "Qualsiasi" }
       },
       "equipaggiamento": ["Abiti eleganti", "Anello sigillo", "Pergamena di genealogia", "Saccoccia con 25 mo"],
       "privilegio": {
@@ -183,10 +192,11 @@
     {
       "id_bg": "bg_sapiente",
       "nome": "Sapiente",
+      "asset_carta": "B_sapiente.png",
       "competenze": {
         "abilita": ["Arcano", "Storia"],
         "strumenti": [],
-        "linguaggi": {"quantita": 2, "scelta": "Qualsiasi"}
+        "linguaggi": { "quantita": 2, "scelta": "Qualsiasi" }
       },
       "equipaggiamento": ["Calamaio", "Pennino", "Pugnale", "Lettera di un defunto collega", "Abiti comuni", "Saccoccia con 10 mo"],
       "privilegio": {
@@ -203,10 +213,11 @@
     {
       "id_bg": "bg_soldato",
       "nome": "Soldato",
+      "asset_carta": "B_soldato.png",
       "competenze": {
         "abilita": ["Atletica", "Intimidire"],
         "strumenti": ["Un tipo di set da gioco", "Veicoli (terrestri)"],
-        "linguaggi": {"quantita": 0}
+        "linguaggi": { "quantita": 0 }
       },
       "equipaggiamento": ["Insegne del grado", "Trofeo di un nemico", "Set di dadi o mazzo di carte", "Abiti comuni", "Saccoccia con 10 mo"],
       "privilegio": {
