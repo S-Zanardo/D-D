@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_monaco",
     "nome": "Monaco",
-    "ui_selezione": {
-      "immagine": "asset_monaco.png",
-      "titolo_carta": "Classe: Monaco"
+    "carta_info_classe": {
+      "asset_carta": "C_monaco_info.png",
+      "descrizione": "Un maestro delle arti marziali che incanala l'energia cosmica del Ki per compiere imprese fisiche prodigiose."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -12,328 +12,67 @@
       "competenze": {
         "armature": [],
         "armi": ["Semplici", "Spade corte"],
-        "strumenti_scelta": {
-          "quantita": 1,
-          "tipo": ["Strumenti da artigiano", "Strumenti musicali"]
-        }
+        "strumenti_scelta": { "quantita": 1, "tipo": ["Strumenti da artigiano", "Strumenti musicali"] }
       },
       "abilita_scelta": {
         "quantita": 2,
         "opzioni": ["Acrobazia", "Atletica", "Furtivita", "Intuizione", "Religione", "Storia"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Spada corta", "Arma semplice"]},
-        {"scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"]},
-        {"fisso": ["Dardi (10)"]}
+        { "scelta": 1, "opzioni": ["Spada corta", "Arma semplice"] },
+        { "scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"] },
+        { "fisso": ["Dardi (10)"] }
       ]
     },
     "livello_scelta_archetipo": 3,
     "archetipi_collegati": ["arc_monaco_mano_aperta", "arc_monaco_ombra", "arc_monaco_quattro_elementi"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_monaco_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d4",
-          "punti_ki": 0,
-          "movimento_senza_armatura": 0
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "difesa_senza_armatura",
-            "effetti": {"calcolo_ca": "10 + mod_DES + mod_SAG"}
-          },
-          {
-            "id": "arti_marziali",
-            "effetti": {"attacco_disarmato_azione_bonus": true, "usa_des_per_attacco_disarmato": true}
-          }
+        "statistiche": { "dado_arti_marziali": "1d4", "punti_ki": 0, "mov_extra": 0 },
+        "privilegi_sbloccati": [
+          { "id": "difesa_senza_armatura", "nome": "Difesa Senza Armatura", "effetti": { "calcolo_ca": "10 + mod_DES + mod_SAG" } },
+          { "id": "arti_marziali", "nome": "Arti Marziali", "descrizione": "Usa DES per attacchi disarmati, il danno scala col dado monaco e puoi attaccare come azione bonus." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_monaco_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d4",
-          "punti_ki": 2,
-          "movimento_senza_armatura": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "ki",
-            "effetti": {"ki_raffica_colpi": true, "ki_difesa_paziente": true, "ki_passo_vento": true}
-          }
-        ]
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d4",
-          "punti_ki": 3,
-          "movimento_senza_armatura": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "deviare_proiettili",
-            "effetti": {"reazione_riduzione_danni_distanza": "1d10 + mod_DES + livello_monaco"}
-          }
-        ]
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d4",
-          "punti_ki": 4,
-          "movimento_senza_armatura": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          },
-          {
-            "id": "caduta_lenta",
-            "effetti": {"reazione_riduzione_danni_caduta": "livello_monaco * 5"}
-          }
+        "statistiche": { "punti_ki": 2, "mov_extra": 3.0 },
+        "privilegi_sbloccati": [
+          { "id": "ki", "nome": "Ki", "descrizione": "Sblocca Raffica di Colpi, Difesa Paziente e Passo del Vento." },
+          { "id": "movimento_senza_armatura", "nome": "Movimento Senza Armatura", "effetti": { "velocita_bonus": 3.0 } }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_monaco_L5.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d6",
-          "punti_ki": 5,
-          "movimento_senza_armatura": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "attacco_extra",
-            "effetti": {"attacchi_azione": 2}
-          },
-          {
-            "id": "colpo_stordente",
-            "effetti": {"ts_cos_o_stordito": true, "costo_ki": 1}
-          }
-        ]
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d6",
-          "punti_ki": 6,
-          "movimento_senza_armatura": 4.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "colpi_ki_potenziati",
-            "effetti": {"attacchi_disarmati_magici": true}
-          }
-        ]
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d6",
-          "punti_ki": 7,
-          "movimento_senza_armatura": 4.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "elusione",
-            "effetti": {"ts_des_danni_dimezzati_o_nulli": true}
-          },
-          {
-            "id": "mente_lucida",
-            "effetti": {"azione_termina_affascinato_spaventato": true}
-          }
-        ]
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d6",
-          "punti_ki": 8,
-          "movimento_senza_armatura": 4.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d6",
-          "punti_ki": 9,
-          "movimento_senza_armatura": 4.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "miglioramento_movimento",
-            "effetti": {"movimento_verticale_e_liquidi": true}
-          }
-        ]
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 10,
-          "movimento_senza_armatura": 6
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "purezza_corpo",
-            "effetti": {"immunita_malattie": true, "immunita_veleno": true}
-          }
-        ]
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 11,
-          "movimento_senza_armatura": 6
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 12,
-          "movimento_senza_armatura": 6
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 13,
-          "movimento_senza_armatura": 6
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "lingua_sole_luna",
-            "effetti": {"comprensione_tutti_linguaggi": true}
-          }
+        "statistiche": { "dado_arti_marziali": "1d6", "punti_ki": 5 },
+        "privilegi_sbloccati": [
+          { "id": "attacco_extra", "nome": "Attacco Extra", "descrizione": "Puoi attaccare due volte con l'azione di attacco." },
+          { "id": "colpo_stordente", "nome": "Colpo Stordente", "descrizione": "Spendi 1 Ki per tentare di stordire il bersaglio (TS COS)." }
         ]
       },
       {
         "livello": 14,
+        "asset_carta": "C_monaco_L14.png",
         "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 14,
-          "movimento_senza_armatura": 7.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "anima_diamante",
-            "effetti": {"competenza_tutti_ts": true, "ritiro_ts_fallito_costo_ki": 1}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 15,
-          "movimento_senza_armatura": 7.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "corpo_senza_tempo",
-            "effetti": {"nessun_invecchiamento": true, "nessun_fabbisogno_cibo_acqua": true}
-          }
-        ]
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d8",
-          "punti_ki": 16,
-          "movimento_senza_armatura": 7.5
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d10",
-          "punti_ki": 17,
-          "movimento_senza_armatura": 7.5
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d10",
-          "punti_ki": 18,
-          "movimento_senza_armatura": 9
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "corpo_vuoto",
-            "effetti": {"invisibilita_e_resistenza_costo_ki": 4, "proiezione_astrale_costo_ki": 8}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d10",
-          "punti_ki": 19,
-          "movimento_senza_armatura": 9
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "punti_ki": 14, "mov_extra": 7.5 },
+        "privilegi_sbloccati": [
+          { "id": "anima_diamante", "nome": "Anima di Diamante", "descrizione": "Ottieni competenza in TUTTI i tiri salvezza. Puoi spendere 1 Ki per ripetere un TS fallito." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_monaco_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "dado_arti_marziali": "1d10",
-          "punti_ki": 20,
-          "movimento_senza_armatura": 9
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "se_perfetto",
-            "effetti": {"recupero_ki_iniziativa_se_vuoto": 4}
-          }
+        "statistiche": { "dado_arti_marziali": "1d10", "punti_ki": 20 },
+        "privilegi_sbloccati": [
+          { "id": "se_perfetto", "nome": "Sé Perfetto", "descrizione": "Se inizi un combattimento senza Ki, ne recuperi immediatamente 4." }
         ]
       }
     ]
@@ -341,93 +80,35 @@
   "archetipi": [
     {
       "id_archetipo": "arc_monaco_mano_aperta",
-      "id_classe_padre": "cls_monaco",
       "nome": "Via della Mano Aperta",
+      "asset_carta": "A_monaco_manoaperta.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "tecnica_mano_aperta", "effetti": {"effetti_aggiuntivi_raffica_colpi": ["Prono", "Spinta_4_5m", "Niente_reazioni"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "integrita_corpo", "effetti": {"azione_cura_pf": "livello_monaco * 3"}}
-          ]
-        },
-        {
-          "livello": 11,
-          "privilegi_nascosti": [
-            {"id": "tranquillita", "effetti": {"effetto_santuario_dopo_riposo_lungo": true}}
+          "asset_carta": "A_monaco_manoaperta_L3.png",
+          "privilegi": [
+            { "id": "tecnica_mano_aperta", "nome": "Tecnica della Mano Aperta", "descrizione": "Aggiunge effetti (Prono, Spinta o No Reazioni) alla Raffica di Colpi." }
           ]
         },
         {
           "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "palmo_tremante", "effetti": {"vibrazioni_letali_attacco_disarmato_costo_ki": 3}}
+          "asset_carta": "A_monaco_manoaperta_L17.png",
+          "privilegi": [
+            { "id": "palmo_tremante", "nome": "Palmo Tremante", "descrizione": "Puoi generare vibrazioni letali nel corpo di un nemico (3 Ki)." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_monaco_ombra",
-      "id_classe_padre": "cls_monaco",
       "nome": "Via dell'Ombra",
+      "asset_carta": "A_monaco_ombra.png",
       "progressione_archetipo": [
         {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "arti_ombra", "effetti": {"trucchetti_noti_fissi": ["Illusione Minore"], "incantesimi_costo_ki_2": ["Oscurita", "Scurovisione", "Passare Senza Tracce", "Silenzio"]}}
-          ]
-        },
-        {
           "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "passo_ombra", "effetti": {"teletrasporto_azione_bonus_luce_debole_oscurita": true, "vantaggio_prossimo_attacco": true}}
-          ]
-        },
-        {
-          "livello": 11,
-          "privilegi_nascosti": [
-            {"id": "manto_ombre", "effetti": {"invisibilita_azione_luce_debole_oscurita": true}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "opportunista", "effetti": {"attacco_reazione_creatura_colpita_da_alleato": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_monaco_quattro_elementi",
-      "id_classe_padre": "cls_monaco",
-      "nome": "Via dei Quattro Elementi",
-      "progressione_archetipo": [
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "discepolo_elementi_1", "effetti": {"scelta_discipline_elementali": 2, "disciplina_fissa": ["Sintonia Elementale"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "discepolo_elementi_2", "effetti": {"scelta_discipline_elementali": 1}}
-          ]
-        },
-        {
-          "livello": 11,
-          "privilegi_nascosti": [
-            {"id": "discepolo_elementi_3", "effetti": {"scelta_discipline_elementali": 1}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "discepolo_elementi_4", "effetti": {"scelta_discipline_elementali": 1}}
+          "asset_carta": "A_monaco_ombra_L6.png",
+          "privilegi": [
+            { "id": "passo_ombra", "nome": "Passo dell'Ombra", "descrizione": "Teletrasportati da un'ombra all'altra come azione bonus." }
           ]
         }
       ]
