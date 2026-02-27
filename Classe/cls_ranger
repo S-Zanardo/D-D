@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_ranger",
     "nome": "Ranger",
-    "ui_selezione": {
-      "immagine": "asset_ranger.png",
-      "titolo_carta": "Classe: Ranger"
+    "carta_info_classe": {
+      "asset_carta": "C_ranger_info.png",
+      "descrizione": "Un cacciatore esperto e un esploratore dei territori selvaggi, capace di tracciare nemici implacabili e utilizzare la magia della natura."
     },
     "automatismi_base": {
       "dado_vita": 10,
@@ -12,292 +12,64 @@
       "caratteristica_incantatore": "SAG",
       "competenze": {
         "armature": ["Leggere", "Medie", "Scudi"],
-        "armi": ["Semplici", "Marziali"],
-        "strumenti": []
+        "armi": ["Semplici", "Marziali"]
       },
       "abilita_scelta": {
         "quantita": 3,
         "opzioni": ["Addestrare Animali", "Atletica", "Furtivita", "Indagare", "Intuizione", "Natura", "Percezione", "Sopravvivenza"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Corazza a scaglie", "Armatura di cuoio"]},
-        {"scelta": 1, "opzioni": ["Due spade corte", "Due armi semplici da mischia"]},
-        {"scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"]},
-        {"fisso": ["Arco lungo", "Faretra (20 frecce)"]}
+        { "scelta": 1, "opzioni": ["Corazza a scaglie", "Armatura di cuoio"] },
+        { "scelta": 1, "opzioni": ["Due spade corte", "Due armi semplici"] },
+        { "scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"] },
+        { "fisso": ["Arco lungo", "Faretra (20 frecce)"] }
       ]
     },
     "livello_scelta_archetipo": 3,
     "archetipi_collegati": ["arc_ranger_cacciatore", "arc_ranger_signore_bestie"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_ranger_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {},
-        "privilegi_nascosti": [
-          {
-            "id": "nemico_prescelto_1",
-            "effetti": {"scelta_nemico": 1, "vantaggio_sopravvivenza_inseguire_nemico": true, "vantaggio_intelligenza_informazioni_nemico": true, "scelta_linguaggi": 1}
-          },
-          {
-            "id": "esploratore_nato_1",
-            "effetti": {"scelta_ambiente_prescelto": 1, "raddoppia_competenza_prove_int_sag_ambiente": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "nemico_prescelto", "nome": "Nemico Prescelto", "descrizione": "Vantaggio nel tracciare e conoscere informazioni su un tipo specifico di creature." },
+          { "id": "esploratore_nato", "nome": "Esploratore Nato", "descrizione": "Bonus raddoppiati e benefici di viaggio in un ambiente prescelto." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_ranger_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "incantesimi_noti": 2,
-          "slot_incantesimi": {"1": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "stile_combattimento_ranger",
-            "effetti": {"scelta_stile": 1, "opzioni": ["Tiro", "Difesa", "Duellare", "Combattere con Due Armi"]}
-          },
-          {
-            "id": "incantesimi_ranger",
-            "effetti": {"accesso_lista": "Ranger"}
-          }
-        ]
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "incantesimi_noti": 3,
-          "slot_incantesimi": {"1": 3}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "consapevolezza_primordiale",
-            "effetti": {"spendi_slot_percepire_creature_raggio_km": "livello_slot_speso"}
-          }
-        ]
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "incantesimi_noti": 3,
-          "slot_incantesimi": {"1": 3}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "incantesimi_noti": 2, "slot_L1": 2 },
+        "privilegi_sbloccati": [
+          { "id": "stile_combattimento", "nome": "Stile di Combattimento", "effetti": { "scelta_stile": 1 } },
+          { "id": "incantesimi_ranger", "nome": "Incantesimi", "descrizione": "Inizi a lanciare incantesimi usando la Saggezza." }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_ranger_L5.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "incantesimi_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "attacco_extra",
-            "effetti": {"attacchi_azione": 2}
-          }
+        "statistiche": { "incantesimi_noti": 4, "slot_L1": 4, "slot_L2": 2 },
+        "privilegi_sbloccati": [
+          { "id": "attacco_extra", "nome": "Attacco Extra", "descrizione": "Puoi attaccare due volte con l'azione di attacco." }
         ]
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "incantesimi_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "nemico_prescelto_2",
-            "effetti": {"scelta_nemico": 1, "scelta_linguaggi": 1}
-          },
-          {
-            "id": "esploratore_nato_2",
-            "effetti": {"scelta_ambiente_prescelto": 1}
-          }
-        ]
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "incantesimi_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "incantesimi_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          },
-          {
-            "id": "andatura_terrestre",
-            "effetti": {"immunita_terreno_difficile_non_magico": true, "vantaggio_ts_piante_magiche": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "incantesimi_noti": 6,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 10,
+        "asset_carta": "C_ranger_L10.png",
         "bonus_competenza": 4,
-        "statistiche_classe": {
-          "incantesimi_noti": 6,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "esploratore_nato_3",
-            "effetti": {"scelta_ambiente_prescelto": 1}
-          },
-          {
-            "id": "nascondersi_in_piena_vista",
-            "effetti": {"bonus_furtivita_mimetizzazione": 10}
-          }
-        ]
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "incantesimi_noti": 7,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "incantesimi_noti": 7,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "incantesimi_noti": 8,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "incantesimi_noti": 8,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "nemico_prescelto_3",
-            "effetti": {"scelta_nemico": 1, "scelta_linguaggi": 1}
-          },
-          {
-            "id": "svanire",
-            "effetti": {"nascondersi_azione_bonus": true, "impossibile_tracciare_magicamenta": true}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "incantesimi_noti": 9,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "incantesimi_noti": 9,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "incantesimi_noti": 10,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "incantesimi_noti": 10,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "sensi_ferini",
-            "effetti": {"ignora_svantaggio_attacco_bersagli_invisibili": true, "percepisce_creature_invisibili_9m": true}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "incantesimi_noti": 11,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "nascondersi_vista", "nome": "Nascondersi in Piena Vista", "descrizione": "Puoi mimetizzarti con fango e piante per ottenere +10 a Furtività." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_ranger_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "incantesimi_noti": 11,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "sterminatore_nemici",
-            "effetti": {"somma_saggezza_tiro_colpire_o_danni_nemico_prescelto": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "sterminatore_nemici", "nome": "Sterminatore di Nemici", "descrizione": "Somma la Saggezza al tiro per colpire o ai danni contro un nemico prescelto." }
         ]
       }
     ]
@@ -305,62 +77,42 @@
   "archetipi": [
     {
       "id_archetipo": "arc_ranger_cacciatore",
-      "id_classe_padre": "cls_ranger",
       "nome": "Cacciatore",
+      "asset_carta": "A_ranger_cacciatore.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "preda_cacciatore", "effetti": {"scelta_preda": 1, "opzioni": ["Assassino di Colossi", "Sterminatore di Giganti", "Spezza Orde"]}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "tattiche_difensive", "effetti": {"scelta_tattica": 1, "opzioni": ["Sfuggire all'Orda", "Difesa Multiattacco", "Volonta di Ferro"]}}
+          "asset_carta": "A_ranger_cacciatore_L3.png",
+          "privilegi": [
+            { "id": "preda_cacciatore", "nome": "Preda del Cacciatore", "descrizione": "Scegli tra Assassino di Colossi, Sterminatore di Giganti o Spezza Orde." }
           ]
         },
         {
           "livello": 11,
-          "privilegi_nascosti": [
-            {"id": "multiattacco", "effetti": {"scelta_multiattacco": 1, "opzioni": ["Raffica", "Attacco Turbinante"]}}
-          ]
-        },
-        {
-          "livello": 15,
-          "privilegi_nascosti": [
-            {"id": "difesa_superiore_cacciatore", "effetti": {"scelta_difesa_superiore": 1, "opzioni": ["Elusione", "Resistere contro la Marea", "Schivata Prodigiosa"]}}
+          "asset_carta": "A_ranger_cacciatore_L11.png",
+          "privilegi": [
+            { "id": "multiattacco", "nome": "Multiattacco", "descrizione": "Scegli tra Raffica (distanza) o Attacco Turbinante (mischia)." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_ranger_signore_bestie",
-      "id_classe_padre": "cls_ranger",
       "nome": "Signore delle Bestie",
+      "asset_carta": "A_ranger_bestie.png",
       "progressione_archetipo": [
         {
           "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "compagno_animale", "effetti": {"scelta_bestia_gs_max_0_25_taglia_media": true, "bonus_competenza_ranger_aggiunto_statistiche_bestia": true, "azione_comando_bestia": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "addestramento_eccezionale", "effetti": {"azione_bonus_comando_scatto_disimpegno_schivata_aiuto_bestia": true, "bestia_attacca_magicamente": true}}
-          ]
-        },
-        {
-          "livello": 11,
-          "privilegi_nascosti": [
-            {"id": "furia_bestiale", "effetti": {"bestia_attacchi_extra": 2}}
+          "asset_carta": "A_ranger_bestie_L3.png",
+          "privilegi": [
+            { "id": "compagno_animale", "nome": "Compagno Animale", "descrizione": "Ottieni un alleato animale GS 1/4 fedele ai tuoi comandi." }
           ]
         },
         {
           "livello": 15,
-          "privilegi_nascosti": [
-            {"id": "condividere_incantesimi", "effetti": {"incantesimo_su_ranger_ha_effetto_anche_su_bestia_9m": true}}
+          "asset_carta": "A_ranger_bestie_L15.png",
+          "privilegi": [
+            { "id": "condividere_inc", "nome": "Condividere Incantesimi", "descrizione": "Gli incantesimi che lanci su di te influenzano anche il tuo compagno animale." }
           ]
         }
       ]
