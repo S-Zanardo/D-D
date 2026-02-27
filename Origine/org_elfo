@@ -1,0 +1,116 @@
+{
+  "origine": {
+    "id_origine": "org_elfo",
+    "nome": "Elfo",
+    "asset_carta": "O_elfo_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 9,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "DES": 2 },
+        "scelte": 0
+      },
+      "competenze": {
+        "abilita_fisse": ["Percezione"]
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Elfico"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "antenato_feerico",
+          "nome": "Antenato Feerico",
+          "effetti": {
+            "vantaggio_ts": ["Charmato"],
+            "immunita": ["Sonno magico"]
+          }
+        },
+        {
+          "id": "trance",
+          "nome": "Trance",
+          "descrizione": "Gli elfi non hanno bisogno di dormire. Meditano in uno stato semicosciente per 4 ore al giorno per ottenere i benefici di 8 ore di riposo lungo."
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_elfo_alto",
+        "nome": "Elfo Alto",
+        "asset_carta": "C_elfo_alto.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "INT": 1 }
+          },
+          "competenze": {
+            "armi_fisse": ["Spada lunga", "Spada corta", "Arco lungo", "Arco corto"]
+          },
+          "linguaggi": {
+            "scelte_extra": 1
+          },
+          "magia_innata": {
+            "trucchetti_scelta": {
+              "quantita": 1,
+              "lista": "Mago",
+              "caratteristica_da_lancio": "INT"
+            }
+          }
+        }
+      },
+      {
+        "id_comunita": "com_elfo_boschi",
+        "nome": "Elfo dei Boschi",
+        "asset_carta": "C_elfo_boschi.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "SAG": 1 }
+          },
+          "velocita_metri": 10.5,
+          "competenze": {
+            "armi_fisse": ["Spada lunga", "Spada corta", "Arco lungo", "Arco corto"]
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "maschera_della_selva",
+              "nome": "Maschera della Selva",
+              "descrizione": "Puoi tentare di nasconderti anche quando sei solo leggermente oscurato da fogliame, pioggia forte, neve o altri fenomeni naturali."
+            }
+          ]
+        }
+      },
+      {
+        "id_comunita": "com_elfo_oscuro",
+        "nome": "Elfo Oscuro (Drow)",
+        "asset_carta": "C_elfo_oscuro.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "CAR": 1 }
+          },
+          "scurovisione_metri": 36,
+          "competenze": {
+            "armi_fisse": ["Stocco", "Spada corta", "Balestra a mano"]
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "sensibilita_luce_solare",
+              "nome": "Sensibilità alla Luce Solare",
+              "effetti": {
+                "svantaggio_attacco_con_luce_diretta": true,
+                "svantaggio_percezione_con_luce_diretta": true
+              }
+            }
+          ],
+          "magia_innata": {
+            "incantesimi_fissi": [
+              { "livello_sblocco": 1, "nome": "Luci Danzanti" },
+              { "livello_sblocco": 3, "nome": "Luminescenza" },
+              { "livello_sblocco": 5, "nome": "Oscurità" }
+            ],
+            "caratteristica_da_lancio": "CAR"
+          }
+        }
+      }
+    ]
+  }
+}
