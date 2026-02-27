@@ -1,0 +1,147 @@
+{
+  "armature": [
+    {
+      "id_arm": "arm_imbottita",
+      "nome": "Armatura Imbottita",
+      "categoria": "Leggera",
+      "costo": "5 mo",
+      "ca_base": 11,
+      "mod_destrezza": "pieno",
+      "forza_minima": 0,
+      "svantaggio_furtivita": true,
+      "peso": 4
+    },
+    {
+      "id_arm": "arm_cuoio",
+      "nome": "Armatura di Cuoio",
+      "categoria": "Leggera",
+      "costo": "10 mo",
+      "ca_base": 11,
+      "mod_destrezza": "pieno",
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 5
+    },
+    {
+      "id_arm": "arm_cuoio_borchiato",
+      "nome": "Armatura di Cuoio Borchiato",
+      "categoria": "Leggera",
+      "costo": "45 mo",
+      "ca_base": 12,
+      "mod_destrezza": "pieno",
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 6
+    },
+    {
+      "id_arm": "arm_pelli",
+      "nome": "Armatura di Pelli",
+      "categoria": "Media",
+      "costo": "10 mo",
+      "ca_base": 12,
+      "mod_destrezza": "max_2",
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 6
+    },
+    {
+      "id_arm": "arm_giaco_maglia",
+      "nome": "Giaco di Maglia",
+      "categoria": "Media",
+      "costo": "50 mo",
+      "ca_base": 13,
+      "mod_destrezza": "max_2",
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 10
+    },
+    {
+      "id_arm": "arm_scaglie",
+      "nome": "Corazza di Scaglie",
+      "categoria": "Media",
+      "costo": "50 mo",
+      "ca_base": 14,
+      "mod_destrezza": "max_2",
+      "forza_minima": 0,
+      "svantaggio_furtivita": true,
+      "peso": 22.5
+    },
+    {
+      "id_arm": "arm_corazza",
+      "nome": "Corazza",
+      "categoria": "Media",
+      "costo": "400 mo",
+      "ca_base": 14,
+      "mod_destrezza": "max_2",
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 10
+    },
+    {
+      "id_arm": "arm_mezza_piastre",
+      "nome": "Mezza Armatura",
+      "categoria": "Media",
+      "costo": "750 mo",
+      "ca_base": 15,
+      "mod_destrezza": "max_2",
+      "forza_minima": 0,
+      "svantaggio_furtivita": true,
+      "peso": 20
+    },
+    {
+      "id_arm": "arm_anelli",
+      "nome": "Armatura ad Anelli",
+      "categoria": "Pesante",
+      "costo": "30 mo",
+      "ca_base": 14,
+      "mod_destrezza": 0,
+      "forza_minima": 0,
+      "svantaggio_furtivita": true,
+      "peso": 20
+    },
+    {
+      "id_arm": "arm_cotta_maglia",
+      "nome": "Cotta di Maglia",
+      "categoria": "Pesante",
+      "costo": "75 mo",
+      "ca_base": 16,
+      "mod_destrezza": 0,
+      "forza_minima": 13,
+      "svantaggio_furtivita": true,
+      "peso": 27.5
+    },
+    {
+      "id_arm": "arm_strisce",
+      "nome": "Armatura a Strisce",
+      "categoria": "Pesante",
+      "costo": "200 mo",
+      "ca_base": 17,
+      "mod_destrezza": 0,
+      "forza_minima": 15,
+      "svantaggio_furtivita": true,
+      "peso": 30
+    },
+    {
+      "id_arm": "arm_piastre",
+      "nome": "Armatura a Piastre",
+      "categoria": "Pesante",
+      "costo": "1500 mo",
+      "ca_base": 18,
+      "mod_destrezza": 0,
+      "forza_minima": 15,
+      "svantaggio_furtivita": true,
+      "peso": 32.5
+    },
+    {
+      "id_arm": "arm_scudo",
+      "nome": "Scudo",
+      "categoria": "Scudo",
+      "costo": "10 mo",
+      "ca_bonus": 2,
+      "mod_destrezza": 0,
+      "forza_minima": 0,
+      "svantaggio_furtivita": false,
+      "peso": 3
+    }
+  ]
+}
