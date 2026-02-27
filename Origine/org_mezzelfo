@@ -1,0 +1,52 @@
+{
+  "origine": {
+    "id_origine": "org_mezzelfo",
+    "nome": "Mezzelfo",
+    "asset_carta": "O_mezzelfo_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 9,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "CAR": 2 },
+        "scelte": 0
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Elfico"],
+        "scelte_extra": 1
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "antenato_feerico",
+          "nome": "Antenato Feerico",
+          "effetti": {
+            "vantaggio_ts": ["Charmato"],
+            "immunita": ["Sonno magico"]
+          }
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_mezzelfo_standard",
+        "nome": "Mezzelfo Versatile",
+        "asset_carta": "C_mezzelfo_std.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": {},
+            "scelte": {
+              "quantita": 2,
+              "valore": 1,
+              "escludi": ["CAR"]
+            }
+          },
+          "competenze": {
+            "abilita_scelta": {
+              "quantita": 2
+            }
+          }
+        }
+      }
+    ]
+  }
+}
