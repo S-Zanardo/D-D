@@ -1,111 +1,73 @@
 {
-  "origini": [
-    {
-      "id_origine": "org_nano",
-      "nome": "Nano",
-      "ui_carosello": {
-        "immagine": "asset_nano_origine.png",
-        "titolo_carta": "Origine: Nano"
+  "origine": {
+    "id_origine": "org_nano",
+    "nome": "Nano",
+    "asset_carta": "O_nano_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 7.5,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "COS": 2 },
+        "scelte": 0
       },
-      "automatismi_scheda": {
-        "taglia": "Media",
-        "velocita_metri": 7.5,
-        "scurovisione_metri": 18,
-        "incrementi_caratteristica": {
-          "fissi": {"COS": 2},
-          "scelte": 0
-        },
-        "competenze": {
-          "armi_fisse": ["Ascia da battaglia", "Ascia", "Martello da guerra", "Martello leggero"],
-          "armature_fisse": [],
-          "strumenti_scelta": {
-            "quantita": 1,
-            "opzioni": ["Strumenti da fabbro", "Strumenti da birraio", "Strumenti da muratore"]
+      "competenze": {
+        "armi_fisse": ["Ascia da battaglia", "Ascia", "Martello da guerra", "Martello leggero"],
+        "strumenti_scelta": {
+          "quantita": 1,
+          "opzioni": ["Strumenti da fabbro", "Strumenti da birraio", "Strumenti da muratore"]
+        }
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Nanico"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "resilienza_nanica",
+          "nome": "Resilienza Nanica",
+          "effetti": {
+            "vantaggio_ts": ["Veleno"],
+            "resistenza_danni": ["Veleno"]
           }
         },
-        "linguaggi": {
-          "fissi": ["Comune", "Nanico"],
-          "scelte_extra": 0
+        {
+          "id": "esperto_minatore",
+          "nome": "Esperto Minatore",
+          "descrizione": "Ogni volta che effettui una prova di Intelligenza (Storia) relativa a un lavoro in pietra, aggiungi il doppio del tuo bonus di competenza."
         },
-        "privilegi_nascosti": [
-          {
-            "id": "resilienza_nanica",
-            "effetti": {
-              "vantaggio_ts": ["Veleno"],
-              "resistenza_danni": ["Veleno"]
-            }
-          },
-          {
-            "id": "esperto_minatore",
-            "effetti": {
-              "raddoppia_competenza_storia": ["Origine_opere_in_pietra"]
-            }
-          }
-        ]
-      },
-      "comunita_collegate": ["com_nano_colline", "com_nano_montagne"]
-    }
-  ],
-  "comunita": [
-    {
-      "id_comunita": "com_nano_colline",
-      "id_origine_padre": "org_nano",
-      "nome": "Nano delle Colline",
-      "ui_carosello": {
-        "immagine": "asset_nano_colline.png",
-        "titolo_carta": "Comunità: Colline"
-      },
-      "automatismi_scheda": {
-        "incrementi_caratteristica": {
-          "fissi": {"SAG": 1},
-          "scelte": 0
-        },
-        "competenze": {
-          "armi_fisse": [],
-          "armature_fisse": []
-        },
-        "modificatori_speciali": {
-          "incremento_pf_base": 1,
-          "incremento_pf_livello": 1
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "robustezza_nanica",
-            "effetti": {
-              "aumento_pf_max": 1,
-              "aumento_pf_livello": 1
-            }
-          }
-        ]
-      }
+        {
+          "id": "robustezza_nanica_movimento",
+          "nome": "Stabilità",
+          "descrizione": "La tua velocità non viene ridotta se indossi un'armatura pesante."
+        }
+      ]
     },
-    {
-      "id_comunita": "com_nano_montagne",
-      "id_origine_padre": "org_nano",
-      "nome": "Nano delle Montagne",
-      "ui_carosello": {
-        "immagine": "asset_nano_montagne.png",
-        "titolo_carta": "Comunità: Montagne"
+    "comunita": [
+      {
+        "id_comunita": "com_nano_colline",
+        "nome": "Nano delle Colline",
+        "asset_carta": "C_nano_colline.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "SAG": 1 }
+          },
+          "bonus_pf_per_livello": 1
+        }
       },
-      "automatismi_scheda": {
-        "incrementi_caratteristica": {
-          "fissi": {"FOR": 2},
-          "scelte": 0
-        },
-        "competenze": {
-          "armi_fisse": [],
-          "armature_fisse": ["Armature leggere", "Armature medie"]
-        },
-        "modificatori_speciali": {},
-        "privilegi_nascosti": [
-          {
-            "id": "addestramento_armature_naniche",
-            "effetti": {
-              "competenza_armature": ["Leggere", "Medie"]
-            }
+      {
+        "id_comunita": "com_nano_montagne",
+        "nome": "Nano delle Montagne",
+        "asset_carta": "C_nano_montagne.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "FOR": 2 }
+          },
+          "competenze": {
+            "armature_fisse": ["Leggere", "Medie"]
           }
-        ]
+        }
       }
-    }
-  ]
+    ]
+  }
 }
