@@ -1,0 +1,248 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_dragonide",
+      "nome": "Dragonide",
+      "ui_carosello": {
+        "immagine": "asset_dragonide_origine.png",
+        "titolo_carta": "Origine: Dragonide"
+      },
+      "automatismi_scheda": {
+        "taglia": "Media",
+        "velocita_metri": 9.0,
+        "scurovisione_metri": 0,
+        "incrementi_caratteristica": {
+          "fissi": {"FOR": 2, "CAR": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Draconico"],
+          "scelte_extra": 0
+        }
+      },
+      "comunita_collegate": [
+        "com_drago_nero", "com_drago_blu", "com_drago_ottone", 
+        "com_drago_bronzo", "com_drago_rame", "com_drago_oro", 
+        "com_drago_verde", "com_drago_rosso", "com_drago_argento", 
+        "com_drago_bianco"
+      ]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_drago_nero",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago Nero",
+      "ui_carosello": {
+        "immagine": "asset_drago_nero.png",
+        "titolo_carta": "Retaggio: Nero"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Acido"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Acido", "forma": "Linea 1,5 x 9m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_blu",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago Blu",
+      "ui_carosello": {
+        "immagine": "asset_drago_blu.png",
+        "titolo_carta": "Retaggio: Blu"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Fulmine"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Fulmine", "forma": "Linea 1,5 x 9m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_ottone",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago d'Ottone",
+      "ui_carosello": {
+        "immagine": "asset_drago_ottone.png",
+        "titolo_carta": "Retaggio: Ottone"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Fuoco"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Fuoco", "forma": "Linea 1,5 x 9m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_bronzo",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago di Bronzo",
+      "ui_carosello": {
+        "immagine": "asset_drago_bronzo.png",
+        "titolo_carta": "Retaggio: Bronzo"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Fulmine"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Fulmine", "forma": "Linea 1,5 x 9m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_rame",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago di Rame",
+      "ui_carosello": {
+        "immagine": "asset_drago_rame.png",
+        "titolo_carta": "Retaggio: Rame"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Acido"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Acido", "forma": "Linea 1,5 x 9m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_oro",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago d'Oro",
+      "ui_carosello": {
+        "immagine": "asset_drago_oro.png",
+        "titolo_carta": "Retaggio: Oro"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Fuoco"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Fuoco", "forma": "Cono 4,5m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_verde",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago Verde",
+      "ui_carosello": {
+        "immagine": "asset_drago_verde.png",
+        "titolo_carta": "Retaggio: Verde"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Veleno"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Veleno", "forma": "Cono 4,5m", "tiro_salvezza": "COS"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_rosso",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago Rosso",
+      "ui_carosello": {
+        "immagine": "asset_drago_rosso.png",
+        "titolo_carta": "Retaggio: Rosso"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Fuoco"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Fuoco", "forma": "Cono 4,5m", "tiro_salvezza": "DES"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_argento",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago d'Argento",
+      "ui_carosello": {
+        "immagine": "asset_drago_argento.png",
+        "titolo_carta": "Retaggio: Argento"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Freddo"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Freddo", "forma": "Cono 4,5m", "tiro_salvezza": "COS"}
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_drago_bianco",
+      "id_origine_padre": "org_dragonide",
+      "nome": "Retaggio: Drago Bianco",
+      "ui_carosello": {
+        "immagine": "asset_drago_bianco.png",
+        "titolo_carta": "Retaggio: Bianco"
+      },
+      "automatismi_scheda": {
+        "privilegi_nascosti": [
+          {
+            "id": "resistenza_draconica",
+            "effetti": {"resistenza_danni": ["Freddo"]}
+          },
+          {
+            "id": "arma_a_soffio",
+            "effetti": {"tipo_danno": "Freddo", "forma": "Cono 4,5m", "tiro_salvezza": "COS"}
+          }
+        ]
+      }
+    }
+  ]
+}
