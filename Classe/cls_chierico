@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_chierico",
     "nome": "Chierico",
-    "ui_selezione": {
-      "immagine": "asset_chierico.png",
-      "titolo_carta": "Classe: Chierico"
+    "carta_info_classe": {
+      "asset_carta": "C_chierico_info.png",
+      "descrizione": "Un agente divino capace di curare le ferite, proteggere gli alleati e scatenare l'ira del proprio dio."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -12,8 +12,7 @@
       "caratteristica_incantatore": "SAG",
       "competenze": {
         "armature": ["Leggere", "Medie", "Scudi"],
-        "armi": ["Semplici"],
-        "strumenti": []
+        "armi": ["Semplici"]
       },
       "abilita_scelta": {
         "quantita": 2,
@@ -22,753 +21,79 @@
       "equipaggiamento_partenza": [
         {"scelta": 1, "opzioni": ["Mazza", "Martello da guerra"]},
         {"scelta": 1, "opzioni": ["Corazza a scaglie", "Armatura di cuoio", "Cotta di maglia"]},
-        {"scelta": 1, "opzioni": ["Balestra leggera e 20 dardi", "Arma semplice"]},
+        {"scelta": 1, "opzioni": ["Balestra leggera", "Arma semplice"]},
         {"scelta": 1, "opzioni": ["Borsa del sacerdote", "Zaino da esploratore"]},
         {"fisso": ["Scudo", "Simbolo sacro"]}
       ]
     },
     "livello_scelta_archetipo": 1,
-    "archetipi_collegati": [
-      "arc_chierico_conoscenza", "arc_chierico_vita", "arc_chierico_luce", 
-      "arc_chierico_natura", "arc_chierico_tempesta", "arc_chierico_inganno", "arc_chierico_guerra"
-    ],
-    "progressione": [
+    "archetipi_collegati": ["arc_chierico_conoscenza", "arc_chierico_vita", "arc_chierico_luce", "arc_chierico_natura", "arc_chierico_tempesta", "arc_chierico_inganno", "arc_chierico_guerra"],
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_chierico_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "incantesimi_chierico",
-            "effetti": {"accesso_lista": "Chierico", "preparazione_incantesimi": "mod_SAG + livello_chierico"}
-          }
+        "statistiche": { "trucchetti": 3, "slot_L1": 2 },
+        "privilegi_sbloccati": [
+          { "id": "incantesimi_chierico", "nome": "Incantesimi", "effetti": {"preparazione": "mod_SAG + livello"} },
+          { "id": "dominio_divino", "nome": "Dominio Divino", "descrizione": "Scegli il tuo Dominio Divino (Archetipo) al 1° livello." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_chierico_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 3},
-          "usi_incanalare_divinita": 1
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "scacciare_non_morti",
-            "effetti": {"ts_saggezza_scacciare": true}
-          }
-        ]
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 2},
-          "usi_incanalare_divinita": 1
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3},
-          "usi_incanalare_divinita": 1
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "slot_L1": 3, "usi_incanalare": 1 },
+        "privilegi_sbloccati": [
+          { "id": "incanalare_divinita", "nome": "Incanalarare Divinità", "descrizione": "Attingi energia divina per alimentare effetti magici." },
+          { "id": "scacciare_non_morti", "nome": "Scacciare Non Morti", "descrizione": "I non morti entro 9m devono effettuare un TS Saggezza o fuggire." }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_chierico_L5.png",
         "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2},
-          "usi_incanalare_divinita": 1
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "distruggere_non_morti_1",
-            "effetti": {"distruzione_gs_max": 0.5}
-          }
-        ]
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          },
-          {
-            "id": "distruggere_non_morti_2",
-            "effetti": {"distruzione_gs_max": 1}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "intervento_divino",
-            "effetti": {"probabilita_successo_percentuale": "livello_chierico"}
-          }
-        ]
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "distruggere_non_morti_3",
-            "effetti": {"distruzione_gs_max": 2}
-          }
-        ]
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "distruggere_non_morti_4",
-            "effetti": {"distruzione_gs_max": 3}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "usi_incanalare_divinita": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1},
-          "usi_incanalare_divinita": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "distruggere_non_morti_5",
-            "effetti": {"distruzione_gs_max": 4}
-          }
-        ]
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1},
-          "usi_incanalare_divinita": 3
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1},
-          "usi_incanalare_divinita": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 20,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1},
-          "usi_incanalare_divinita": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "intervento_divino_infallibile",
-            "effetti": {"probabilita_successo_percentuale": 100}
-          }
+        "statistiche": { "slot_L1": 4, "slot_L2": 3, "slot_L3": 2 },
+        "privilegi_sbloccati": [
+          { "id": "distruggere_non_morti", "nome": "Distruggere Non Morti (GS 1/2)", "descrizione": "Se un non morto fallisce il TS contro Scacciare, viene distrutto all'istante." }
         ]
       }
     ]
   },
   "archetipi": [
     {
-      "id_archetipo": "arc_chierico_conoscenza",
-      "id_classe_padre": "cls_chierico",
-      "nome": "Dominio della Conoscenza",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_conoscenza_1", "effetti": {"incantesimi_preparati_fissi": ["Comando", "Identificare"]}},
-            {"id": "benedizioni_conoscenza", "effetti": {"scelta_linguaggi": 2, "raddoppia_competenza_abilita_scelta": {"quantita": 2, "opzioni": ["Arcano", "Natura", "Religione", "Storia"]}}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_conoscenza", "effetti": {"competenza_temporanea_abilita_strumento": 10}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_conoscenza_3", "effetti": {"incantesimi_preparati_fissi": ["Presagio", "Suggestione"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_conoscenza_5", "effetti": {"incantesimi_preparati_fissi": ["Nondividuazione", "Parlare con i Morti"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "lettura_pensieri", "effetti": {"incanalare_divinita_leggere_pensieri": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_conoscenza_7", "effetti": {"incantesimi_preparati_fissi": ["Confusione", "Occhio Arcano"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_potenti_conoscenza", "effetti": {"somma_saggezza_danni_trucchetti": true}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_conoscenza_9", "effetti": {"incantesimi_preparati_fissi": ["Conoscenza delle Leggende", "Scrutare"]}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "visioni_passato", "effetti": {"visioni_oggetti_luoghi": true}}
-          ]
-        }
-      ]
-    },
-    {
       "id_archetipo": "arc_chierico_vita",
-      "id_classe_padre": "cls_chierico",
       "nome": "Dominio della Vita",
+      "asset_carta": "A_chierico_vita.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_vita_1", "effetti": {"incantesimi_preparati_fissi": ["Benedizione", "Cura Ferite"]}},
-            {"id": "competenza_bonus_vita", "effetti": {"competenza_armature": ["Pesanti"]}},
-            {"id": "discepolo_vita", "effetti": {"bonus_cura_incantesimi": "2 + livello_incantesimo"}}
+          "asset_carta": "A_chierico_vita_L1.png",
+          "privilegi": [
+            { "id": "competenza_pesanti", "nome": "Competenza Bonus", "effetti": {"armature": ["Pesanti"]} },
+            { "id": "discepolo_vita", "nome": "Discepolo della Vita", "effetti": {"bonus_cura": "2 + livello_inc"} }
           ]
         },
         {
           "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_vita", "effetti": {"cura_divisa_alleati": "5 * livello_chierico"}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_vita_3", "effetti": {"incantesimi_preparati_fissi": ["Arma Spirituale", "Ristorare Inferiore"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_vita_5", "effetti": {"incantesimi_preparati_fissi": ["Faro di Speranza", "Rinascita"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "guaritore_benedetto", "effetti": {"cura_personale_quando_curi_altri": "2 + livello_incantesimo"}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_vita_7", "effetti": {"incantesimi_preparati_fissi": ["Interdizione alla Morte", "Guardiano della Fede"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_vita", "effetti": {"danni_radiosi_attacco_arma": "1d8"}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_vita_9", "effetti": {"incantesimi_preparati_fissi": ["Cura Ferite di Massa", "Rianimare Morti"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_vita_migliorato", "effetti": {"danni_radiosi_attacco_arma": "2d8"}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "guarigione_suprema", "effetti": {"massimizza_dadi_cura": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_chierico_luce",
-      "id_classe_padre": "cls_chierico",
-      "nome": "Dominio della Luce",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_luce_1", "effetti": {"incantesimi_preparati_fissi": ["Fuoco Feerico", "Mani Brucianti"]}},
-            {"id": "trucchetto_bonus_luce", "effetti": {"trucchetti_noti_fissi": ["Luce"]}},
-            {"id": "bagliore_interdizione", "effetti": {"svantaggio_attacco_reazione": "mod_SAG"}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_luce", "effetti": {"danni_radiosi_area": "2d10 + livello_chierico"}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_luce_3", "effetti": {"incantesimi_preparati_fissi": ["Raggio Rovente", "Sfera Infuocata"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_luce_5", "effetti": {"incantesimi_preparati_fissi": ["Luce Diurna", "Palla di Fuoco"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "bagliore_interdizione_migliorato", "effetti": {"protezione_alleati": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_luce_7", "effetti": {"incantesimi_preparati_fissi": ["Guardiano della Fede", "Muro di Fuoco"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_potenti_luce", "effetti": {"somma_saggezza_danni_trucchetti": true}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_luce_9", "effetti": {"incantesimi_preparati_fissi": ["Colpo Infuocato", "Scrutare"]}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "corona_luce", "effetti": {"svantaggio_ts_fuoco_radioso_nemici": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_chierico_natura",
-      "id_classe_padre": "cls_chierico",
-      "nome": "Dominio della Natura",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_natura_1", "effetti": {"incantesimi_preparati_fissi": ["Amicizia con gli Animali", "Parlare con gli Animali"]}},
-            {"id": "accolito_natura", "effetti": {"trucchetti_druido_scelta": 1, "abilita_scelta": {"quantita": 1, "opzioni": ["Addestrare Animali", "Natura", "Sopravvivenza"]}}},
-            {"id": "competenza_bonus_natura", "effetti": {"competenza_armature": ["Pesanti"]}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_natura", "effetti": {"affascinare_animali_vegetali": true}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_natura_3", "effetti": {"incantesimi_preparati_fissi": ["Crescita di Spine", "Pelle Coriacea"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_natura_5", "effetti": {"incantesimi_preparati_fissi": ["Crescita Vegetale", "Muro di Vento"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "smorzare_elementi", "effetti": {"reazione_resistenza_acido_freddo_fuoco_fulmine_tuono": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_natura_7", "effetti": {"incantesimi_preparati_fissi": ["Dominare Bestie", "Viticci Afferranti"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_natura", "effetti": {"danni_scelta_attacco_arma": {"dadi": "1d8", "tipo": ["Freddo", "Fuoco", "Fulmine"]}}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_natura_9", "effetti": {"incantesimi_preparati_fissi": ["Piaga degli Insetti", "Traslazione Arborea"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_natura_migliorato", "effetti": {"danni_scelta_attacco_arma": {"dadi": "2d8", "tipo": ["Freddo", "Fuoco", "Fulmine"]}}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "maestro_natura", "effetti": {"comando_creature_affascinate_dominio": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_chierico_tempesta",
-      "id_classe_padre": "cls_chierico",
-      "nome": "Dominio della Tempesta",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_tempesta_1", "effetti": {"incantesimi_preparati_fissi": ["Nube di Nebbia", "Onda Tonante"]}},
-            {"id": "competenza_bonus_tempesta", "effetti": {"competenza_armature": ["Pesanti"], "competenza_armi": ["Marziali"]}},
-            {"id": "ira_tempesta", "effetti": {"reazione_danni_fulmine_tuono_attaccante": "2d8"}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_tempesta", "effetti": {"massimizza_danni_fulmine_tuono": true}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_tempesta_3", "effetti": {"incantesimi_preparati_fissi": ["Folata di Vento", "Frantumare"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_tempesta_5", "effetti": {"incantesimi_preparati_fissi": ["Invocare il Fulmine", "Tempesta di Nevischio"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "colpo_fulmine", "effetti": {"spinta_3m_danni_fulmine": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_tempesta_7", "effetti": {"incantesimi_preparati_fissi": ["Controllo dell'Acqua", "Tempesta di Ghiaccio"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_tempesta", "effetti": {"danni_tuono_attacco_arma": "1d8"}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_tempesta_9", "effetti": {"incantesimi_preparati_fissi": ["Onda Distruttiva", "Piaga degli Insetti"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_tempesta_migliorato", "effetti": {"danni_tuono_attacco_arma": "2d8"}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "nato_tempesta", "effetti": {"velocita_volo_all_aperto": "velocita_base"}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_chierico_inganno",
-      "id_classe_padre": "cls_chierico",
-      "nome": "Dominio dell'Inganno",
-      "progressione_archetipo": [
-        {
-          "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_inganno_1", "effetti": {"incantesimi_preparati_fissi": ["Camuffare Se Stesso", "Charme su Persone"]}},
-            {"id": "benedizione_ingannatore", "effetti": {"vantaggio_furtivita_creatura_toccata": true}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_inganno", "effetti": {"creazione_illusione_duplicato": true}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_inganno_3", "effetti": {"incantesimi_preparati_fissi": ["Immagine Speculare", "Passare Senza Tracce"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_inganno_5", "effetti": {"incantesimi_preparati_fissi": ["Dissolvi Magie", "Intermittenza"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "mantello_ombre", "effetti": {"incanalare_divinita_invisibilita": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_inganno_7", "effetti": {"incantesimi_preparati_fissi": ["Metamorfosi", "Porta Dimensionale"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_inganno", "effetti": {"danni_veleno_attacco_arma": "1d8"}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_inganno_9", "effetti": {"incantesimi_preparati_fissi": ["Dominare Persone", "Modificare Memoria"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_inganno_migliorato", "effetti": {"danni_veleno_attacco_arma": "2d8"}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "duplicato_migliorato", "effetti": {"creazione_illusione_fino_a_quattro": true}}
+          "asset_carta": "A_chierico_vita_L2.png",
+          "privilegi": [
+            { "id": "incanalare_vita", "nome": "Incanalarare: Preservare Vita", "descrizione": "Cura alleati feriti per un totale di 5 x livello." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_chierico_guerra",
-      "id_classe_padre": "cls_chierico",
       "nome": "Dominio della Guerra",
+      "asset_carta": "A_chierico_guerra.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_guerra_1", "effetti": {"incantesimi_preparati_fissi": ["Favore Divino", "Scudo della Fede"]}},
-            {"id": "competenza_bonus_guerra", "effetti": {"competenza_armature": ["Pesanti"], "competenza_armi": ["Marziali"]}},
-            {"id": "sacerdote_guerra", "effetti": {"attacco_arma_azione_bonus": "mod_SAG"}}
-          ]
-        },
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_guerra", "effetti": {"bonus_colpire_piu_10": true}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_guerra_3", "effetti": {"incantesimi_preparati_fissi": ["Arma Magica", "Arma Spirituale"]}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_guerra_5", "effetti": {"incantesimi_preparati_fissi": ["Mantello del Crociato", "Spiriti Guardiani"]}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "incanalare_divinita_guerra_alleato", "effetti": {"bonus_colpire_piu_10_alleato": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_guerra_7", "effetti": {"incantesimi_preparati_fissi": ["Liberta di Movimento", "Pelle di Pietra"]}}
-          ]
-        },
-        {
-          "livello": 8,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_guerra", "effetti": {"danni_arma_stesso_tipo": "1d8"}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_dominio_guerra_9", "effetti": {"incantesimi_preparati_fissi": ["Colpo Infuocato", "Sfera Distruttiva"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "colpo_divino_guerra_migliorato", "effetti": {"danni_arma_stesso_tipo": "2d8"}}
-          ]
-        },
-        {
-          "livello": 17,
-          "privilegi_nascosti": [
-            {"id": "avatar_battaglia", "effetti": {"resistenza_danni": ["Contundente", "Perforante", "Tagliente_da_armi_non_magiche"]}}
+          "asset_carta": "A_chierico_guerra_L1.png",
+          "privilegi": [
+            { "id": "comp_guerra", "nome": "Competenza Bonus", "effetti": {"armature": ["Pesanti"], "armi": ["Marziali"]} },
+            { "id": "sacerdote_guerra", "nome": "Sacerdote di Guerra", "descrizione": "Puoi compiere un attacco come azione bonus (volte = mod_SAG)." }
           ]
         }
       ]
