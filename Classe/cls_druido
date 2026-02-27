@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_druido",
     "nome": "Druido",
-    "ui_selezione": {
-      "immagine": "asset_druido.png",
-      "titolo_carta": "Classe: Druido"
+    "carta_info_classe": {
+      "asset_carta": "C_druido_info.png",
+      "descrizione": "Un custode della natura capace di assumere forme animali e di scatenare la furia degli elementi."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -21,253 +21,82 @@
         "opzioni": ["Addestrare Animali", "Arcano", "Intuizione", "Medicina", "Natura", "Percezione", "Religione", "Sopravvivenza"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Scudo in legno", "Arma semplice"]},
-        {"scelta": 1, "opzioni": ["Scimitarra", "Arma semplice da mischia"]},
-        {"fisso": ["Armatura di cuoio", "Zaino da esploratore", "Focalizzatore druidico"]}
+        { "scelta": 1, "opzioni": ["Scudo in legno", "Arma semplice"] },
+        { "scelta": 1, "opzioni": ["Scimitarra", "Arma semplice da mischia"] },
+        { "fisso": ["Armatura di cuoio", "Zaino da esploratore", "Focalizzatore druidico"] }
       ]
     },
     "livello_scelta_archetipo": 2,
     "archetipi_collegati": ["arc_druido_terra", "arc_druido_luna"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_druido_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "slot_incantesimi": {"1": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "druidico",
-            "effetti": {"linguaggi_fissi": ["Druidico"]}
-          },
-          {
-            "id": "incantesimi_druido",
-            "effetti": {"accesso_lista": "Druido", "preparazione_incantesimi": "mod_SAG + livello_druido"}
-          }
+        "statistiche_classe": { "trucchetti_noti": 2, "slot_incantesimi": { "1": 2 } },
+        "privilegi_sbloccati": [
+          { "id": "druidico", "nome": "Druidico", "effetti": { "linguaggi_fissi": ["Druidico"] } },
+          { "id": "incantesimi_druido", "nome": "Incantesimi", "effetti": { "accesso_lista": "Druido", "preparazione": "mod_SAG + livello" } }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_druido_L2.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "slot_incantesimi": {"1": 3},
+          "slot_incantesimi": { "1": 3 },
           "usi_forma_selvatica": 2,
           "forma_selvatica_gs_max": 0.25,
           "forma_selvatica_restrizioni": ["No volo", "No nuoto"]
         },
-        "privilegi_nascosti": [
-          {
-            "id": "forma_selvatica",
-            "effetti": {"trasformazione_bestia": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "forma_selvatica", "nome": "Forma Selvatica", "descrizione": "Puoi trasformarti in una bestia che hai visto." },
+          { "id": "circolo_druidico", "nome": "Circolo Druidico", "descrizione": "Scegli il tuo archetipo (Circolo della Terra o della Luna)." }
         ]
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 2,
-          "slot_incantesimi": {"1": 4, "2": 2}
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 4,
+        "asset_carta": "C_druido_L4.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
           "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3},
+          "slot_incantesimi": { "1": 4, "2": 3 },
           "forma_selvatica_gs_max": 0.5,
           "forma_selvatica_restrizioni": ["No volo"]
         },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "incremento_caratteristiche", "nome": "Aumento dei Punteggi di Caratteristica", "descrizione": "Aumenta un punteggio di 2 o due punteggi di 1, oppure scegli un talento." }
         ]
-      },
-      {
-        "livello": 5,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 8,
+        "asset_carta": "C_druido_L8.png",
         "bonus_competenza": 3,
         "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2},
-          "forma_selvatica_gs_max": 1,
+          "slot_incantesimi": { "1": 4, "2": 3, "3": 3, "4": 2 },
+          "forma_selvatica_gs_max": 1.0,
           "forma_selvatica_restrizioni": []
         },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "incremento_caratteristiche_2", "nome": "Aumento dei Punteggi di Caratteristica", "descrizione": "Aumenta un punteggio di 2 o due punteggi di 1, oppure scegli un talento." }
         ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 18,
+        "asset_carta": "C_druido_L18.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "corpo_senza_tempo",
-            "effetti": {"invecchiamento_rallentato": 10}
-          },
-          {
-            "id": "incantesimi_bestiali",
-            "effetti": {"lancio_incantesimi_forma_selvatica": true}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "corpo_senza_tempo", "nome": "Corpo Senza Tempo", "descrizione": "Invecchi 10 volte più lentamente." },
+          { "id": "incantesimi_bestiali", "nome": "Incantesimi Bestiali", "descrizione": "Puoi lanciare incantesimi mentre sei in Forma Selvatica." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_druido_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1},
-          "usi_forma_selvatica": 999
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "arcidruido",
-            "effetti": {"ignora_componenti_verbali_somatiche": true}
-          }
+        "statistiche_classe": { "usi_forma_selvatica": "Illimitati" },
+        "privilegi_sbloccati": [
+          { "id": "arcidruido", "nome": "Arcidruido", "descrizione": "Puoi usare Forma Selvatica quante volte vuoi e ignori componenti verbali/somatiche." }
         ]
       }
     ]
@@ -275,90 +104,44 @@
   "archetipi": [
     {
       "id_archetipo": "arc_druido_terra",
-      "id_classe_padre": "cls_druido",
       "nome": "Circolo della Terra",
+      "asset_carta": "A_druido_terra.png",
       "progressione_archetipo": [
         {
           "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "trucchetto_bonus_terra", "effetti": {"trucchetti_druido_scelta": 1}},
-            {"id": "recupero_naturale", "effetti": {"recupero_slot_riposo_breve": "livello_druido / 2"}},
-            {"id": "scelta_ambiente", "effetti": {"scelta_ambiente_magico": 1, "opzioni": ["Artico", "Costa", "Deserto", "Foresta", "Montagna", "Palude", "Pianura", "Sottosuolo"]}}
-          ]
-        },
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_circolo_3", "effetti": {"applica_incantesimi_ambiente_scelto": true}}
-          ]
-        },
-        {
-          "livello": 5,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_circolo_5", "effetti": {"applica_incantesimi_ambiente_scelto": true}}
+          "asset_carta": "A_druido_terra_L2.png",
+          "privilegi": [
+            { "id": "trucchetto_terra", "nome": "Trucchetto Bonus", "effetti": { "trucchetti_druido_scelta": 1 } },
+            { "id": "recupero_naturale", "nome": "Recupero Naturale", "descrizione": "Recuperi slot incantesimi durante un riposo breve." }
           ]
         },
         {
           "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "andatura_terrestre", "effetti": {"immunita_terreno_difficile_non_magico": true, "vantaggio_ts_piante_magiche": true}}
-          ]
-        },
-        {
-          "livello": 7,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_circolo_7", "effetti": {"applica_incantesimi_ambiente_scelto": true}}
-          ]
-        },
-        {
-          "livello": 9,
-          "privilegi_nascosti": [
-            {"id": "incantesimi_circolo_9", "effetti": {"applica_incantesimi_ambiente_scelto": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "interdizione_natura", "effetti": {"immunita_condizione": ["Affascinato_da_elementali_o_folletti", "Spaventato_da_elementali_o_folletti"], "immunita_danni": ["Veleno"], "immunita_malattie": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "santuario_natura", "effetti": {"esitazione_attacco_bestie_piante": "SAG"}}
+          "asset_carta": "A_druido_terra_L6.png",
+          "privilegi": [
+            { "id": "andatura_terrestre", "nome": "Andatura Terrestre", "descrizione": "Il terreno difficile non magico non ti rallenta." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_druido_luna",
-      "id_classe_padre": "cls_druido",
       "nome": "Circolo della Luna",
+      "asset_carta": "A_druido_luna.png",
       "progressione_archetipo": [
         {
           "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "forma_selvatica_combattimento", "effetti": {"trasformazione_azione_bonus": true, "cura_forma_selvatica_slot": "1d8_per_livello_slot"}},
-            {"id": "forme_circolo_1", "effetti": {"forma_selvatica_gs_max_sovrascritto": 1}}
+          "asset_carta": "A_druido_luna_L2.png",
+          "privilegi": [
+            { "id": "forma_luna_comb", "nome": "Forma Selvatica da Combattimento", "descrizione": "Trasformati come azione bonus e usa slot per curarti." },
+            { "id": "forme_migliorate", "nome": "Forme del Circolo", "effetti": { "forma_selvatica_gs_max_sovrascritto": 1.0 } }
           ]
         },
         {
           "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "colpo_primordiale", "effetti": {"attacchi_forma_selvatica_magici": true}},
-            {"id": "forme_circolo_2", "effetti": {"forma_selvatica_gs_max_sovrascritto": "livello_druido / 3"}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "forma_selvatica_elementale", "effetti": {"trasformazione_elementale": ["Aria", "Acqua", "Fuoco", "Terra"], "costo_usi_forma_selvatica": 2}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "mille_forme", "effetti": {"lancio_alterare_se_stesso_a_volonta": true}}
+          "asset_carta": "A_druido_luna_L6.png",
+          "privilegi": [
+            { "id": "colpo_primordiale", "nome": "Colpo Primordiale", "descrizione": "I tuoi attacchi in forma animale sono magici." }
           ]
         }
       ]
