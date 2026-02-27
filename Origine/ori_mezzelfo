@@ -1,0 +1,24 @@
+{
+  "origine": {
+    "id_ori": "ori_mezzelfo",
+    "nome": "Mezzelfo",
+    "asset_carta": "O_mezzelfo.png",
+    "descrizione": "Camminatori tra due mondi, i mezzelfi uniscono la grazia elfica alla determinazione umana, dimostrando un'adattabilità senza pari.",
+    "tratti_base": [
+      { "nome": "Taglia", "valore": "Media" },
+      { "nome": "Velocità", "valore": "9m" },
+      { "nome": "Scurovisione", "valore": "18m" },
+      { "nome": "Antenato Feerico", "valore": "Vantaggio contro Charme, immunità al sonno magico" },
+      { "nome": "Linguaggi", "valore": "Comune, Elfico, +1 a scelta" }
+    ],
+    "comunita": [
+      { 
+        "id_com": "com_mezzelfo_standard", 
+        "nome": "Mezzelfo Versatile", 
+        "asset_carta": "C_mezzelfo_std.png", 
+        "bonus": {"CAR": 2, "Scelta_1": 1, "Scelta_2": 1}, 
+        "tratti_comunitari": ["Versatilità nelle Abilità (Competenza in 2 abilità a scelta)"] 
+      }
+    ]
+  }
+}
