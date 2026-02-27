@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_bardo",
     "nome": "Bardo",
-    "ui_selezione": {
-      "immagine": "asset_bardo.png",
-      "titolo_carta": "Classe: Bardo"
+    "carta_info_classe": {
+      "asset_carta": "C_bardo_info.png",
+      "descrizione": "Un maestro della canzone, della parola e della magia, capace di ispirare gli alleati e manipolare la mente dei nemici."
     },
     "automatismi_base": {
       "dado_vita": 8,
@@ -13,428 +13,130 @@
       "competenze": {
         "armature": ["Leggere"],
         "armi": ["Semplici", "Balestre a mano", "Spade lunghe", "Stocchi", "Spade corte"],
-        "strumenti_scelta": {"quantita": 3, "tipo": "Strumenti musicali"}
+        "strumenti_scelta": { "quantita": 3, "tipo": "Strumenti musicali" }
       },
       "abilita_scelta": {
         "quantita": 3,
         "opzioni": ["Tutte"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Stocco", "Spada lunga", "Arma semplice"]},
-        {"scelta": 1, "opzioni": ["Borsa del diplomatico", "Borsa dell'intrattenitore"]},
-        {"scelta": 1, "opzioni": ["Liuto", "Strumento musicale"]},
-        {"fisso": ["Armatura di cuoio", "Pugnale"]}
+        { "scelta": 1, "opzioni": ["Stocco", "Spada lunga", "Arma semplice"] },
+        { "scelta": 1, "opzioni": ["Borsa del diplomatico", "Borsa dell'intrattenitore"] },
+        { "scelta": 1, "opzioni": ["Liuto", "Strumento musicale"] },
+        { "fisso": ["Armatura di cuoio", "Pugnale"] }
       ]
     },
     "livello_scelta_archetipo": 3,
     "archetipi_collegati": ["arc_bardo_sapienza", "arc_bardo_valore"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_bardo_L1.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
           "trucchetti_noti": 2,
           "incantesimi_noti": 4,
-          "slot_incantesimi": {"1": 2},
+          "slot_incantesimi": { "1": 2 },
           "dado_ispirazione": "1d6"
         },
-        "privilegi_nascosti": [
+        "privilegi_sbloccati": [
           {
             "id": "incantesimi_bardo",
-            "effetti": {"accesso_lista": "Bardo"}
+            "nome": "Incantesimi",
+            "effetti": { "accesso_lista": "Bardo" }
           },
           {
             "id": "ispirazione_bardica",
-            "effetti": {"usi_ispirazione": "mod_CAR"}
+            "nome": "Ispirazione Bardica",
+            "effetti": { "usi_ispirazione": "mod_CAR" },
+            "descrizione": "Come azione bonus, conferisci un dado di ispirazione a un alleato entro 18m."
           }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_bardo_L2.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
           "trucchetti_noti": 2,
           "incantesimi_noti": 5,
-          "slot_incantesimi": {"1": 3},
+          "slot_incantesimi": { "1": 3 },
           "dado_ispirazione": "1d6"
         },
-        "privilegi_nascosti": [
+        "privilegi_sbloccati": [
           {
             "id": "tuttofare",
-            "effetti": {"aggiungi_meta_competenza_prove_senza_competenza": true}
+            "nome": "Tuttofare",
+            "effetti": { "aggiungi_meta_competenza_prove_senza_competenza": true },
+            "descrizione": "Sommi metà del bonus competenza a ogni prova di abilità in cui non sei competente."
           },
           {
-            "id": "canto_riposo_1",
-            "effetti": {"pf_extra_riposo_breve": "1d6"}
+            "id": "canto_di_riposo",
+            "nome": "Canto di Riposo",
+            "descrizione": "Gli alleati recuperano 1d6 PF extra alla fine di un riposo breve."
           }
         ]
       },
       {
         "livello": 3,
+        "asset_carta": "C_bardo_L3.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
           "trucchetti_noti": 2,
           "incantesimi_noti": 6,
-          "slot_incantesimi": {"1": 4, "2": 2},
+          "slot_incantesimi": { "1": 4, "2": 2 },
           "dado_ispirazione": "1d6"
         },
-        "privilegi_nascosti": [
+        "privilegi_sbloccati": [
           {
-            "id": "maestria_1",
-            "effetti": {"scelta_maestria_abilita": 2}
+            "id": "scelta_archetipo",
+            "nome": "Collegio Bardico",
+            "descrizione": "Scegli un collegio che definisce il tuo stile artistico e magico."
+          },
+          {
+            "id": "maestria",
+            "nome": "Maestria",
+            "effetti": { "raddoppia_competenza_abilita": 2 },
+            "descrizione": "Raddoppia il bonus di competenza in due abilità a scelta."
           }
         ]
       },
       {
         "livello": 4,
+        "asset_carta": "C_bardo_L4.png",
         "bonus_competenza": 2,
         "statistiche_classe": {
           "trucchetti_noti": 3,
           "incantesimi_noti": 7,
-          "slot_incantesimi": {"1": 4, "2": 3},
+          "slot_incantesimi": { "1": 4, "2": 3 },
           "dado_ispirazione": "1d6"
         },
-        "privilegi_nascosti": [
+        "privilegi_sbloccati": [
           {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
+            "id": "incremento_caratteristiche",
+            "nome": "Aumento dei Punteggi di Caratteristica",
+            "descrizione": "Aumenta un punteggio di 2 o due punteggi di 1, oppure scegli un talento."
           }
         ]
       },
       {
         "livello": 5,
+        "asset_carta": "C_bardo_L5.png",
         "bonus_competenza": 3,
         "statistiche_classe": {
           "trucchetti_noti": 3,
           "incantesimi_noti": 8,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2},
+          "slot_incantesimi": { "1": 4, "2": 3, "3": 2 },
           "dado_ispirazione": "1d8"
         },
-        "privilegi_nascosti": [
+        "privilegi_sbloccati": [
           {
-            "id": "fonte_ispirazione",
-            "effetti": {"recupero_ispirazione_riposo_breve": true}
-          }
-        ]
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 9,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3},
-          "dado_ispirazione": "1d8"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "controfaschino",
-            "effetti": {"vantaggio_ts_alleati_spaventato_affascinato": true}
-          }
-        ]
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 10,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1},
-          "dado_ispirazione": "1d8"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 11,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2},
-          "dado_ispirazione": "1d8"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "incantesimi_noti": 12,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1},
-          "dado_ispirazione": "1d8"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "canto_riposo_2",
-            "effetti": {"pf_extra_riposo_breve": "1d8"}
-          }
-        ]
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 14,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2},
-          "dado_ispirazione": "1d10"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "maestria_2",
-            "effetti": {"scelta_maestria_abilita": 2}
-          },
-          {
-            "id": "segreti_magici_1",
-            "effetti": {"scelta_incantesimi_qualsiasi_classe": 2}
-          }
-        ]
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "dado_ispirazione": "1d10"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "dado_ispirazione": "1d10"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 16,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "dado_ispirazione": "1d10"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "canto_riposo_3",
-            "effetti": {"pf_extra_riposo_breve": "1d10"}
-          }
-        ]
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 18,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "dado_ispirazione": "1d10"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "segreti_magici_2",
-            "effetti": {"scelta_incantesimi_qualsiasi_classe": 2}
-          }
-        ]
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 19,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 19,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 20,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "canto_riposo_4",
-            "effetti": {"pf_extra_riposo_breve": "1d12"}
-          }
-        ]
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 22,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "segreti_magici_3",
-            "effetti": {"scelta_incantesimi_qualsiasi_classe": 2}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 22,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 20,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 22,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1},
-          "dado_ispirazione": "1d12"
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "ispirazione_superiore",
-            "effetti": {"recupero_ispirazione_iniziativa_se_vuoto": 1}
+            "id": "fonte_di_ispirazione",
+            "nome": "Fonte di Ispirazione",
+            "descrizione": "Recuperi tutti i tuoi usi di Ispirazione Bardica dopo un riposo breve o lungo."
           }
         ]
       }
     ]
-  },
-  "archetipi": [
-    {
-      "id_archetipo": "arc_bardo_sapienza",
-      "id_classe_padre": "cls_bardo",
-      "nome": "Collegio della Sapienza",
-      "ui_selezione": {
-        "immagine": "asset_bardo_sapienza.png",
-        "titolo_carta": "Archetipo: Sapienza"
-      },
-      "progressione_archetipo": [
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {
-              "id": "competenze_bonus_sapienza",
-              "effetti": {"abilita_scelta": 3}
-            },
-            {
-              "id": "parole_taglienti",
-              "effetti": {"riduzione_tiri_nemici": "dado_ispirazione"}
-            }
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {
-              "id": "segreti_magici_aggiuntivi",
-              "effetti": {"scelta_incantesimi_qualsiasi_classe": 2}
-            }
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {
-              "id": "abilita_impareggiabile",
-              "effetti": {"aggiungi_dado_ispirazione_prove_abilita": true}
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_bardo_valore",
-      "id_classe_padre": "cls_bardo",
-      "nome": "Collegio del Valore",
-      "ui_selezione": {
-        "immagine": "asset_bardo_valore.png",
-        "titolo_carta": "Archetipo: Valore"
-      },
-      "progressione_archetipo": [
-        {
-          "livello": 3,
-          "privilegi_nascosti": [
-            {
-              "id": "competenze_bonus_valore",
-              "effetti": {
-                "competenza_armature": ["Medie", "Scudi"],
-                "competenza_armi": ["Marziali"]
-              }
-            },
-            {
-              "id": "ispirazione_combattimento",
-              "effetti": {"aggiungi_dado_ispirazione_danni_o_ca": true}
-            }
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {
-              "id": "attacco_extra",
-              "effetti": {"attacchi_azione": 2}
-            }
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {
-              "id": "magia_battaglia",
-              "effetti": {"attacco_arma_bonus_dopo_incantesimo": true}
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }
