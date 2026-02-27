@@ -1,0 +1,44 @@
+{
+  "origine": {
+    "id_origine": "org_mezzorco",
+    "nome": "Mezzorco",
+    "asset_carta": "O_mezzorco_main.png",
+    "automatismi_base": {
+      "taglia": "Media",
+      "velocita_metri": 9,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "FOR": 2, "COS": 1 },
+        "scelte": 0
+      },
+      "competenze": {
+        "abilita_fisse": ["Intimidire"]
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Orchesco"],
+        "scelte_extra": 0
+      }
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_mezzorco_standard",
+        "nome": "Discendenza Brutale",
+        "asset_carta": "C_mezzorco_std.png",
+        "automatismi_comunita": {
+          "privilegi_nascosti": [
+            {
+              "id": "resistenza_tenace",
+              "nome": "Resistenza Tenace",
+              "descrizione": "Quando scendi a 0 punti ferita ma non sei ucciso sul colpo, puoi decidere di scendere invece a 1 punto ferita. Non puoi più utilizzare questo privilegio finché non completi un riposo lungo."
+            },
+            {
+              "id": "attacchi_selvaggi",
+              "nome": "Attacchi Selvaggi",
+              "descrizione": "Quando metti a segno un colpo critico con un attacco con arma in mischia, puoi aggiungere uno dei dadi di danno dell'arma al danno extra del colpo critico."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
