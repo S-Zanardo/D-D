@@ -1,0 +1,63 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_mezzelfo",
+      "nome": "Mezzelfo",
+      "ui_carosello": {
+        "immagine": "asset_mezzelfo_origine.png",
+        "titolo_carta": "Origine: Mezzelfo"
+      },
+      "automatismi_scheda": {
+        "taglia": "Media",
+        "velocita_metri": 9.0,
+        "scurovisione_metri": 18,
+        "incrementi_caratteristica": {
+          "fissi": {"CAR": 2},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Elfico"],
+          "scelte_extra": 1
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "retaggio_feerico",
+            "effetti": {
+              "vantaggio_ts": ["Affascinato"],
+              "immunita_condizione": ["Sonno_magico"]
+            }
+          }
+        ]
+      },
+      "comunita_collegate": ["com_mezzelfo_standard"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_mezzelfo_standard",
+      "id_origine_padre": "org_mezzelfo",
+      "nome": "Mezzelfo Standard",
+      "ui_carosello": {
+        "immagine": "asset_mezzelfo_standard.png",
+        "titolo_carta": "Comunità: Standard"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {},
+          "scelte": 2
+        },
+        "competenze": {
+          "abilita_scelta": 2,
+          "armi_fisse": [],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": []
+      }
+    }
+  ]
+}
