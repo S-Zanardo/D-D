@@ -1,0 +1,81 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_umano",
+      "nome": "Umano",
+      "ui_carosello": {
+        "immagine": "asset_umano_origine.png",
+        "titolo_carta": "Origine: Umano"
+      },
+      "automatismi_scheda": {
+        "taglia": "Media",
+        "velocita_metri": 9.0,
+        "scurovisione_metri": 0,
+        "incrementi_caratteristica": {
+          "fissi": {},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune"],
+          "scelte_extra": 1
+        },
+        "privilegi_nascosti": []
+      },
+      "comunita_collegate": ["com_umano_standard", "com_umano_variante"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_umano_standard",
+      "id_origine_padre": "org_umano",
+      "nome": "Umano Standard",
+      "ui_carosello": {
+        "immagine": "asset_umano_standard.png",
+        "titolo_carta": "Comunità: Standard"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {
+            "FOR": 1,
+            "DES": 1,
+            "COS": 1,
+            "INT": 1,
+            "SAG": 1,
+            "CAR": 1
+          },
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": []
+        }
+      }
+    },
+    {
+      "id_comunita": "com_umano_variante",
+      "id_origine_padre": "org_umano",
+      "nome": "Umano Variante",
+      "ui_carosello": {
+        "immagine": "asset_umano_variante.png",
+        "titolo_carta": "Comunità: Variante"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {},
+          "scelte": 2
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "abilita_scelta": 1
+        },
+        "talenti_scelta": 1
+      }
+    }
+  ]
+}
