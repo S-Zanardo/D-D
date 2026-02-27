@@ -1,0 +1,476 @@
+{
+  "classe": {
+    "id_classe": "cls_barbaro",
+    "nome": "Barbaro",
+    "ui_selezione": {
+      "immagine": "asset_barbaro.png",
+      "titolo_carta": "Classe: Barbaro"
+    },
+    "automatismi_base": {
+      "dado_vita": 12,
+      "tiri_salvezza": ["FOR", "COS"],
+      "competenze": {
+        "armature": ["Leggere", "Medie", "Scudi"],
+        "armi": ["Semplici", "Marziali"],
+        "strumenti": []
+      },
+      "abilita_scelta": {
+        "quantita": 2,
+        "opzioni": ["Addestrare Animali", "Atletica", "Intimidire", "Natura", "Percezione", "Sopravvivenza"]
+      },
+      "equipaggiamento_partenza": [
+        {"scelta": 1, "opzioni": ["Ascia bipenne", "Arma marziale da mischia"]},
+        {"scelta": 1, "opzioni": ["Due asce, Ascia", "Arma semplice"]},
+        {"fisso": ["Zaino da esploratore", "Giavotto (4)"]}
+      ]
+    },
+    "livello_scelta_archetipo": 3,
+    "archetipi_collegati": ["arc_barbaro_berserker", "arc_barbaro_totemico"],
+    "progressione": [
+      {
+        "livello": 1,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "n_ire": 2,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "ira",
+            "effetti": {
+              "vantaggio_prove_ts": ["FOR"],
+              "bonus_danni_mischia": "danni_ira",
+              "resistenza_danni": ["Contundente", "Perforante", "Tagliente"]
+            }
+          },
+          {
+            "id": "difesa_senza_armatura",
+            "effetti": {
+              "calcolo_ca": "10 + mod_DES + mod_COS"
+            }
+          }
+        ]
+      },
+      {
+        "livello": 2,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "n_ire": 2,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "attacco_irruento",
+            "effetti": {
+              "vantaggio_tiri_colpire_forza": true,
+              "concede_vantaggio_nemici": true
+            }
+          },
+          {
+            "id": "senso_pericolo",
+            "effetti": {
+              "vantaggio_ts": ["DES"]
+            }
+          }
+        ]
+      },
+      {
+        "livello": 3,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "n_ire": 3,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 4,
+        "bonus_competenza": 2,
+        "statistiche_classe": {
+          "n_ire": 3,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_1",
+            "effetti": {
+              "scelta_aumento": 2,
+              "opzione_talento": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 5,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "n_ire": 3,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "attacco_extra_1",
+            "effetti": {
+              "attacchi_azione": 2
+            }
+          },
+          {
+            "id": "movimento_veloce",
+            "effetti": {
+              "aumento_velocita_metri": 3
+            }
+          }
+        ]
+      },
+      {
+        "livello": 6,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 7,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "istinto_feroce",
+            "effetti": {
+              "vantaggio_iniziativa": true,
+              "ignora_sorpresa_ira": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 8,
+        "bonus_competenza": 3,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 2
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_2",
+            "effetti": {
+              "scelta_aumento": 2,
+              "opzione_talento": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 9,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "critico_brutale_1",
+            "effetti": {
+              "dadi_danno_extra_critico": 1
+            }
+          }
+        ]
+      },
+      {
+        "livello": 10,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 11,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "n_ire": 4,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "furia_implacabile",
+            "effetti": {
+              "ts_cos_sopravvivenza_1_pf": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 12,
+        "bonus_competenza": 4,
+        "statistiche_classe": {
+          "n_ire": 5,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_3",
+            "effetti": {
+              "scelta_aumento": 2,
+              "opzione_talento": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 13,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "n_ire": 5,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "critico_brutale_2",
+            "effetti": {
+              "dadi_danno_extra_critico": 2
+            }
+          }
+        ]
+      },
+      {
+        "livello": 14,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "n_ire": 5,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": []
+      },
+      {
+        "livello": 15,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "n_ire": 5,
+          "danni_ira": 3
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "ira_persistente",
+            "effetti": {
+              "fine_ira_solo_incoscienza": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 16,
+        "bonus_competenza": 5,
+        "statistiche_classe": {
+          "n_ire": 5,
+          "danni_ira": 4
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_4",
+            "effetti": {
+              "scelta_aumento": 2,
+              "opzione_talento": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 17,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "n_ire": 6,
+          "danni_ira": 4
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "critico_brutale_3",
+            "effetti": {
+              "dadi_danno_extra_critico": 3
+            }
+          }
+        ]
+      },
+      {
+        "livello": 18,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "n_ire": 6,
+          "danni_ira": 4
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "potenza_indomabile",
+            "effetti": {
+              "prova_forza_minimo_punteggio": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 19,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "n_ire": 6,
+          "danni_ira": 4
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "aumento_punteggi_caratteristica_5",
+            "effetti": {
+              "scelta_aumento": 2,
+              "opzione_talento": true
+            }
+          }
+        ]
+      },
+      {
+        "livello": 20,
+        "bonus_competenza": 6,
+        "statistiche_classe": {
+          "n_ire": 999,
+          "danni_ira": 4
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "campione_primordiale",
+            "effetti": {
+              "aumento_forza": 4,
+              "aumento_costituzione": 4,
+              "massimo_statistica_sovrascritto": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "archetipi": [
+    {
+      "id_archetipo": "arc_barbaro_berserker",
+      "id_classe_padre": "cls_barbaro",
+      "nome": "Cammino del Berserker",
+      "ui_selezione": {
+        "immagine": "asset_berserker.png",
+        "titolo_carta": "Archetipo: Berserker"
+      },
+      "progressione_archetipo": [
+        {
+          "livello": 3,
+          "privilegi_nascosti": [
+            {
+              "id": "frenesia",
+              "effetti": {
+                "attacco_azione_bonus_ira": true,
+                "sfinimento_fine_ira": 1
+              }
+            }
+          ]
+        },
+        {
+          "livello": 6,
+          "privilegi_nascosti": [
+            {
+              "id": "ira_inconsapevole",
+              "effetti": {
+                "immunita_condizione_ira": ["Affascinato", "Spaventato"],
+                "sospensione_condizione_ira": ["Affascinato", "Spaventato"]
+              }
+            }
+          ]
+        },
+        {
+          "livello": 10,
+          "privilegi_nascosti": [
+            {
+              "id": "presenza_terrificante",
+              "effetti": {
+                "azione_spaventare": "CAR"
+              }
+            }
+          ]
+        },
+        {
+          "livello": 14,
+          "privilegi_nascosti": [
+            {
+              "id": "ritorsione",
+              "effetti": {
+                "attacco_reazione_danno_subito": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_archetipo": "arc_barbaro_totemico",
+      "id_classe_padre": "cls_barbaro",
+      "nome": "Cammino del Combattente Totemico",
+      "ui_selezione": {
+        "immagine": "asset_totemico.png",
+        "titolo_carta": "Archetipo: Totemico"
+      },
+      "progressione_archetipo": [
+        {
+          "livello": 3,
+          "privilegi_nascosti": [
+            {
+              "id": "cercatore_spiriti",
+              "effetti": {
+                "incantesimi_rituale": ["Percezione_Bestiale", "Parlare_Animali"]
+              }
+            },
+            {
+              "id": "spirito_totemico_1",
+              "effetti": {
+                "scelta_totem": 1,
+                "opzioni": ["Orso", "Aquila", "Lupo"]
+              }
+            }
+          ]
+        },
+        {
+          "livello": 6,
+          "privilegi_nascosti": [
+            {
+              "id": "aspetto_bestia",
+              "effetti": {
+                "scelta_aspetto": 1,
+                "opzioni": ["Orso", "Aquila", "Lupo"]
+              }
+            }
+          ]
+        },
+        {
+          "livello": 10,
+          "privilegi_nascosti": [
+            {
+              "id": "viandante_spirituale",
+              "effetti": {
+                "incantesimi_rituale": ["Comunione_con_la_Natura"]
+              }
+            }
+          ]
+        },
+        {
+          "livello": 14,
+          "privilegi_nascosti": [
+            {
+              "id": "sintonia_totemica",
+              "effetti": {
+                "scelta_sintonia": 1,
+                "opzioni": ["Orso", "Aquila", "Lupo"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
