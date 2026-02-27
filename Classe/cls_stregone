@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_stregone",
     "nome": "Stregone",
-    "ui_selezione": {
-      "immagine": "asset_stregone.png",
-      "titolo_carta": "Classe: Stregone"
+    "carta_info_classe": {
+      "asset_carta": "C_stregone_info.png",
+      "descrizione": "Un incantatore nato, il cui potere deriva da una stirpe magica, un'influenza planare o un'esposizione a energie arcane."
     },
     "automatismi_base": {
       "dado_vita": 6,
@@ -12,296 +12,66 @@
       "caratteristica_incantatore": "CAR",
       "competenze": {
         "armature": [],
-        "armi": ["Pugnali", "Dardi", "Fionde", "Bastoni ferrati", "Balestre leggere"],
-        "strumenti": []
+        "armi": ["Pugnali", "Dardi", "Fionde", "Bastoni ferrati", "Balestre leggere"]
       },
       "abilita_scelta": {
         "quantita": 2,
         "opzioni": ["Arcano", "Inganno", "Intimidire", "Intuizione", "Persuasione", "Religione"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Balestra leggera e 20 dardi", "Arma semplice"]},
-        {"scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"]},
-        {"scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"]},
-        {"fisso": ["Pugnale (2)"]}
+        { "scelta": 1, "opzioni": ["Balestra leggera e 20 dardi", "Arma semplice"] },
+        { "scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"] },
+        { "scelta": 1, "opzioni": ["Zaino da esploratore", "Zaino da speleologo"] },
+        { "fisso": ["Pugnale (2)"] }
       ]
     },
     "livello_scelta_archetipo": 1,
     "archetipi_collegati": ["arc_stregone_draconica", "arc_stregone_magia_selvaggia"],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_stregone_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 2,
-          "slot_incantesimi": {"1": 2},
-          "punti_stregoneria": 0
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "incantesimi_stregone",
-            "effetti": {"accesso_lista": "Stregone"}
-          }
+        "statistiche": { "trucchetti": 4, "incantesimi": 2, "slot_L1": 2, "punti_stregoneria": 0 },
+        "privilegi_sbloccati": [
+          { "id": "incantesimi_stregone", "nome": "Incantesimi", "effetti": { "accesso_lista": "Stregone" } },
+          { "id": "origine_stregonesca", "nome": "Origine Stregonesca", "descrizione": "Scegli il tuo archetipo al 1° livello." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_stregone_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 3,
-          "slot_incantesimi": {"1": 3},
-          "punti_stregoneria": 2
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "fonte_magia",
-            "effetti": {"conversione_slot_punti_stregoneria": true}
-          }
+        "statistiche": { "incantesimi": 3, "slot_L1": 3, "punti_stregoneria": 2 },
+        "privilegi_sbloccati": [
+          { "id": "fonte_magia", "nome": "Fonte di Magia", "descrizione": "Puoi convertire Punti Stregoneria in slot incantesimo e viceversa." }
         ]
       },
       {
         "livello": 3,
+        "asset_carta": "C_stregone_L3.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "incantesimi_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 2},
-          "punti_stregoneria": 3
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "metamagia_1",
-            "effetti": {"scelta_opzioni_metamagia": 2}
-          }
-        ]
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3},
-          "punti_stregoneria": 4
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 5,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 6,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2},
-          "punti_stregoneria": 5
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 7,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3},
-          "punti_stregoneria": 6
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 8,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1},
-          "punti_stregoneria": 7
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 9,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2},
-          "punti_stregoneria": 8
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "incantesimi_noti": 10,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1},
-          "punti_stregoneria": 9
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 11,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2},
-          "punti_stregoneria": 10
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "metamagia_2",
-            "effetti": {"scelta_opzioni_metamagia": 1}
-          }
-        ]
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 12,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "punti_stregoneria": 11
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 12,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1},
-          "punti_stregoneria": 12
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 13,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "punti_stregoneria": 13
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 13,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1},
-          "punti_stregoneria": 14
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 14,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "punti_stregoneria": 15
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 14,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1},
-          "punti_stregoneria": 16
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "incantesimi": 4, "slot_L1": 4, "slot_L2": 2, "punti_stregoneria": 3 },
+        "privilegi_sbloccati": [
+          { "id": "metamagia_1", "nome": "Metamagia", "descrizione": "Scegli due opzioni per modificare i tuoi incantesimi (Es: Accelerato, Raddoppiato)." }
         ]
       },
       {
         "livello": 17,
+        "asset_carta": "C_stregone_L17.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1},
-          "punti_stregoneria": 17
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "metamagia_3",
-            "effetti": {"scelta_opzioni_metamagia": 1}
-          }
-        ]
-      },
-      {
-        "livello": 18,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1},
-          "punti_stregoneria": 18
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1},
-          "punti_stregoneria": 19
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "incantesimi": 15, "punti_stregoneria": 17 },
+        "privilegi_sbloccati": [
+          { "id": "metamagia_3", "nome": "Metamagia Superiore", "descrizione": "Scegli una quarta opzione di Metamagia." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_stregone_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 6,
-          "incantesimi_noti": 15,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1},
-          "punti_stregoneria": 20
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "ristoro_stregonesco",
-            "effetti": {"recupero_punti_stregoneria_riposo_breve": 4}
-          }
+        "statistiche": { "punti_stregoneria": 20 },
+        "privilegi_sbloccati": [
+          { "id": "ristoro_stregonesco", "nome": "Ristoro Stregonesco", "descrizione": "Recuperi 4 Punti Stregoneria spesi quando completi un riposo breve." }
         ]
       }
     ]
@@ -309,64 +79,37 @@
   "archetipi": [
     {
       "id_archetipo": "arc_stregone_draconica",
-      "id_classe_padre": "cls_stregone",
       "nome": "Stirpe Draconica",
+      "asset_carta": "A_stregone_draconico.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "antenato_draconico", "effetti": {"scelta_tipo_drago": 1, "opzioni": ["Acido", "Freddo", "Fuoco", "Fulmine", "Veleno"], "raddoppia_competenza_interazione_draghi": true}},
-            {"id": "resilienza_draconica", "effetti": {"incremento_pf_livello": 1, "calcolo_ca_senza_armatura": "13 + mod_DES"}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "affinita_elementale", "effetti": {"somma_carisma_danni_elemento_drago": true, "resistenza_danni_costo_punti_stregoneria": 1}}
+          "asset_carta": "A_stregone_draconico_L1.png",
+          "privilegi": [
+            { "id": "antenato_draconico", "nome": "Antenato Draconico", "descrizione": "Scegli una tipologia di drago; ottieni bonus all'interazione e ai linguaggi." },
+            { "id": "resilienza_draconica", "nome": "Resilienza Draconica", "effetti": { "pf_bonus": 1, "ca_senza_armatura": "13 + mod_DES" } }
           ]
         },
         {
           "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "ali_drago", "effetti": {"velocita_volo_pari_a_velocita_base": true}}
-          ]
-        },
-        {
-          "livello": 18,
-          "privilegi_nascosti": [
-            {"id": "presenza_draconica", "effetti": {"aura_18m_affascinato_o_spaventato_costo_punti_stregoneria": 5}}
+          "asset_carta": "A_stregone_draconico_L14.png",
+          "privilegi": [
+            { "id": "ali_drago", "nome": "Ali di Drago", "descrizione": "Manifesti un paio di ali draconiane e ottieni velocità di volo." }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_stregone_magia_selvaggia",
-      "id_classe_padre": "cls_stregone",
       "nome": "Magia Selvaggia",
+      "asset_carta": "A_stregone_selvaggio.png",
       "progressione_archetipo": [
         {
           "livello": 1,
-          "privilegi_nascosti": [
-            {"id": "ondata_magia_selvaggia", "effetti": {"tiro_tabella_magia_selvaggia_dopo_incantesimo_livello_1_o_superiore_se_d20_1": true}},
-            {"id": "maree_caos", "effetti": {"vantaggio_ts_attacco_prova_caratteristica_ricarica_riposo_lungo_o_ondata": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "piegare_fortuna", "effetti": {"reazione_modifica_tiro_1d4_costo_punti_stregoneria": 2}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "caos_controllato", "effetti": {"due_tiri_tabella_magia_selvaggia_scelta_giocatore": true}}
-          ]
-        },
-        {
-          "livello": 18,
-          "privilegi_nascosti": [
-            {"id": "bombardamento_magico", "effetti": {"dado_danno_aggiuntivo_se_dado_danno_massimo": true}}
+          "asset_carta": "A_stregone_selvaggio_L1.png",
+          "privilegi": [
+            { "id": "ondata_selvaggia", "nome": "Ondata di Magia Selvaggia", "descrizione": "Il lancio di incantesimi può scatenare effetti caotici imprevedibili." },
+            { "id": "maree_caos", "nome": "Maree del Caos", "descrizione": "Ottieni vantaggio a un tiro a tua scelta (si ricarica con un'ondata)." }
           ]
         }
       ]
