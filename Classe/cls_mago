@@ -2,9 +2,9 @@
   "classe": {
     "id_classe": "cls_mago",
     "nome": "Mago",
-    "ui_selezione": {
-      "immagine": "asset_mago.png",
-      "titolo_carta": "Classe: Mago"
+    "carta_info_classe": {
+      "asset_carta": "C_mago_info.png",
+      "descrizione": "Uno studioso dell'arcano capace di manipolare la realtà stessa attraverso formule, rituali e un antico libro degli incantesimi."
     },
     "automatismi_base": {
       "dado_vita": 6,
@@ -12,18 +12,17 @@
       "caratteristica_incantatore": "INT",
       "competenze": {
         "armature": [],
-        "armi": ["Pugnali", "Dardi", "Fionde", "Bastoni ferrati", "Balestre leggere"],
-        "strumenti": []
+        "armi": ["Pugnali", "Dardi", "Fionde", "Bastoni ferrati", "Balestre leggere"]
       },
       "abilita_scelta": {
         "quantita": 2,
         "opzioni": ["Arcano", "Indagare", "Intuizione", "Medicina", "Religione", "Storia"]
       },
       "equipaggiamento_partenza": [
-        {"scelta": 1, "opzioni": ["Bastone ferrato", "Pugnale"]},
-        {"scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"]},
-        {"scelta": 1, "opzioni": ["Borsa dello studioso", "Zaino da esploratore"]},
-        {"fisso": ["Libro degli incantesimi"]}
+        { "scelta": 1, "opzioni": ["Bastone ferrato", "Pugnale"] },
+        { "scelta": 1, "opzioni": ["Borsa per componenti", "Focalizzatore arcano"] },
+        { "scelta": 1, "opzioni": ["Borsa dello studioso", "Zaino da esploratore"] },
+        { "fisso": ["Libro degli incantesimi"] }
       ]
     },
     "livello_scelta_archetipo": 2,
@@ -32,486 +31,77 @@
       "arc_mago_evocazione", "arc_mago_illusione", "arc_mago_invocazione",
       "arc_mago_necromanzia", "arc_mago_trasmutazione"
     ],
-    "progressione": [
+    "progressione_mazzo": [
       {
         "livello": 1,
+        "asset_carta": "C_mago_L1.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "incantesimi_mago",
-            "effetti": {"accesso_lista": "Mago", "preparazione_incantesimi": "mod_INT + livello_mago"}
-          },
-          {
-            "id": "recupero_arcano",
-            "effetti": {"recupero_slot_riposo_breve": "livello_mago / 2"}
-          }
+        "statistiche": { "trucchetti": 3, "slot_L1": 2 },
+        "privilegi_sbloccati": [
+          { "id": "incantesimi_mago", "nome": "Incantesimi", "effetti": { "preparazione": "mod_INT + livello" } },
+          { "id": "recupero_arcano", "nome": "Recupero Arcano", "descrizione": "Recuperi slot incantesimi durante un riposo breve (pari a metà livello)." }
         ]
       },
       {
         "livello": 2,
+        "asset_carta": "C_mago_L2.png",
         "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 3}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 3,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 3,
-          "slot_incantesimi": {"1": 4, "2": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 4,
-        "bonus_competenza": 2,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_1",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "statistiche": { "slot_L1": 3 },
+        "privilegi_sbloccati": [
+          { "id": "tradizione_arcana", "nome": "Tradizione Arcana", "descrizione": "Scegli la tua Scuola di Specializzazione (Archetipo)." }
         ]
-      },
-      {
-        "livello": 5,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 6,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 7,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 8,
-        "bonus_competenza": 3,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 2}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_2",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 9,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 4,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 10,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 11,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 12,
-        "bonus_competenza": 4,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_3",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 13,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 14,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 15,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1}
-        },
-        "privilegi_nascosti": []
-      },
-      {
-        "livello": 16,
-        "bonus_competenza": 5,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_4",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
-        ]
-      },
-      {
-        "livello": 17,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 2, "6": 1, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": []
       },
       {
         "livello": 18,
+        "asset_carta": "C_mago_L18.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "padroneggiare_incantesimi",
-            "effetti": {"incantesimo_infinito_livello_1_2": true}
-          }
-        ]
-      },
-      {
-        "livello": 19,
-        "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 1, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "aumento_punteggi_caratteristica_5",
-            "effetti": {"scelta_aumento": 2, "opzione_talento": true}
-          }
+        "privilegi_sbloccati": [
+          { "id": "padroneggiare_incantesimi", "nome": "Padroneggiare Incantesimi", "descrizione": "Scegli un incantesimo di 1° e 2° livello da lanciare a volontà senza slot." }
         ]
       },
       {
         "livello": 20,
+        "asset_carta": "C_mago_L20.png",
         "bonus_competenza": 6,
-        "statistiche_classe": {
-          "trucchetti_noti": 5,
-          "slot_incantesimi": {"1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2, "7": 2, "8": 1, "9": 1}
-        },
-        "privilegi_nascosti": [
-          {
-            "id": "incantesimi_personali",
-            "effetti": {"incantesimi_livello_3_preparati_sempre_un_uso_gratuito": 2}
-          }
+        "privilegi_sbloccati": [
+          { "id": "incantesimi_personali", "nome": "Incantesimi Personali", "descrizione": "Scegli due incantesimi di 3° livello sempre preparati che non contano nel limite." }
         ]
       }
     ]
   },
   "archetipi": [
     {
-      "id_archetipo": "arc_mago_abiurazione",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Abiurazione",
+      "id_archetipo": "arc_mago_invocazione",
+      "nome": "Scuola di Invocazione",
+      "asset_carta": "A_mago_invocazione.png",
       "progressione_archetipo": [
         {
           "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_abiurazione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Abiurazione"}},
-            {"id": "interdizione_arcana", "effetti": {"scudo_pf_temporanei": "livello_mago * 2 + mod_INT"}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "interdizione_proiettata", "effetti": {"reazione_assorbimento_danni_alleato": true}}
+          "asset_carta": "A_mago_invocazione_L2.png",
+          "privilegi": [
+            { "id": "sapiente_inv", "nome": "Sapiente dell'Invocazione", "descrizione": "Costo e tempo di trascrizione dimezzati per Invocazione." },
+            { "id": "plasmare_inc", "nome": "Plasmare Incantesimi", "descrizione": "Crea zone sicure per gli alleati all'interno delle tue aree di effetto." }
           ]
         },
         {
           "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "abiurazione_migliorata", "effetti": {"aggiungi_competenza_prove_abiurazione": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "resistenza_incantesimi", "effetti": {"vantaggio_ts_incantesimi": true, "resistenza_danni_incantesimi": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_ammaliamento",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Ammaliamento",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_ammaliamento", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Ammaliamento"}},
-            {"id": "sguardo_ipnotico", "effetti": {"azione_incantare_bersaglio_1_5m": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "charme_istintivo", "effetti": {"reazione_devia_attacco_bersaglio": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "ammaliamento_sdoppiato", "effetti": {"incantesimo_ammaliamento_bersaglio_singolo_colpisce_due": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "alterare_memorie", "effetti": {"ignora_consapevolezza_charme": true, "modifica_memoria_charme": true}}
+          "asset_carta": "A_mago_invocazione_L10.png",
+          "privilegi": [
+            { "id": "inv_potenziata", "nome": "Invocazione Potenziata", "effetti": { "somma_INT_danni": true } }
           ]
         }
       ]
     },
     {
       "id_archetipo": "arc_mago_divinazione",
-      "id_classe_padre": "cls_mago",
       "nome": "Scuola di Divinazione",
+      "asset_carta": "A_mago_divinazione.png",
       "progressione_archetipo": [
         {
           "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_divinazione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Divinazione"}},
-            {"id": "portento", "effetti": {"dadi_previsione_riposo_lungo": 2}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "esperto_divinazione", "effetti": {"recupero_slot_lancio_divinazione": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "terzo_occhio", "effetti": {"azione_scelta_vista": ["Scurovisione", "Etereo", "Comprensione", "Invisibilita"]}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "portento_superiore", "effetti": {"dadi_previsione_riposo_lungo": 3}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_evocazione",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Evocazione",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_evocazione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Evocazione"}},
-            {"id": "evocazione_minore", "effetti": {"creazione_oggetto_inanimato_piccolo": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "trasposizione_benigna", "effetti": {"teletrasporto_9m_o_scambio_alleato": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "evocazione_focalizzata", "effetti": {"danni_non_interrompono_concentrazione_evocazione": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "evocazioni_durevoli", "effetti": {"creature_evocate_pf_temporanei": 30}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_illusione",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Illusione",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_illusione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Illusione"}},
-            {"id": "illusione_minore_migliorata", "effetti": {"trucchetti_noti_fissi": ["Illusione Minore"], "illusione_minore_suono_e_immagine": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "illusioni_malleabili", "effetti": {"azione_modifica_illusione_attiva": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "se_illusorio", "effetti": {"reazione_crea_duplicato_falso_attacco_mancato": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "realta_illusoria", "effetti": {"rende_reale_oggetto_illusorio": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_invocazione",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Invocazione",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_invocazione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Invocazione"}},
-            {"id": "plasmare_incantesimi", "effetti": {"protegge_alleati_da_danni_invocazione": "1 + livello_incantesimo"}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "trucchetto_potente", "effetti": {"ts_riuscito_trucchetto_dimezza_danno_invece_di_zero": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "invocazione_potenziata", "effetti": {"somma_intelligenza_danni_invocazione": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "sovraccaricare", "effetti": {"massimizza_danni_incantesimo_danni_a_se_stessi_successivi": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_necromanzia",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Necromanzia",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_necromanzia", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Necromanzia"}},
-            {"id": "mietere_grigia", "effetti": {"cura_uccisione_incantesimo": "livello_incantesimo * 2_o_3"}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "asservire_non_morti", "effetti": {"incantesimi_noti_fissi": ["Animare Morti"], "animare_morti_potenziato": true}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "assuefazione_non_morte", "effetti": {"resistenza_danni": ["Necrotico"], "pf_massimi_non_riducibili": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "comandare_non_morti", "effetti": {"azione_dominare_non_morto": true}}
-          ]
-        }
-      ]
-    },
-    {
-      "id_archetipo": "arc_mago_trasmutazione",
-      "id_classe_padre": "cls_mago",
-      "nome": "Scuola di Trasmutazione",
-      "progressione_archetipo": [
-        {
-          "livello": 2,
-          "privilegi_nascosti": [
-            {"id": "sapiente_trasmutazione", "effetti": {"costo_oro_tempo_dimezzato_trascrizione": "Trasmutazione"}},
-            {"id": "alchimia_minore", "effetti": {"cambia_sostanza_materiale": true}}
-          ]
-        },
-        {
-          "livello": 6,
-          "privilegi_nascosti": [
-            {"id": "pietra_trasmutatore", "effetti": {"creazione_pietra_benefici": ["Scurovisione", "Velocita", "Competenza_TS_COS", "Resistenza"]}}
-          ]
-        },
-        {
-          "livello": 10,
-          "privilegi_nascosti": [
-            {"id": "mutaforma", "effetti": {"incantesimi_noti_fissi": ["Metamorfosi"], "metamorfosi_se_stessi_senza_slot_gs_1": true}}
-          ]
-        },
-        {
-          "livello": 14,
-          "privilegi_nascosti": [
-            {"id": "maestro_trasmutatore", "effetti": {"distruggi_pietra_effetto_potente": ["Trasformazione", "Panacea", "Ripristinare_Vita", "Giovinezza"]}}
+          "asset_carta": "A_mago_divinazione_L2.png",
+          "privilegi": [
+            { "id": "portento", "nome": "Portento", "descrizione": "Tira due d20 dopo il riposo lungo; puoi sostituire qualsiasi tiro con questi risultati." }
           ]
         }
       ]
