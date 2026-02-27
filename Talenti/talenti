@@ -1,0 +1,263 @@
+{
+  "talenti": [
+    {
+      "id_talento": "tal_allerta",
+      "nome": "Allerta",
+      "prerequisiti": null,
+      "automatismi": { "bonus_iniziativa": 5, "non_sorprendibile": true, "nega_vantaggio_nascosti": true },
+      "descrizione": "Bonus +5 iniziativa, non puoi essere sorpreso finché sei cosciente, le creature nascoste non hanno vantaggio ai tiri per colpire contro di te."
+    },
+    {
+      "id_talento": "tal_atleta",
+      "nome": "Atleta",
+      "prerequisiti": null,
+      "automatismi": { "scelta_incremento": { "quantita": 1, "opzioni": ["FOR", "DES"] }, "costo_alzarsi_prono_metri": 1.5, "scalare_velocita_piena": true, "salto_con_corsa_minima": 3 },
+      "descrizione": "Aumenta Forza o Destrezza di 1. Alzarti da prono costa solo 1,5m di movimento. Scali senza penalità. Salti con rincorsa di soli 3m."
+    },
+    {
+      "id_talento": "tal_attore",
+      "nome": "Attore",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"CAR": 1}, "vantaggio_prove": ["Inganno_Recitazione", "Intrattenere_Recitazione"], "imitazione_voce": true },
+      "descrizione": "Aumenta Carisma di 1. Vantaggio alle prove di Inganno e Intrattenere per farti passare per un altro. Puoi imitare voci e suoni."
+    },
+    {
+      "id_talento": "tal_carismatico",
+      "nome": "Carismatico",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"CAR": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Carisma di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_cecchino",
+      "nome": "Cecchino",
+      "prerequisiti": null,
+      "automatismi": { "nessun_svantaggio_gittata_lunga": true, "ignora_copertura": ["Metà", "Tre_Quarti"], "attacco_potente_distanza": {"penalita_colpire": -5, "bonus_danno": 10} },
+      "descrizione": "Nessuno svantaggio alla gittata lunga. Ignori coperture parziali. Puoi subire -5 al colpire per fare +10 danni con armi a distanza."
+    },
+    {
+      "id_talento": "tal_combattente_due_armi",
+      "nome": "Combattente a Due Armi",
+      "prerequisiti": null,
+      "automatismi": { "bonus_ca_due_armi": 1, "usa_armi_non_leggere": true, "estrazione_doppia": true },
+      "descrizione": "+1 alla CA mentre impugni due armi. Puoi usare due armi anche se non sono leggere. Estrai/riponi due armi contemporaneamente."
+    },
+    {
+      "id_talento": "tal_combattente_montato",
+      "nome": "Combattente Montato",
+      "prerequisiti": null,
+      "automatismi": { "vantaggio_mischia_su_creature_piccole": true, "protezione_cavalcatura_deviazione": true, "elusione_cavalcatura": true },
+      "descrizione": "Vantaggio ai tiri per colpire in mischia contro creature a piedi più piccole della cavalcatura. Puoi forzare un attacco diretto alla cavalcatura su di te."
+    },
+    {
+      "id_talento": "tal_condottiero_ispiratore",
+      "nome": "Condottiero Ispiratore",
+      "prerequisiti": {"CAR": 13},
+      "automatismi": { "pf_temporanei_ispirazione": "livello_personaggio + mod_CAR" },
+      "descrizione": "Con un discorso di 10 minuti conferisci PF temporanei a 6 alleati."
+    },
+    {
+      "id_talento": "tal_conduttore_bestie",
+      "nome": "Conduttore di Bestie",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"SAG": 1}, "vantaggio_addestrare_animali": true },
+      "descrizione": "Aumenta Saggezza di 1. Vantaggio alle prove di Addestrare Animali."
+    },
+    {
+      "id_talento": "tal_cuoco",
+      "nome": "Cuoco",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"COS_o_SAG": 1}, "pf_extra_riposo_breve": "1d8", "spuntini_pf_temporanei": "bonus_competenza" },
+      "descrizione": "Aumenta Costituzione o Saggezza di 1. Gli alleati recuperano 1d8 PF extra durante il riposo breve."
+    },
+    {
+      "id_talento": "tal_difensore_duellante",
+      "nome": "Difensore col Duello",
+      "prerequisiti": {"DES": 13},
+      "automatismi": { "reazione_ca_bonus": "bonus_competenza" },
+      "descrizione": "Mentre impugni un'arma accurata, puoi usare la reazione per sommare il bonus di competenza alla CA contro un attacco."
+    },
+    {
+      "id_talento": "tal_esperto",
+      "nome": "Esperto",
+      "prerequisiti": null,
+      "automatismi": { "scelta_incremento": { "quantita": 1, "opzioni": ["Tutte"] }, "scelta_competenza_abilita": 1, "scelta_maestria": 1 },
+      "descrizione": "Aumenta una caratteristica di 1. Ottieni una competenza e una maestria."
+    },
+    {
+      "id_talento": "tal_fortunato",
+      "nome": "Fortunato",
+      "prerequisiti": null,
+      "automatismi": { "punti_fortuna": 3 },
+      "descrizione": "Ottieni 3 punti fortuna per influenzare tiri di dado o tiri avversari."
+    },
+    {
+      "id_talento": "tal_grande_fortezza",
+      "nome": "Grande Fortezza",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"COS": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Costituzione di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_guaritore",
+      "nome": "Guaritore",
+      "prerequisiti": null,
+      "automatismi": { "stabilizza_con_pf": 1, "cura_kit_medicina": "1d6 + 4 + dadi_vita_bersaglio" },
+      "descrizione": "Stabilizzare un alleato gli ridà 1 PF. Puoi usare un kit di medicina per curare 1d6+4+DV PF una volta per riposo."
+    },
+    {
+      "id_talento": "tal_iniziato_magia",
+      "nome": "Iniziato alla Magia",
+      "prerequisiti": null,
+      "automatismi": { "scelta_classe_magica": 1, "trucchetti_scelta": 2, "incantesimo_liv1_scelta": 1 },
+      "descrizione": "Scegli una classe: ottieni 2 trucchetti e un incantesimo di 1° livello lanciabile una volta per riposo lungo."
+    },
+    {
+      "id_talento": "tal_linguista",
+      "nome": "Linguista",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"INT": 1}, "scelta_linguaggi": 3, "creazione_codici": true },
+      "descrizione": "Aumenta Intelligenza di 1. Impari 3 linguaggi e puoi creare linguaggi cifrati."
+    },
+    {
+      "id_talento": "tal_lottatore",
+      "nome": "Lottatore",
+      "prerequisiti": {"FOR": 13},
+      "automatismi": { "vantaggio_colpire_creatura_afferrata": true, "azione_immobilizzare": true },
+      "descrizione": "Vantaggio ai tiri per colpire contro creature afferrate. Puoi tentare di immobilizzare una creatura afferrata."
+    },
+    {
+      "id_talento": "tal_maestro_armature_leggere",
+      "nome": "Maestro delle Armature Leggere",
+      "prerequisiti": null,
+      "automatismi": { "scelta_incremento": { "quantita": 1, "opzioni": ["FOR", "DES"] }, "competenza_armature": ["Leggere"] },
+      "descrizione": "Aumenta Forza o Destrezza di 1. Ottieni competenza nelle armature leggere."
+    },
+    {
+      "id_talento": "tal_maestro_armature_medie",
+      "nome": "Maestro delle Armature Medie",
+      "prerequisiti": ["Competenza Armature Medie"],
+      "automatismi": { "limite_des_ca_medie": 3, "rimuove_svantaggio_furtivita_medie": true },
+      "descrizione": "Il bonus di Destrezza massimo per le armature medie diventa 3. Non hai più svantaggio a Furtività con armature medie."
+    },
+    {
+      "id_talento": "tal_maestro_armature_pesanti",
+      "nome": "Maestro delle Armature Pesanti",
+      "prerequisiti": ["Competenza Armature Pesanti"],
+      "automatismi": { "incremento_fisso": {"FOR": 1}, "riduzione_danno_fisico": 3 },
+      "descrizione": "Aumenta Forza di 1. Riduci di 3 i danni contundenti, perforanti e taglienti da armi non magiche."
+    },
+    {
+      "id_talento": "tal_maestro_armi_grandi",
+      "nome": "Maestro delle Armi Grandi",
+      "prerequisiti": null,
+      "automatismi": { "attacco_bonus_critico": true, "attacco_potente_mischia": {"penalita": -5, "bonus": 10} },
+      "descrizione": "Attacco bonus se fai critico o uccidi. Puoi subire -5 al colpire per fare +10 danni con armi pesanti."
+    },
+    {
+      "id_talento": "tal_maestro_armi_asta",
+      "nome": "Maestro delle Armi d'Asta",
+      "prerequisiti": null,
+      "automatismi": { "attacco_bonus_estremita": "1d4", "attacco_opportunita_entrata_portata": true },
+      "descrizione": "Attacco bonus con il calcio dell'arma. Provochi attacco d'opportunità quando i nemici entrano nella tua portata."
+    },
+    {
+      "id_talento": "tal_maestro_scudi",
+      "nome": "Maestro degli Scudi",
+      "prerequisiti": null,
+      "automatismi": { "azione_bonus_spinta_scudo": true, "bonus_ca_a_ts_des": true, "reazione_dimezza_danno_ts_des": true },
+      "descrizione": "Spingi come azione bonus. Sommi il bonus dello scudo ai TS Destrezza contro incantesimi a bersaglio singolo."
+    },
+    {
+      "id_talento": "tal_mago_combattente",
+      "nome": "Mago Combattente",
+      "prerequisiti": ["Capacità di lanciare almeno un incantesimo"],
+      "automatismi": { "vantaggio_ts_concentrazione": true, "componenti_somatiche_armi_impugnate": true, "incantesimo_reazione_opportunita": true },
+      "descrizione": "Vantaggio ai TS concentrazione. Puoi lanciare incantesimi somatici con le mani occupate. Usi incantesimi per gli attacchi d'opportunità."
+    },
+    {
+      "id_talento": "tal_mente_scattante",
+      "nome": "Mente Scattante",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"INT": 1}, "memoria_perfetta": true, "tempo_mancante_prossima_alba": true },
+      "descrizione": "Aumenta Intelligenza di 1. Ricordi tutto ciò che hai visto nell'ultimo mese."
+    },
+    {
+      "id_talento": "tal_mirabile_intelligenza",
+      "nome": "Mirabile Intelligenza",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"INT": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Intelligenza di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_mobile",
+      "nome": "Mobile",
+      "prerequisiti": null,
+      "automatismi": { "aumento_velocita_metri": 3, "scatto_ignora_terreno_difficile": true, "nega_opportunita_se_attaccato": true },
+      "descrizione": "+3m velocità. Terreno difficile non ti rallenta se scatti. Se attacchi una creatura, non può farti attacchi d'opportunità."
+    },
+    {
+      "id_talento": "tal_osservatore",
+      "nome": "Osservatore",
+      "prerequisiti": null,
+      "automatismi": { "scelta_incremento": { "quantita": 1, "opzioni": ["INT", "SAG"] }, "bonus_passivo_percezione_indagare": 5, "leggere_labiale": true },
+      "descrizione": "Aumenta Intelligenza o Saggezza di 1. +5 a Percezione e Indagare passiva. Puoi leggere le labbra."
+    },
+    {
+      "id_talento": "tal_percezione_straordinaria",
+      "nome": "Percezione Straordinaria",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"SAG": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Saggezza di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_possente",
+      "nome": "Possente",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"FOR": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Forza di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_rapido_riflessi",
+      "nome": "Rapido di Riflessi",
+      "prerequisiti": null,
+      "automatismi": { "incremento_fisso": {"DES": 1} },
+      "descrizione": "Aumenta il tuo punteggio di Destrezza di 1, fino a un massimo di 20."
+    },
+    {
+      "id_talento": "tal_resiliente",
+      "nome": "Resiliente",
+      "prerequisiti": null,
+      "automatismi": { "scelta_incremento": { "quantita": 1, "opzioni": ["Tutte"] }, "competenza_ts_caratteristica_scelta": true },
+      "descrizione": "Aumenta una caratteristica di 1 e ottieni competenza nei relativi TS."
+    },
+    {
+      "id_talento": "tal_robustezza",
+      "nome": "Robustezza",
+      "prerequisiti": null,
+      "automatismi": { "aumento_pf_massimi_per_livello": 2 },
+      "descrizione": "I tuoi PF massimi aumentano di 2 per ogni tuo livello."
+    },
+    {
+      "id_talento": "tal_sentinella",
+      "nome": "Sentinella",
+      "prerequisiti": null,
+      "automatismi": { "riduce_velocita_zero_opportunita": true, "ignora_disimpegno": true, "reazione_attacco_alleato_colpito": true },
+      "descrizione": "I colpi d'opportunità fermano il nemico. Ignori Disimpegno. Attacchi se un nemico colpisce un alleato vicino."
+    },
+    {
+      "id_talento": "tal_stregone_rituale",
+      "nome": "Stregone Rituale",
+      "prerequisiti": {"INT_o_SAG": 13},
+      "automatismi": { "libro_rituali": true, "scelta_incantesimi_rituali_liv1": 2 },
+      "descrizione": "Ottieni un libro per trascrivere ed eseguire rituali di una classe magica a scelta."
+    },
+    {
+      "id_talento": "tal_uccisore_maghi",
+      "nome": "Uccisore di Maghi",
+      "prerequisiti": null,
+      "automatismi": { "reazione_attacco_lancio_incantesimo": true, "svantaggio_ts_concentrazione_nemico": true, "vantaggio_ts_incantesimi_vicini": true },
+      "descrizione": "Attacchi chi lancia incantesimi vicino a te. Imponi svantaggio ai TS concentrazione. Vantaggio ai TS contro incantesimi entro 1,5m."
+    }
+  ]
+}
