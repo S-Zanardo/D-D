@@ -1,0 +1,79 @@
+{
+  "origine": {
+    "id_origine": "org_gnomo",
+    "nome": "Gnomo",
+    "asset_carta": "O_gnomo_main.png",
+    "automatismi_base": {
+      "taglia": "Piccola",
+      "velocita_metri": 7.5,
+      "scurovisione_metri": 18,
+      "incrementi_caratteristica": {
+        "fissi": { "INT": 2 },
+        "scelte": 0
+      },
+      "linguaggi": {
+        "fissi": ["Comune", "Gnomesco"],
+        "scelte_extra": 0
+      },
+      "privilegi_nascosti": [
+        {
+          "id": "astuzia_gnomica",
+          "nome": "Astuzia Gnomica",
+          "effetti": {
+            "vantaggio_ts_magia": ["INT", "SAG", "CAR"]
+          }
+        }
+      ]
+    },
+    "comunita": [
+      {
+        "id_comunita": "com_gnomo_foreste",
+        "nome": "Gnomo delle Foreste",
+        "asset_carta": "C_gnomo_foreste.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "DES": 1 }
+          },
+          "magia_innata": {
+            "incantesimi_fissi": [
+              { "livello_sblocco": 1, "nome": "Illusione Minore" }
+            ],
+            "caratteristica_da_lancio": "INT"
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "parlare_piccole_bestie",
+              "nome": "Parlare con le Piccole Bestie",
+              "descrizione": "Attraverso suoni e gesti, puoi comunicare concetti semplici a bestie di taglia Piccola o inferiore."
+            }
+          ]
+        }
+      },
+      {
+        "id_comunita": "com_gnomo_rocce",
+        "nome": "Gnomo delle Rocce",
+        "asset_carta": "C_gnomo_rocce.png",
+        "automatismi_comunita": {
+          "incrementi_caratteristica": {
+            "fissi": { "COS": 1 }
+          },
+          "competenze": {
+            "strumenti_fissi": ["Strumenti da inventore"]
+          },
+          "privilegi_nascosti": [
+            {
+              "id": "conoscenza_artefice",
+              "nome": "Conoscenza dell'Artefice",
+              "descrizione": "Ogni volta che effettui una prova di Intelligenza (Storia) relativa a oggetti magici, congegni alchemici o tecnologici, aggiungi il doppio del bonus di competenza."
+            },
+            {
+              "id": "mastro_inventore",
+              "nome": "Mastro Inventore",
+              "descrizione": "Puoi spendere 1 ora e 10 mo in materiali per costruire un congegno meccanico minuscolo (Orologio, Acciarino o Giocattolo musicale)."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
