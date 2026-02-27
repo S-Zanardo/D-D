@@ -1,0 +1,109 @@
+{
+  "origini": [
+    {
+      "id_origine": "org_halfling",
+      "nome": "Halfling",
+      "ui_carosello": {
+        "immagine": "asset_halfling_origine.png",
+        "titolo_carta": "Origine: Halfling"
+      },
+      "automatismi_scheda": {
+        "taglia": "Piccola",
+        "velocita_metri": 7.5,
+        "scurovisione_metri": 0,
+        "incrementi_caratteristica": {
+          "fissi": {"DES": 2},
+          "scelte": 0
+        },
+        "competenze": {
+          "abilita_fisse": [],
+          "armi_fisse": [],
+          "armature_fisse": [],
+          "strumenti_scelta": null
+        },
+        "linguaggi": {
+          "fissi": ["Comune", "Halfling"],
+          "scelte_extra": 0
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "fortunato",
+            "effetti": {
+              "ritiro_dado_uno": ["Tiro_colpire", "Prova_caratteristica", "Tiro_salvezza"]
+            }
+          },
+          {
+            "id": "coraggioso",
+            "effetti": {
+              "vantaggio_ts": ["Spaventato"]
+            }
+          },
+          {
+            "id": "agilita_halfling",
+            "effetti": {
+              "movimento_spazio_creature_piu_grandi": true
+            }
+          }
+        ]
+      },
+      "comunita_collegate": ["com_halfling_piedelesto", "com_halfling_tozzo"]
+    }
+  ],
+  "comunita": [
+    {
+      "id_comunita": "com_halfling_piedelesto",
+      "id_origine_padre": "org_halfling",
+      "nome": "Halfling Piedelesto",
+      "ui_carosello": {
+        "immagine": "asset_halfling_piedelesto.png",
+        "titolo_carta": "Comunità: Piedelesto"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {"CAR": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "furtivita_innata",
+            "effetti": {
+              "nascondersi_occultamento": ["Creatura_piu_grande"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id_comunita": "com_halfling_tozzo",
+      "id_origine_padre": "org_halfling",
+      "nome": "Halfling Tozzo",
+      "ui_carosello": {
+        "immagine": "asset_halfling_tozzo.png",
+        "titolo_carta": "Comunità: Tozzo"
+      },
+      "automatismi_scheda": {
+        "incrementi_caratteristica": {
+          "fissi": {"COS": 1},
+          "scelte": 0
+        },
+        "competenze": {
+          "armi_fisse": [],
+          "armature_fisse": []
+        },
+        "privilegi_nascosti": [
+          {
+            "id": "resilienza_tozza",
+            "effetti": {
+              "vantaggio_ts": ["Veleno"],
+              "resistenza_danni": ["Veleno"]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
