@@ -1,8 +1,11 @@
 {
-  "origine": {
-    "id_origine": "org_dragonide",
+  "razza": {
+    "id": "rz_dragonide",
     "nome": "Dragonide",
-    "asset_carta": "O_dragonide_main.png",
+    "ui_carta": {
+      "fronte": "Dragonide",
+      "retro_descrizione": "Umanoidi dall'aspetto draconico. Tratti base: +2 Forza, +1 Carisma. Velocità 9m. Arma a Soffio e Resistenza ai danni in base alla discendenza draconica scelta."
+    },
     "automatismi_base": {
       "taglia": "Media",
       "velocita_metri": 9,
@@ -14,123 +17,180 @@
         "fissi": ["Comune", "Draconico"],
         "scelte_extra": 0
       },
-      "privilegi_nascosti": [
+      "competenze_armi": { "fisse": [] },
+      "competenze_armature": { "fisse": [] },
+      "competenze_strumenti": { "scelte": 0, "opzioni": [] },
+      "competenze_abilita": { "fisse": [], "scelte": 0 },
+      "resistenze_danni": [],
+      "vantaggi_ts": [],
+      "sensi": {},
+      "privilegi_speciali": [
         {
-          "id": "arma_a_soffio",
+          "id": "arma_a_soffio_base",
           "nome": "Arma a Soffio",
-          "descrizione": "Azione per esalare energia distruttiva. Il danno è 2d6 (aumenta a 3d6 al liv. 6, 4d6 al liv. 11, 5d6 al liv. 16). CD = 8 + mod_COS + bonus_competenza."
+          "descrizione": "Usa un'azione per esalare energia. 2d6 danni (3d6 liv.6, 4d6 liv.11, 5d6 liv.16). Tiro Salvezza con CD = 8 + mod. Costituzione + Bonus Competenza. Forma e tipo di danno dipendono dalla discendenza."
         }
       ]
     },
-    "comunita": [
+    "sottorazze": [
       {
-        "id_comunita": "com_drag_nero",
+        "id": "sub_dragonide_nero",
         "nome": "Discendenza Nera",
-        "asset_carta": "C_drag_nero.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Acido",
-          "resistenza_danni": ["Acido"],
-          "soffio_area": "Linea 1.5x9m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Nera",
+          "retro_descrizione": "Danno: Acido. Soffio: Linea 1.5x9m (TS Destrezza). Resistenza: Acido."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Acido"],
+          "arma_a_soffio": {
+            "tipo_danno": "Acido",
+            "area": "Linea 1.5x9m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_blu",
+        "id": "sub_dragonide_blu",
         "nome": "Discendenza Blu",
-        "asset_carta": "C_drag_blu.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Fulmine",
-          "resistenza_danni": ["Fulmine"],
-          "soffio_area": "Linea 1.5x9m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Blu",
+          "retro_descrizione": "Danno: Fulmine. Soffio: Linea 1.5x9m (TS Destrezza). Resistenza: Fulmine."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Fulmine"],
+          "arma_a_soffio": {
+            "tipo_danno": "Fulmine",
+            "area": "Linea 1.5x9m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_ottone",
+        "id": "sub_dragonide_ottone",
         "nome": "Discendenza Ottone",
-        "asset_carta": "C_drag_ottone.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Fuoco",
-          "resistenza_danni": ["Fuoco"],
-          "soffio_area": "Linea 1.5x9m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Ottone",
+          "retro_descrizione": "Danno: Fuoco. Soffio: Linea 1.5x9m (TS Destrezza). Resistenza: Fuoco."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Fuoco"],
+          "arma_a_soffio": {
+            "tipo_danno": "Fuoco",
+            "area": "Linea 1.5x9m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_bronzo",
+        "id": "sub_dragonide_bronzo",
         "nome": "Discendenza Bronzo",
-        "asset_carta": "C_drag_bronzo.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Fulmine",
-          "resistenza_danni": ["Fulmine"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Bronzo",
+          "retro_descrizione": "Danno: Fulmine. Soffio: Cono 4.5m (TS Destrezza). Resistenza: Fulmine."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Fulmine"],
+          "arma_a_soffio": {
+            "tipo_danno": "Fulmine",
+            "area": "Cono 4.5m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_rame",
+        "id": "sub_dragonide_rame",
         "nome": "Discendenza Rame",
-        "asset_carta": "C_drag_rame.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Acido",
-          "resistenza_danni": ["Acido"],
-          "soffio_area": "Linea 1.5x9m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Rame",
+          "retro_descrizione": "Danno: Acido. Soffio: Linea 1.5x9m (TS Destrezza). Resistenza: Acido."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Acido"],
+          "arma_a_soffio": {
+            "tipo_danno": "Acido",
+            "area": "Linea 1.5x9m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_oro",
+        "id": "sub_dragonide_oro",
         "nome": "Discendenza Oro",
-        "asset_carta": "C_drag_oro.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Fuoco",
-          "resistenza_danni": ["Fuoco"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "DES"
+        "ui_carta": {
+          "fronte": "Discendenza Oro",
+          "retro_descrizione": "Danno: Fuoco. Soffio: Cono 4.5m (TS Destrezza). Resistenza: Fuoco."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Fuoco"],
+          "arma_a_soffio": {
+            "tipo_danno": "Fuoco",
+            "area": "Cono 4.5m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_verde",
+        "id": "sub_dragonide_verde",
         "nome": "Discendenza Verde",
-        "asset_carta": "C_drag_verde.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Veleno",
-          "resistenza_danni": ["Veleno"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "COS"
+        "ui_carta": {
+          "fronte": "Discendenza Verde",
+          "retro_descrizione": "Danno: Veleno. Soffio: Cono 4.5m (TS Costituzione). Resistenza: Veleno."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Veleno"],
+          "arma_a_soffio": {
+            "tipo_danno": "Veleno",
+            "area": "Cono 4.5m",
+            "statistica_ts": "COS"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_rosso",
-        "nome": "Discendenza Rosso",
-        "asset_carta": "C_drag_rosso.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Fuoco",
-          "resistenza_danni": ["Fuoco"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "DES"
+        "id": "sub_dragonide_rosso",
+        "nome": "Discendenza Rossa",
+        "ui_carta": {
+          "fronte": "Discendenza Rossa",
+          "retro_descrizione": "Danno: Fuoco. Soffio: Cono 4.5m (TS Destrezza). Resistenza: Fuoco."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Fuoco"],
+          "arma_a_soffio": {
+            "tipo_danno": "Fuoco",
+            "area": "Cono 4.5m",
+            "statistica_ts": "DES"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_argento",
+        "id": "sub_dragonide_argento",
         "nome": "Discendenza Argento",
-        "asset_carta": "C_drag_argento.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Freddo",
-          "resistenza_danni": ["Freddo"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "COS"
+        "ui_carta": {
+          "fronte": "Discendenza Argento",
+          "retro_descrizione": "Danno: Freddo. Soffio: Cono 4.5m (TS Costituzione). Resistenza: Freddo."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Freddo"],
+          "arma_a_soffio": {
+            "tipo_danno": "Freddo",
+            "area": "Cono 4.5m",
+            "statistica_ts": "COS"
+          }
         }
       },
       {
-        "id_comunita": "com_drag_bianco",
-        "nome": "Discendenza Bianco",
-        "asset_carta": "C_drag_bianco.png",
-        "automatismi_comunita": {
-          "tipo_danno": "Freddo",
-          "resistenza_danni": ["Freddo"],
-          "soffio_area": "Cono 4.5m",
-          "soffio_ts": "COS"
+        "id": "sub_dragonide_bianco",
+        "nome": "Discendenza Bianca",
+        "ui_carta": {
+          "fronte": "Discendenza Bianca",
+          "retro_descrizione": "Danno: Freddo. Soffio: Cono 4.5m (TS Costituzione). Resistenza: Freddo."
+        },
+        "automatismi_sottorazza": {
+          "resistenze_danni": ["Freddo"],
+          "arma_a_soffio": {
+            "tipo_danno": "Freddo",
+            "area": "Cono 4.5m",
+            "statistica_ts": "COS"
+          }
         }
       }
     ]
