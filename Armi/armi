@@ -11,7 +11,6 @@
     { "id_wp": "wp_falcetto", "nome": "Falcetto", "categoria": "Semplice", "tipo": "Mischia", "costo": "1 mo", "danno": "1d4", "tipo_danno": "Tagliente", "peso": 1, "proprieta": ["Leggera"] },
     { "id_wp": "wp_lancia", "nome": "Lancia", "categoria": "Semplice", "tipo": "Mischia", "costo": "1 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1.5, "proprieta": ["Lancio (6/18)", "Versatile (1d8)"] },
     { "id_wp": "wp_balestra_leggera", "nome": "Balestra Leggera", "categoria": "Semplice", "tipo": "Distanza", "costo": "25 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 2.5, "proprieta": ["Munizioni (24/96)", "Ricarica", "Due Mani"] },
-    { "id_wp": "wp_dardo", "nome": "Dardo", "categoria": "Semplice", "tipo": "Distanza", "costo": "5 mr", "danno": "1d4", "tipo_danno": "Perforante", "peso": 0.1, "proprieta": ["Accurata", "Lancio (6/18)"] },
     { "id_wp": "wp_arco_corto", "nome": "Arco Corto", "categoria": "Semplice", "tipo": "Distanza", "costo": "25 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Munizioni (24/96)", "Due Mani"] },
     { "id_wp": "wp_fionda", "nome": "Fionda", "categoria": "Semplice", "tipo": "Distanza", "costo": "1 ma", "danno": "1d4", "tipo_danno": "Contundente", "peso": 0, "proprieta": ["Munizioni (9/36)"] },
     { "id_wp": "wp_alabarda", "nome": "Alabarda", "categoria": "Marziale", "tipo": "Mischia", "costo": "20 mo", "danno": "1d10", "tipo_danno": "Tagliente", "peso": 3, "proprieta": ["Pesante", "Portata", "Due Mani"] },
