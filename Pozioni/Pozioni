@@ -1,0 +1,3 @@
+{
+  "pozioni": [
+   { "id_eq": "pozione_guarigione", "nome": "Pozione di Guarigione", "costo": "50 mo", "peso": 0.25, "cura": "2d4 + 4", "descrizione": "Recupera 2d4 + 2 Punti Ferita." },
