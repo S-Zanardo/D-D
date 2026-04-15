@@ -23,7 +23,7 @@
     { "id_eq": "eq_olio", "nome": "Olio (ampolla)", "costo": "1 ma", "peso": 0.5, "descrizione": "Combustibile o arma improvvisata (1d4 danni fuoco)." },
     { "id_eq": "eq_pala", "nome": "Pala", "costo": "2 mo", "peso": 2.5, "descrizione": "Attrezzo per scavare." },
     { "id_eq": "eq_piede_porco", "nome": "Piede di Porco", "costo": "2 mo", "peso": 2.5, "descrizione": "Vantaggio alle prove di Forza dove è applicabile la leva." },
-    { "id_eq": "eq_pozione_guarigione", "nome": "Pozione di Guarigione", "costo": "50 mo", "peso": 0.25, "descrizione": "Recupera 2d4 + 2 Punti Ferita." },
+    { "id_eq": "eq_pozione_guarigione", "nome": "Pozione di Guarigione", "categoria": "Pozioni", "costo": "50 mo", "peso": 0.25, "descrizione": "Recupera 2d4 + 2 Punti Ferita." },
     { "id_eq": "eq_razioni", "nome": "Razioni (1 giorno)", "costo": "5 ma", "peso": 1, "descrizione": "Cibo disidratato per viaggiatori." },
     { "id_eq": "eq_sacca", "nome": "Sacca", "costo": "1 ma", "peso": 0.25, "descrizione": "Capacità: 0.03 metri cubi / 15kg." },
     { "id_eq": "eq_sacco_pelo", "nome": "Sacco a Pelo", "costo": "1 mo", "peso": 3.5, "descrizione": "Equipaggiamento da bivacco." },
