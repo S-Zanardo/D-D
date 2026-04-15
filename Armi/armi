@@ -23,6 +23,7 @@
     { "id_wp": "wp_maglio", "nome": "Maglio", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "2d6", "tipo_danno": "Contundente", "peso": 5, "proprieta": ["Pesante", "Due Mani"] },
     { "id_wp": "wp_mazzafrusto", "nome": "Mazzafrusto", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d8", "tipo_danno": "Contundente", "peso": 2, "proprieta": [] },
     { "id_wp": "wp_picca", "nome": "Picca", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "5 mo", "danno": "1d10", "tipo_danno": "Perforante", "peso": 9, "proprieta": ["Pesante", "Portata", "Due Mani"] },
+    { "id_wp": "wp_pistola", "nome": "Pistola", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "50 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Munizioni (45/180)", "Pesante"] },
     { "id_wp": "wp_scimitarra", "nome": "Scimitarra", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "25 mo", "danno": "1d6", "tipo_danno": "Tagliente", "peso": 1.5, "proprieta": ["Accurata", "Leggera"] },
     { "id_wp": "wp_spada_corta", "nome": "Spada Corta", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Accurata", "Leggera"] },
     { "id_wp": "wp_spada_lunga", "nome": "Spada Lunga", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "15 mo", "danno": "1d8", "tipo_danno": "Tagliente", "peso": 1.5, "proprieta": ["Versatile (1d10)"] },
