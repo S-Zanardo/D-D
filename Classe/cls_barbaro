@@ -1,152 +1,103 @@
 {
-  "class": "Barbaro",
+  "id": "class_barbarian",
+  "name": "Barbaro",
   "hit_die": 12,
-  "primary_ability": "Forza",
-  "saving_throws": ["Forza", "Costituzione"],
+  "primary_ability": ["STR"],
+  "multiclass_requirements": {
+    "STR": 13
+  },
+  "multiclass_proficiencies": {
+    "armor": ["shield", "simple_weapons", "martial_weapons"]
+  },
+  "starting_wealth": "2d4*10",
   "proficiencies": {
-    "armor": ["Armature leggere", "Armature medie", "Scudi"],
-    "weapons": ["Armi semplici", "Armi da guerra"],
+    "armor": ["light_armor", "medium_armor", "shield"],
+    "weapons": ["simple_weapons", "martial_weapons"],
     "tools": [],
+    "saving_throws": ["STR", "CON"],
     "skills": {
       "choose": 2,
-      "options": ["Addestrare Animali", "Atletica", "Intimidire", "Natura", "Percezione", "Sopravvivenza"]
+      "options": ["skill_animal_handling", "skill_athletics", "skill_intimidation", "skill_nature", "skill_perception", "skill_survival"]
     }
   },
   "starting_equipment": {
-    "fixed": ["Zaino da dotazione per esploratori", "4 Giavellotti"],
+    "fixed": ["itm_explorer_pack", "itm_javelin_x4"],
     "choices": [
       {
-        "option_a": "Ascia bipenne",
-        "option_b": "Qualsiasi arma da guerra da mischia"
+        "choose": 1,
+        "options": [
+          {"type": "specific", "id": "itm_greataxe"},
+          {"type": "category", "id": "martial_melee_weapons"}
+        ]
       },
       {
-        "option_a": "Due asce da battaglia",
-        "option_b": "Qualsiasi arma semplice"
+        "choose": 1,
+        "options": [
+          {"type": "specific", "id": "itm_handaxe_x2"},
+          {"type": "category", "id": "simple_weapons"}
+        ]
       }
     ]
   },
   "class_progression": [
-    {"level": 1, "prof_bonus": 2, "rages": 2, "rage_damage": 2, "features": ["Ira", "Difesa Senza Armatura"]},
-    {"level": 2, "prof_bonus": 2, "rages": 2, "rage_damage": 2, "features": ["Attacco Irruente", "Percezione del Pericolo"]},
-    {"level": 3, "prof_bonus": 2, "rages": 3, "rage_damage": 2, "features": ["Cammino Primordiale"]},
-    {"level": 4, "prof_bonus": 2, "rages": 3, "rage_damage": 2, "features": ["Aumento dei Punteggi di Caratteristica"]},
-    {"level": 5, "prof_bonus": 3, "rages": 3, "rage_damage": 2, "features": ["Attacco Extra", "Movimento Veloce"]},
-    {"level": 6, "prof_bonus": 3, "rages": 4, "rage_damage": 2, "features": ["Privilegio del Cammino Primordiale"]},
-    {"level": 7, "prof_bonus": 3, "rages": 4, "rage_damage": 2, "features": ["Istinto Selvaggio"]},
-    {"level": 8, "prof_bonus": 3, "rages": 4, "rage_damage": 2, "features": ["Aumento dei Punteggi di Caratteristica"]},
-    {"level": 9, "prof_bonus": 4, "rages": 4, "rage_damage": 3, "features": ["Critico Brutale (1 dado)"]},
-    {"level": 10, "prof_bonus": 4, "rages": 4, "rage_damage": 3, "features": ["Privilegio del Cammino Primordiale"]},
-    {"level": 11, "prof_bonus": 4, "rages": 4, "rage_damage": 3, "features": ["Ira Implacabile"]},
-    {"level": 12, "prof_bonus": 4, "rages": 5, "rage_damage": 3, "features": ["Aumento dei Punteggi di Caratteristica"]},
-    {"level": 13, "prof_bonus": 5, "rages": 5, "rage_damage": 3, "features": ["Critico Brutale (2 dadi)"]},
-    {"level": 14, "prof_bonus": 5, "rages": 5, "rage_damage": 3, "features": ["Privilegio del Cammino Primordiale"]},
-    {"level": 15, "prof_bonus": 5, "rages": 5, "rage_damage": 3, "features": ["Ira Persistente"]},
-    {"level": 16, "prof_bonus": 5, "rages": 5, "rage_damage": 4, "features": ["Aumento dei Punteggi di Caratteristica"]},
-    {"level": 17, "prof_bonus": 6, "rages": 6, "rage_damage": 4, "features": ["Critico Brutale (3 dadi)"]},
-    {"level": 18, "prof_bonus": 6, "rages": 6, "rage_damage": 4, "features": ["Potenza Indomita"]},
-    {"level": 19, "prof_bonus": 6, "rages": 6, "rage_damage": 4, "features": ["Aumento dei Punteggi di Caratteristica"]},
-    {"level": 20, "prof_bonus": 6, "rages": 999, "rage_damage": 4, "features": ["Campione Primitivo"]}
+    {
+      "level": 1, 
+      "prof_bonus": 2, 
+      "class_specific": {"rages": 2, "rage_damage": 2}, 
+      "features_unlocked": ["feat_rage", "feat_unarmored_defense"],
+      "actions_required": []
+    },
+    {
+      "level": 2, 
+      "prof_bonus": 2, 
+      "class_specific": {"rages": 2, "rage_damage": 2}, 
+      "features_unlocked": ["feat_reckless_attack", "feat_danger_sense"],
+      "actions_required": []
+    },
+    {
+      "level": 3, 
+      "prof_bonus": 2, 
+      "class_specific": {"rages": 3, "rage_damage": 2}, 
+      "features_unlocked": ["feat_primal_path"],
+      "actions_required": ["choose_subclass"]
+    },
+    {
+      "level": 4, 
+      "prof_bonus": 2, 
+      "class_specific": {"rages": 3, "rage_damage": 2}, 
+      "features_unlocked": [],
+      "actions_required": ["asi_or_feat"]
+    },
+    {
+      "level": 5, 
+      "prof_bonus": 3, 
+      "class_specific": {"rages": 3, "rage_damage": 2}, 
+      "features_unlocked": ["feat_extra_attack", "feat_fast_movement"],
+      "actions_required": []
+    }
   ],
   "features_details": {
-    "Ira": {
-      "description": "In combattimento, combatti con ferocia primordiale. Nel tuo turno, puoi entrare in ira come azione bonus.",
+    "feat_rage": {
+      "name": "Ira",
+      "description": "In combattimento, combatti con ferocia primordiale. Nel tuo turno, puoi entrare in ira come azione bonus...",
       "mechanics": {
-        "activation": "bonus_action",
-        "duration": "1_minute",
-        "constraints": ["no_heavy_armor"],
-        "benefits": {
-          "advantage": ["Strength checks", "Strength saving throws"],
-          "damage_bonus": "variable_by_level",
-          "resistance": ["bludgeoning", "piercing", "slashing"]
-        }
+        "action_type": "bonus_action",
+        "duration_minutes": 1,
+        "modifiers": [
+          {"type": "advantage", "target": "str_saving_throws"},
+          {"type": "advantage", "target": "str_checks"},
+          {"type": "damage_bonus", "target": "str_melee_attacks", "value_source": "class_specific.rage_damage"},
+          {"type": "resistance", "target": ["bludgeoning", "piercing", "slashing"]}
+        ],
+        "restrictions": ["no_heavy_armor", "no_spellcasting"]
       }
     },
-    "Difesa Senza Armatura": {
-      "description": "Finché non indossi alcuna armatura, la tua Classe Armatura è pari a 10 + Modificatore di Destrezza + Modificatore di Costituzione.",
+    "feat_unarmored_defense": {
+      "name": "Difesa Senza Armatura",
+      "description": "Finché non indossi alcuna armatura, la tua CA è pari a 10 + Modificatore DES + Modificatore COS.",
       "mechanics": {
-        "ac_calculation": "10 + DEX + CON",
-        "shield_allowed": true
-      }
-    },
-    "Attacco Irruente": {
-      "description": "Puoi scartare ogni difesa per colpire con furia disperata. Il primo attacco in mischia basato sulla Forza ha vantaggio.",
-      "mechanics": {
-        "benefit": "advantage_on_melee_strength_attacks",
-        "penalty": "enemies_have_advantage_against_you_until_next_turn"
-      }
-    },
-    "Percezione del Pericolo": {
-      "description": "Ottieni un senso innato di quando le cose intorno a te non sono come dovrebbero essere.",
-      "mechanics": {
-        "advantage": ["Dexterity saving throws against seen effects"],
-        "constraints": ["not_blinded", "not_deafened", "not_incapacitated"]
-      }
-    },
-    "Cammino Primordiale": {
-      "description": "Scegli un cammino che plasma la natura della tua ira. Questa scelta garantisce privilegi ai livelli 3, 6, 10 e 14.",
-      "mechanics": {
-        "trigger": "subclass_selection",
-        "reference_file": "subclasses_barbarian.json"
-      }
-    },
-    "Aumento dei Punteggi di Caratteristica": {
-      "description": "Puoi aumentare un punteggio di caratteristica di 2, o due punteggi di caratteristica di 1. In alternativa, puoi scegliere un talento.",
-      "mechanics": {
-        "options": ["+2 to one ability score", "+1 to two ability scores", "Choose a Feat"],
-        "max_score": 20
-      }
-    },
-    "Attacco Extra": {
-      "description": "Puoi attaccare due volte, anziché una volta, ogni volta che effettui l'azione di Attacco nel tuo turno.",
-      "mechanics": {
-        "attacks_per_action": 2
-      }
-    },
-    "Movimento Veloce": {
-      "description": "La tua velocità aumenta di 3 metri purché tu non indossi un'armatura pesante.",
-      "mechanics": {
-        "speed_bonus": 3,
-        "unit": "meters",
-        "condition": "no_heavy_armor"
-      }
-    },
-    "Istinto Selvaggio": {
-      "description": "I tuoi istinti sono così affinati che hai vantaggio ai tiri per l'iniziativa.",
-      "mechanics": {
-        "advantage": ["Initiative"],
-        "surprise_override": "can act normally if you enter rage before doing anything else"
-      }
-    },
-    "Critico Brutale": {
-      "description": "Puoi tirare dadi di danno dell'arma aggiuntivi quando determini il danno extra di un colpo critico.",
-      "mechanics": {
-        "extra_crit_dice": "variable_by_level"
-      }
-    },
-    "Ira Implacabile": {
-      "description": "La tua ira ti permette di continuare a combattere nonostante le ferite gravi.",
-      "mechanics": {
-        "on_zero_hp": "DC 10 CON save to drop to 1 HP instead",
-        "dc_increase": 5
-      }
-    },
-    "Ira Persistente": {
-      "description": "La tua ira è così feroce che termina prematuramente solo se cadi privo di sensi o se scegli di farla terminare.",
-      "mechanics": {
-        "end_conditions": ["unconscious", "voluntary_end"]
-      }
-    },
-    "Potenza Indomita": {
-      "description": "Se il totale di una prova di Forza è inferiore al tuo punteggio di Forza, puoi usare quel punteggio al posto del totale.",
-      "mechanics": {
-        "min_strength_check_result": "STR_score"
-      }
-    },
-    "Campione Primitivo": {
-      "description": "Diventi l'incarnazione del potere selvaggio. I tuoi punteggi di Forza e Costituzione aumentano di 4.",
-      "mechanics": {
-        "stat_bonus": {"STR": 4, "CON": 4},
-        "max_limit_override": 24
+        "ac_formula": "10 + DEX_MOD + CON_MOD",
+        "allows_shield": true
       }
     }
   }
