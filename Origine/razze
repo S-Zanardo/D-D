@@ -1,0 +1,184 @@
+{
+  "races": [
+    {
+      "id": "mezzorco",
+      "ui": {
+        "title": "Mezzorco",
+        "subtitle": "Razza",
+        "front_image": "url_immagine_tarocco_mezzorco.png"
+      },
+      "display": {
+        "asi": "Forza +2, Costituzione +1",
+        "age": "Raggiungono la maturità a 14 anni. L'aspettativa di vita massima è di circa 75 anni.",
+        "alignment": "Tendono all'allineamento caotico e raramente propendono per il bene.",
+        "size": "Media. La statura varia da 1,5 metri a oltre 2 metri, con una corporatura massiccia.",
+        "speed": "La velocità base di passeggio è di 9 metri (30 piedi).",
+        "vision": "Visione utile entro 18 metri (60 piedi) in condizioni di luce fioca come se fosse luce intensa, e nell'oscurità come se fosse luce fioca. Nell'oscurità non si distinguono i colori, ma solo sfumature di grigio.",
+        "traits": [
+          {
+            "title": "Minaccioso",
+            "description": "Fornisce la competenza nell'abilità Intimidire."
+          },
+          {
+            "title": "Resistenza Implacabile",
+            "description": "Quando i punti ferita scendono a 0, a meno che non sia morte istantanea, scendono invece a 1. Utilizzabile una sola volta. Si ricarica al termine di un riposo lungo."
+          },
+          {
+            "title": "Attacchi Selvaggi",
+            "description": "Quando si mette a segno un colpo critico con un attacco con un'arma da mischia, si tira uno dei dadi di danno dell'arma un'ulteriore volta e lo si aggiunge ai danni extra del colpo critico."
+          }
+        ],
+        "languages": "Capacità di parlare, leggere e scrivere in Comune e Orchesco."
+      },
+      "logic": {
+        "asi": { "str": 2, "dex": 0, "con": 1, "int": 0, "wis": 0, "cha": 0 },
+        "speed_m": 9,
+        "vision_type": "scurovisione (18m)",
+        "skill_proficiencies": ["Intimidire"],
+        "tool_proficiencies": [],
+        "weapon_proficiencies": [],
+        "armor_proficiencies": [],
+        "languages": ["Comune", "Orchesco"],
+        "mechanics": [
+          {
+            "id": "resistenza_implacabile",
+            "trigger": "hp_reaches_0",
+            "effect": "set_hp_1",
+            "uses_per_rest": 1,
+            "rest_type": "long"
+          },
+          {
+            "id": "attacchi_selvaggi",
+            "trigger": "melee_weapon_crit",
+            "effect": "add_weapon_damage_die"
+          }
+        ]
+      },
+      "subraces": null
+    },
+    {
+      "id": "elfo",
+      "ui": {
+        "title": "Elfo",
+        "subtitle": "Razza",
+        "front_image": "url_immagine_tarocco_elfo.png"
+      },
+      "display": {
+        "asi": "Destrezza +2",
+        "age": "Sebbene gli elfi raggiungano la maturità fisica circa alla stessa età degli umani, la comprensione elfica dell'età adulta va oltre la crescita fisica. Un elfo tipicamente rivendica l'età adulta e un nome da adulto intorno ai 100 anni e può vivere fino a 750 anni.",
+        "alignment": "Gli elfi amano la libertà, la varietà e l'espressione personale, quindi propendono fortemente per gli aspetti più gentili del caos.",
+        "size": "Media. Gli elfi variano dai 1,5 a oltre 1,8 metri di altezza e hanno corporature snelle.",
+        "speed": "La velocità base di passeggio è di 9 metri (30 piedi).",
+        "vision": "Abituato alle foreste crepuscolari e al cielo notturno, l'elfo possiede una vista superiore in condizioni di oscurità e luce fioca. Scurovisione 18 metri.",
+        "traits": [
+          {
+            "title": "Sensi Acuti",
+            "description": "Fornisce la competenza nell'abilità Percezione."
+          },
+          {
+            "title": "Retaggio Feerico",
+            "description": "Vantaggio ai tiri salvezza per non essere affascinato e la magia non può addormentare l'elfo."
+          },
+          {
+            "title": "Trance",
+            "description": "Gli elfi non hanno bisogno di dormire. Meditano profondamente per 4 ore al giorno, ottenendo gli stessi benefici di 8 ore di sonno umano."
+          }
+        ],
+        "languages": "Capacità di parlare, leggere e scrivere in Comune ed Elfico."
+      },
+      "logic": {
+        "asi": { "str": 0, "dex": 2, "con": 0, "int": 0, "wis": 0, "cha": 0 },
+        "speed_m": 9,
+        "vision_type": "scurovisione (18m)",
+        "skill_proficiencies": ["Percezione"],
+        "tool_proficiencies": [],
+        "weapon_proficiencies": [],
+        "armor_proficiencies": [],
+        "languages": ["Comune", "Elfico"],
+        "mechanics": [
+          {
+            "id": "retaggio_feerico",
+            "trigger": "saving_throw_charm",
+            "effect": "advantage",
+            "immunity": "magical_sleep"
+          }
+        ]
+      },
+      "subraces": [
+        {
+          "id": "alto_elfo",
+          "ui": {
+            "title": "Alto Elfo"
+          },
+          "display": {
+            "asi": "Intelligenza +1",
+            "traits": [
+              {
+                "title": "Addestramento nelle Armi Elfiche",
+                "description": "Competenza nelle spade lunghe, spade corte, archi corti e archi lunghi."
+              },
+              {
+                "title": "Trucchetto",
+                "description": "Conosce un trucchetto a scelta dalla lista degli incantesimi del mago. Intelligenza è la caratteristica da incantatore."
+              },
+              {
+                "title": "Linguaggio Extra",
+                "description": "Può parlare, leggere e scrivere un linguaggio extra a scelta."
+              }
+            ]
+          },
+          "logic_modifiers": {
+            "asi_add": { "int": 1 },
+            "weapon_proficiencies_add": ["Spada lunga", "Spada corta", "Arco corto", "Arco lungo"],
+            "languages_add_choice": 1,
+            "mechanics_add": [
+              {
+                "id": "trucchetto_alto_elfo",
+                "type": "spell_selection",
+                "list": "mago",
+                "level": 0,
+                "quantity": 1,
+                "ability": "int"
+              }
+            ]
+          }
+        },
+        {
+          "id": "elfo_dei_boschi",
+          "ui": {
+            "title": "Elfo dei Boschi"
+          },
+          "display": {
+            "asi": "Saggezza +1",
+            "traits": [
+              {
+                "title": "Addestramento nelle Armi Elfiche",
+                "description": "Competenza nelle spade lunghe, spade corte, archi corti e archi lunghi."
+              },
+              {
+                "title": "Passo Veloce",
+                "description": "La velocità base di passeggio aumenta a 10,5 metri (35 piedi)."
+              },
+              {
+                "title": "Maschera della Natura",
+                "description": "L'elfo può tentare di nascondersi anche quando è oscurato solo leggermente da fogliame, pioggia forte, neve che cade, nebbia e altri fenomeni naturali."
+              }
+            ]
+          },
+          "logic_modifiers": {
+            "asi_add": { "wis": 1 },
+            "weapon_proficiencies_add": ["Spada lunga", "Spada corta", "Arco corto", "Arco lungo"],
+            "speed_m_override": 10.5,
+            "mechanics_add": [
+              {
+                "id": "maschera_della_natura",
+                "trigger": "hide_action",
+                "condition": "lightly_obscured_natural"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
