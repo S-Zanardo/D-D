@@ -1,39 +1,587 @@
 {
   "armi": [
-    { "id_wp": "wp_randello", "nome": "Randello", "categoria": "Semplice", "tipo": "Mischia", "costo": "1 ma", "danno": "1d4", "tipo_danno": "Contundente", "peso": 1, "proprieta": ["Leggera"] },
-    { "id_wp": "wp_pugnale", "nome": "Pugnale", "categoria": "Semplice", "tipo": "Mischia", "costo": "2 mo", "danno": "1d4", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Accurata", "Leggera", "Lancio (6/18)"] },
-    { "id_wp": "wp_randello_pesante", "nome": "Randello Pesante", "categoria": "Semplice", "tipo": "Mischia", "costo": "2 ma", "danno": "1d8", "tipo_danno": "Contundente", "peso": 5, "proprieta": ["Due Mani"] },
-    { "id_wp": "wp_ascia_mano", "nome": "Ascia a Mano", "categoria": "Semplice", "tipo": "Mischia", "costo": "5 mo", "danno": "1d6", "tipo_danno": "Tagliente", "peso": 1, "proprieta": ["Leggera", "Lancio (6/18)"] },
-    { "id_wp": "wp_giavellotto", "nome": "Giavellotto", "categoria": "Semplice", "tipo": "Mischia", "costo": "5 ma", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Lancio (9/36)"] },
-    { "id_wp": "wp_martello_leggero", "nome": "Martello Leggero", "categoria": "Semplice", "tipo": "Mischia", "costo": "2 mo", "danno": "1d4", "tipo_danno": "Contundente", "peso": 1, "proprieta": ["Leggera", "Lancio (6/18)"] },
-    { "id_wp": "wp_mazza", "nome": "Mazza", "categoria": "Semplice", "tipo": "Mischia", "costo": "5 mo", "danno": "1d6", "tipo_danno": "Contundente", "peso": 2, "proprieta": [] },
-    { "id_wp": "wp_bastone_ferrato", "nome": "Bastone Ferrato", "categoria": "Semplice", "tipo": "Mischia", "costo": "2 ma", "danno": "1d6", "tipo_danno": "Contundente", "peso": 2, "proprieta": ["Versatile (1d8)"] },
-    { "id_wp": "wp_falcetto", "nome": "Falcetto", "categoria": "Semplice", "tipo": "Mischia", "costo": "1 mo", "danno": "1d4", "tipo_danno": "Tagliente", "peso": 1, "proprieta": ["Leggera"] },
-    { "id_wp": "wp_lancia", "nome": "Lancia", "categoria": "Semplice", "tipo": "Mischia", "costo": "1 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1.5, "proprieta": ["Lancio (6/18)", "Versatile (1d8)"] },
-    { "id_wp": "wp_balestra_leggera", "nome": "Balestra Leggera", "categoria": "Semplice", "tipo": "Distanza", "costo": "25 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 2.5, "proprieta": ["Munizioni (24/96)", "Ricarica", "Due Mani"] },
-    { "id_wp": "wp_arco_corto", "nome": "Arco Corto", "categoria": "Semplice", "tipo": "Distanza", "costo": "25 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Munizioni (24/96)", "Due Mani"] },
-    { "id_wp": "wp_fionda", "nome": "Fionda", "categoria": "Semplice", "tipo": "Distanza", "costo": "1 ma", "danno": "1d4", "tipo_danno": "Contundente", "peso": 0, "proprieta": ["Munizioni (9/36)"] },
-    { "id_wp": "wp_alabarda", "nome": "Alabarda", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "20 mo", "danno": "1d10", "tipo_danno": "Tagliente", "peso": 3, "proprieta": ["Pesante", "Portata", "Due Mani"] },
-    { "id_wp": "wp_ascia_bipenne", "nome": "Ascia Bipenne", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "30 mo", "danno": "1d12", "tipo_danno": "Tagliente", "peso": 3.5, "proprieta": ["Pesante", "Due Mani"] },
-    { "id_wp": "wp_falcione", "nome": "Falcione", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "20 mo", "danno": "1d10", "tipo_danno": "Tagliente", "peso": 3, "proprieta": ["Pesante", "Portata", "Due Mani"] },
-    { "id_wp": "wp_flagello", "nome": "Flagello", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d8", "tipo_danno": "Contundente", "peso": 1, "proprieta": [] },
-    { "id_wp": "wp_falce", "nome": "Falce", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d10", "tipo_danno": "Tagliente", "peso": 1, "proprieta": ["Pesante", "Due Mani"] },
-    { "id_wp": "wp_martello_guerra", "nome": "Martello da Guerra", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "15 mo", "danno": "1d8", "tipo_danno": "Contundente", "peso": 1, "proprieta": ["Versatile (1d10)"] },
-    { "id_wp": "wp_lancia_cavaliere", "nome": "Lancia da Cavaliere", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d12", "tipo_danno": "Perforante", "peso": 3, "proprieta": ["Portata", "Speciale"] },
-    { "id_wp": "wp_maglio", "nome": "Maglio", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "2d6", "tipo_danno": "Contundente", "peso": 5, "proprieta": ["Pesante", "Due Mani"] },
-    { "id_wp": "wp_mazzafrusto", "nome": "Mazzafrusto", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d8", "tipo_danno": "Contundente", "peso": 2, "proprieta": [] },
-    { "id_wp": "wp_picca", "nome": "Picca", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "5 mo", "danno": "1d10", "tipo_danno": "Perforante", "peso": 9, "proprieta": ["Pesante", "Portata", "Due Mani"] },
-    { "id_wp": "wp_pistola", "nome": "Pistola", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "50 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Munizioni (45/180)", "Pesante"] },
-    { "id_wp": "wp_scimitarra", "nome": "Scimitarra", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "25 mo", "danno": "1d6", "tipo_danno": "Tagliente", "peso": 1.5, "proprieta": ["Accurata", "Leggera"] },
-    { "id_wp": "wp_spada_corta", "nome": "Spada Corta", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "10 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Accurata", "Leggera"] },
-    { "id_wp": "wp_spada_lunga", "nome": "Spada Lunga", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "15 mo", "danno": "1d8", "tipo_danno": "Tagliente", "peso": 1.5, "proprieta": ["Versatile (1d10)"] },
-    { "id_wp": "wp_spadone", "nome": "Spadone", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "50 mo", "danno": "2d6", "tipo_danno": "Tagliente", "peso": 3, "proprieta": ["Pesante", "Due Mani"] },
-    { "id_wp": "wp_stocco", "nome": "Stocco", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "25 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Accurata"] },
-    { "id_wp": "wp_tridente", "nome": "Tridente", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "5 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 2, "proprieta": ["Lancio (6/18)", "Versatile (1d8)"] },
-    { "id_wp": "wp_frusta", "nome": "Frusta", "categoria": "Da Guerra", "tipo": "Mischia", "costo": "2 mo", "danno": "1d4", "tipo_danno": "Tagliente", "peso": 1.5, "proprieta": ["Accurata", "Portata"] },
-    { "id_wp": "wp_balestra_mano", "nome": "Balestra a Mano", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "75 mo", "danno": "1d6", "tipo_danno": "Perforante", "peso": 1.5, "proprieta": ["Munizioni (9/36)", "Leggera", "Ricarica"] },
-    { "id_wp": "wp_balestra_pesante", "nome": "Balestra Pesante", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "50 mo", "danno": "1d10", "tipo_danno": "Perforante", "peso": 9, "proprieta": ["Munizioni (30/120)", "Pesante", "Ricarica", "Due Mani"] },
-    { "id_wp": "wp_arco_lungo", "nome": "Arco Lungo", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "50 mo", "danno": "1d8", "tipo_danno": "Perforante", "peso": 1, "proprieta": ["Munizioni (45/180)", "Pesante", "Due Mani"] },
-    { "id_wp": "wp_rete", "nome": "Rete", "categoria": "Da Guerra", "tipo": "Distanza", "costo": "1 mo", "danno": "0", "tipo_danno": "Speciale", "peso": 1.5, "proprieta": ["Lancio (1.5/4.5)", "Speciale"] }
+    {
+      "id": "DD_WEAPON_RANDELLO",
+      "name": "Randello",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "1 ma",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["leggera"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_PUGNALE",
+      "name": "Pugnale",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "2 mo",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["accurata", "leggera", "lancio (6/18)"],
+        "finesse_options": {
+          "alternative_trait": "Destrezza"
+        },
+        "thrown_options": {
+          "range_normal_long": "6/18"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_RANDELLO_PESANTE",
+      "name": "Randello Pesante",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 5.0,
+      "cost": "2 ma",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_ASCIA_MANO",
+      "name": "Ascia a Mano",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "5 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["leggera", "lancio (6/18)"],
+        "thrown_options": {
+          "range_normal_long": "6/18"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_GIAVELLOTTO",
+      "name": "Giavellotto",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "5 ma",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["lancio (9/36)"],
+        "thrown_options": {
+          "range_normal_long": "9/36"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_MARTELLO_LEGGERO",
+      "name": "Martello Leggero",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "2 mo",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["leggera", "lancio (6/18)"],
+        "thrown_options": {
+          "range_normal_long": "6/18"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_MAZZA",
+      "name": "Mazza",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 2.0,
+      "cost": "5 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": []
+      }
+    },
+    {
+      "id": "DD_WEAPON_BASTONE_FERRATO",
+      "name": "Bastone Ferrato",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 2.0,
+      "cost": "2 ma",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["versatile (1d8)"],
+        "versatile_options": {
+          "two_handed_damage_dice": "1d8"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_FALCETTO",
+      "name": "Falcetto",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "1 mo",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["leggera"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_LANCIA",
+      "name": "Lancia",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "1 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["lancio (6/18)", "versatile (1d8)"],
+        "thrown_options": {
+          "range_normal_long": "6/18"
+        },
+        "versatile_options": {
+          "two_handed_damage_dice": "1d8"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_BALESTRA_LEGGERA",
+      "name": "Balestra Leggera",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 2.5,
+      "cost": "25 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "perforante",
+        "range": "24/96",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "ricarica", "due mani"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_ARCO_CORTO",
+      "name": "Arco Corto",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "25 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "24/96",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "due mani"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_FIONDA",
+      "name": "Fionda",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 0.1,
+      "cost": "1 ma",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "contundente",
+        "range": "9/36",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_ALABARDA",
+      "name": "Alabarda",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 3.0,
+      "cost": "20 mo",
+      "combat_logic": {
+        "damage_dice": "1d10",
+        "damage_type": "tagliente",
+        "range": "portata",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "portata", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_ASCIA_BIPENNE",
+      "name": "Ascia Bipenne",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 3.5,
+      "cost": "30 mo",
+      "combat_logic": {
+        "damage_dice": "1d12",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_FALCIONE",
+      "name": "Falcione",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 3.0,
+      "cost": "20 mo",
+      "combat_logic": {
+        "damage_dice": "1d10",
+        "damage_type": "tagliente",
+        "range": "portata",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "portata", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_FLAGELLO",
+      "name": "Flagello",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": []
+      }
+    },
+    {
+      "id": "DD_WEAPON_FALCE",
+      "name": "Falce",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d10",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_MARTELLO_GUERRA",
+      "name": "Martello da Guerra",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "15 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["versatile (1d10)"],
+        "versatile_options": {
+          "two_handed_damage_dice": "1d10"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_LANCIA_CAVALIERE",
+      "name": "Lancia da Cavaliere",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 3.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d12",
+        "damage_type": "perforante",
+        "range": "portata",
+        "primary_trait": "Forza",
+        "properties": ["portata", "speciale"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_MAGLIO",
+      "name": "Maglio",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 5.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "2d6",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_MAZZAFRUSTO",
+      "name": "Mazzafrusto",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 2.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": []
+      }
+    },
+    {
+      "id": "DD_WEAPON_PICCA",
+      "name": "Picca",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 9.0,
+      "cost": "5 mo",
+      "combat_logic": {
+        "damage_dice": "1d10",
+        "damage_type": "perforante",
+        "range": "portata",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "portata", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_PISTOLA",
+      "name": "Pistola",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "50 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "perforante",
+        "range": "45/180",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "pesante"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_SCIMITARRA",
+      "name": "Scimitarra",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "25 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["accurata", "leggera"],
+        "finesse_options": {
+          "alternative_trait": "Destrezza"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_SPADA_CORTA",
+      "name": "Spada Corta",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["accurata", "leggera"],
+        "finesse_options": {
+          "alternative_trait": "Destrezza"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_SPADA_LUNGA",
+      "name": "Spada Lunga",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "15 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["versatile (1d10)"],
+        "versatile_options": {
+          "two_handed_damage_dice": "1d10"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_SPADONE",
+      "name": "Spadone",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 3.0,
+      "cost": "50 mo",
+      "combat_logic": {
+        "damage_dice": "2d6",
+        "damage_type": "tagliente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["pesante", "due mani"]
+      }
+    },
+    {
+      "id": "DD_WEAPON_STOCCO",
+      "name": "Stocco",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "25 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["accurata"],
+        "finesse_options": {
+          "alternative_trait": "Destrezza"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_TRIDENTE",
+      "name": "Tridente",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 2.0,
+      "cost": "5 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": ["lancio (6/18)", "versatile (1d8)"],
+        "thrown_options": {
+          "range_normal_long": "6/18"
+        },
+        "versatile_options": {
+          "two_handed_damage_dice": "1d8"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_FRUSTA",
+      "name": "Frusta",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "2 mo",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "tagliente",
+        "range": "portata",
+        "primary_trait": "Forza",
+        "properties": ["accurata", "portata"],
+        "finesse_options": {
+          "alternative_trait": "Destrezza"
+        }
+      }
+    },
+    {
+      "id": "DD_WEAPON_BALESTRA_MANO",
+      "name": "Balestra a Mano",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "75 mo",
+      "combat_logic": {
+        "damage_dice": "1d6",
+        "damage_type": "perforante",
+        "range": "9/36",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "leggera", "ricarica"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_BALESTRA_PESANTE",
+      "name": "Balestra Pesante",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 9.0,
+      "cost": "50 mo",
+      "combat_logic": {
+        "damage_dice": "1d10",
+        "damage_type": "perforante",
+        "range": "30/120",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "pesante", "ricarica", "due mani"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_ARCO_LUNGO",
+      "name": "Arco Lungo",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.0,
+      "cost": "50 mo",
+      "combat_logic": {
+        "damage_dice": "1d8",
+        "damage_type": "perforante",
+        "range": "45/180",
+        "primary_trait": "Destrezza",
+        "properties": ["munizioni", "pesante", "due mani"],
+        "requires_ammunition": true
+      }
+    },
+    {
+      "id": "DD_WEAPON_RETE",
+      "name": "Rete",
+      "type": "arma",
+      "rarity": "comune",
+      "weight_kg": 1.5,
+      "cost": "1 mo",
+      "combat_logic": {
+        "damage_dice": "0",
+        "damage_type": "speciale",
+        "range": "1.5/4.5",
+        "primary_trait": "Destrezza",
+        "properties": ["lancio (1.5/4.5)", "speciale"],
+        "thrown_options": {
+          "range_normal_long": "1.5/4.5"
+        }
+      }
+    }
   ]
 }
