@@ -3,7 +3,7 @@
     {
       "id": "DD_WEAPON_RANDELLO",
       "name": "Randello",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "1 ma",
@@ -18,7 +18,7 @@
     {
       "id": "DD_WEAPON_PUGNALE",
       "name": "Pugnale",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "2 mo",
@@ -39,7 +39,7 @@
     {
       "id": "DD_WEAPON_RANDELLO_PESANTE",
       "name": "Randello Pesante",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 5.0,
       "cost": "2 ma",
@@ -54,7 +54,7 @@
     {
       "id": "DD_WEAPON_ASCIA_MANO",
       "name": "Ascia a Mano",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "5 mo",
@@ -72,7 +72,7 @@
     {
       "id": "DD_WEAPON_GIAVELLOTTO",
       "name": "Giavellotto",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "5 ma",
@@ -90,7 +90,7 @@
     {
       "id": "DD_WEAPON_MARTELLO_LEGGERO",
       "name": "Martello Leggero",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "2 mo",
@@ -108,7 +108,7 @@
     {
       "id": "DD_WEAPON_MAZZA",
       "name": "Mazza",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 2.0,
       "cost": "5 mo",
@@ -123,7 +123,7 @@
     {
       "id": "DD_WEAPON_BASTONE_FERRATO",
       "name": "Bastone Ferrato",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 2.0,
       "cost": "2 ma",
@@ -141,7 +141,7 @@
     {
       "id": "DD_WEAPON_FALCETTO",
       "name": "Falcetto",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "1 mo",
@@ -156,7 +156,7 @@
     {
       "id": "DD_WEAPON_LANCIA",
       "name": "Lancia",
-      "type": "arma",
+      "type": "Arma da mischia semplice",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "1 mo",
@@ -177,7 +177,7 @@
     {
       "id": "DD_WEAPON_BALESTRA_LEGGERA",
       "name": "Balestra Leggera",
-      "type": "arma",
+      "type": "Arma a distanza semplice",
       "rarity": "comune",
       "weight_kg": 2.5,
       "cost": "25 mo",
@@ -193,7 +193,7 @@
     {
       "id": "DD_WEAPON_ARCO_CORTO",
       "name": "Arco Corto",
-      "type": "arma",
+      "type": "Arma a distanza semplice",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "25 mo",
@@ -209,7 +209,7 @@
     {
       "id": "DD_WEAPON_FIONDA",
       "name": "Fionda",
-      "type": "arma",
+      "type": "Arma a distanza semplice",
       "rarity": "comune",
       "weight_kg": 0.1,
       "cost": "1 ma",
@@ -225,7 +225,7 @@
     {
       "id": "DD_WEAPON_ALABARDA",
       "name": "Alabarda",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 3.0,
       "cost": "20 mo",
@@ -240,7 +240,7 @@
     {
       "id": "DD_WEAPON_ASCIA_BIPENNE",
       "name": "Ascia Bipenne",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 3.5,
       "cost": "30 mo",
@@ -255,7 +255,7 @@
     {
       "id": "DD_WEAPON_FALCIONE",
       "name": "Falcione",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 3.0,
       "cost": "20 mo",
@@ -270,7 +270,7 @@
     {
       "id": "DD_WEAPON_FLAGELLO",
       "name": "Flagello",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "10 mo",
@@ -285,7 +285,7 @@
     {
       "id": "DD_WEAPON_FALCE",
       "name": "Falce",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "10 mo",
@@ -300,7 +300,7 @@
     {
       "id": "DD_WEAPON_MARTELLO_GUERRA",
       "name": "Martello da Guerra",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "15 mo",
@@ -318,7 +318,7 @@
     {
       "id": "DD_WEAPON_LANCIA_CAVALIERE",
       "name": "Lancia da Cavaliere",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 3.0,
       "cost": "10 mo",
@@ -333,7 +333,7 @@
     {
       "id": "DD_WEAPON_MAGLIO",
       "name": "Maglio",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 5.0,
       "cost": "10 mo",
@@ -348,7 +348,7 @@
     {
       "id": "DD_WEAPON_MAZZAFRUSTO",
       "name": "Mazzafrusto",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 2.0,
       "cost": "10 mo",
@@ -363,7 +363,7 @@
     {
       "id": "DD_WEAPON_PICCA",
       "name": "Picca",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 9.0,
       "cost": "5 mo",
@@ -378,7 +378,7 @@
     {
       "id": "DD_WEAPON_PISTOLA",
       "name": "Pistola",
-      "type": "arma",
+      "type": "Arma a distanza da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "50 mo",
@@ -394,7 +394,7 @@
     {
       "id": "DD_WEAPON_SCIMITARRA",
       "name": "Scimitarra",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "25 mo",
@@ -412,7 +412,7 @@
     {
       "id": "DD_WEAPON_SPADA_CORTA",
       "name": "Spada Corta",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "10 mo",
@@ -430,7 +430,7 @@
     {
       "id": "DD_WEAPON_SPADA_LUNGA",
       "name": "Spada Lunga",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "15 mo",
@@ -448,7 +448,7 @@
     {
       "id": "DD_WEAPON_SPADONE",
       "name": "Spadone",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 3.0,
       "cost": "50 mo",
@@ -463,7 +463,7 @@
     {
       "id": "DD_WEAPON_STOCCO",
       "name": "Stocco",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "25 mo",
@@ -481,7 +481,7 @@
     {
       "id": "DD_WEAPON_TRIDENTE",
       "name": "Tridente",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 2.0,
       "cost": "5 mo",
@@ -502,7 +502,7 @@
     {
       "id": "DD_WEAPON_FRUSTA",
       "name": "Frusta",
-      "type": "arma",
+      "type": "Arma da mischia da guerra",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "2 mo",
@@ -520,7 +520,7 @@
     {
       "id": "DD_WEAPON_BALESTRA_MANO",
       "name": "Balestra a Mano",
-      "type": "arma",
+      "type": "Arma a distanza da guerra",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "75 mo",
@@ -536,7 +536,7 @@
     {
       "id": "DD_WEAPON_BALESTRA_PESANTE",
       "name": "Balestra Pesante",
-      "type": "arma",
+      "type": "Arma a distanza da guerra",
       "rarity": "comune",
       "weight_kg": 9.0,
       "cost": "50 mo",
@@ -552,7 +552,7 @@
     {
       "id": "DD_WEAPON_ARCO_LUNGO",
       "name": "Arco Lungo",
-      "type": "arma",
+      "type": "Arma a distanza da guerra",
       "rarity": "comune",
       "weight_kg": 1.0,
       "cost": "50 mo",
@@ -568,7 +568,7 @@
     {
       "id": "DD_WEAPON_RETE",
       "name": "Rete",
-      "type": "arma",
+      "type": "Arma a distanza da guerra",
       "rarity": "comune",
       "weight_kg": 1.5,
       "cost": "1 mo",
@@ -581,6 +581,26 @@
         "thrown_options": {
           "range_normal_long": "1.5/4.5"
         }
+      }
+    },
+    {
+      "id": "DD_SHIELD_SCUDO",
+      "name": "Scudo",
+      "type": "Scudo",
+      "rarity": "comune",
+      "weight_kg": 3.0,
+      "cost": "10 mo",
+      "combat_logic": {
+        "damage_dice": "1d4",
+        "damage_type": "contundente",
+        "range": "mischia",
+        "primary_trait": "Forza",
+        "properties": []
+      },
+      "defensive_logic": {
+        "base_ac": 2,
+        "dex_modifier": "none",
+        "stealth_disadvantage": false
       }
     }
   ]
