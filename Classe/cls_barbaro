@@ -21,7 +21,11 @@
           },
           "combat_modifiers": {
             "rage_damage_bonus": 2,
-            "damage_resistances": ["contundente", "perforante", "tagliente"]
+            "damage_resistances": ["contundente", "perforante", "tagliente"],
+            "automatic_advantages": {
+              "saving_throws": ["Forza"],
+              "skills": ["Atletica"]
+            }
           }
         },
         {
@@ -113,6 +117,60 @@
             "speed_bonus_meters": 3.0,
             "restriction": "no_heavy_armor"
           }
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "resource_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_total_slots": 4
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "combat_modifiers_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_rage_damage_bonus": 3
+        }
+      ]
+    },
+    {
+      "level": 12,
+      "resource_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_total_slots": 5
+        }
+      ]
+    },
+    {
+      "level": 16,
+      "combat_modifiers_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_rage_damage_bonus": 4
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "resource_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_total_slots": 6
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "resource_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_total_slots": 999
         }
       ]
     }
