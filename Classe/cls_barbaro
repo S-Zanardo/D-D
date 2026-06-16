@@ -1,345 +1,120 @@
 {
-  "id": "class_barbarian",
+  "class_id": "DD_CLASS_BARBARO",
   "name": "Barbaro",
-  "card_summary": "Un feroce combattente di origini primitive. Dal livello 1 al 20, sblocca capacità legate alla resistenza fisica, danni massicci, sensi affinati e un potenziamento passivo degli attributi fisici che culmina in una forza sovrumana.",
-  "narrative_description": "Il barbaro è l'incarnazione della brutalità sfrenata e dell'istinto di sopravvivenza. Questa classe non si affida all'addestramento militare, ma a una furia primordiale che annulla il dolore. Un barbaro può essere un guerriero nomade temprato dai geli inospitali del nord, un letale gladiatore sopravvissuto ad arene insanguinate tramite la pura ferocia, o un campione tribale guidato dagli spiriti. Combatte spinto da un'ira incontrollabile che lo rende una forza della natura inarrestabile sul campo di battaglia.",
-  "hit_die": 12,
-  "primary_ability": [
-    {"id": "STR", "name": "Forza"}
-  ],
-  "multiclass_requirements": {
-    "STR": 13
-  },
-  "multiclass_proficiencies": {
-    "armor": [
-      {"id": "shield", "name": "Scudi"},
-      {"id": "simple_weapons", "name": "Armi Semplici"},
-      {"id": "martial_weapons", "name": "Armi da Guerra"}
-    ]
-  },
-  "starting_wealth": "2d4*10",
-  "proficiencies": {
-    "armor": [
-      {"id": "light_armor", "name": "Armature Leggere"},
-      {"id": "medium_armor", "name": "Armature Medie"},
-      {"id": "shield", "name": "Scudi"}
-    ],
-    "weapons": [
-      {"id": "simple_weapons", "name": "Armi Semplici"},
-      {"id": "martial_weapons", "name": "Armi da Guerra"}
-    ],
-    "tools": [],
-    "saving_throws": [
-      {"id": "STR", "name": "Forza"},
-      {"id": "CON", "name": "Costituzione"}
-    ],
-    "skills": {
-      "choose": 2,
-      "options": [
-        {"id": "skill_animal_handling", "name": "Addestrare Animali"},
-        {"id": "skill_athletics", "name": "Atletica"},
-        {"id": "skill_intimidation", "name": "Intimidire"},
-        {"id": "skill_nature", "name": "Natura"},
-        {"id": "skill_perception", "name": "Percezione"},
-        {"id": "skill_survival", "name": "Sopravvivenza"}
+  "hit_die": "1d12",
+  "primary_traits": ["Forza"],
+  "saving_throws_proficiencies": ["Forza", "Costituzione"],
+  "progression": [
+    {
+      "level": 1,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_IRA",
+          "name": "Ira",
+          "activation_type": "active",
+          "action_type": "bonus_action",
+          "description": "In combattimento, lotti con ferocia primordiale. Nel tuo turno puoi entrare in ira come azione bonus. Ottieni vantaggio alle prove e tiri salvezza di Forza, un bonus ai danni degli attacchi con armi da mischia su Forza, e resistenza ai danni contundenti, perforanti e taglienti.",
+          "resource_logic": {
+            "resource_name": "Usi di Ira",
+            "total_slots": 2,
+            "recovery": "long_rest"
+          },
+          "combat_modifiers": {
+            "rage_damage_bonus": 2,
+            "damage_resistances": ["contundente", "perforante", "tagliente"]
+          }
+        },
+        {
+          "id": "DD_FEAT_BARBARO_DIFESA_SENZA_ARMATURA",
+          "name": "Difesa Senza Armatura",
+          "activation_type": "passive",
+          "description": "Quando non indossi alcuna armatura, la tua Classe Armatura è pari a 10 + modificatore di Destrezza + modificatore di Costituzione. Puoi utilizzare uno scudo e ottenere comunque questo beneficio.",
+          "ui_override_logic": {
+            "ac_calculation_type": "unarmored_barbarian"
+          }
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_ATTACCO_TEMERARIO",
+          "name": "Attacco Temerario",
+          "activation_type": "active",
+          "action_type": "no_action",
+          "description": "Puoi accantonare ogni difesa per attaccare con furia disperata. Quando effettui il tuo primo attacco nel tuo turno, puoi decidere di attaccare in modo temerario: ottieni vantaggio a tutti i tiri per colpire in mischia che utilizzano Forza in questo turno, ma i tiri per colpire contro di te hanno vantaggio fino al tuo prossimo turno.",
+          "combat_modifiers": {
+            "self_attack_advantage_trait": "Forza",
+            "incoming_attack_advantage": true
+          }
+        },
+        {
+          "id": "DD_FEAT_BARBARO_PERCEZIONE_DEL_PERICOLO",
+          "name": "Percezione del Pericolo",
+          "activation_type": "passive",
+          "description": "Ottieni un prodigioso senso di ciò che ti circonda che ti avverte dei pericoli vicini. Hai vantaggio ai tiri salvezza di Destrezza contro gli effetti che puoi vedere, come trappole e incantesimi. Non devi essere accecato, assordato o incapacitato."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_CAMMINO_PRIMORDIALE",
+          "name": "Cammino Primordiale",
+          "activation_type": "passive",
+          "description": "Scegli un cammino primordiale che determina la natura della tua ira. La scelta del cammino sblocca funzionalità al 3°, 6°, 10° e 14° livello.",
+          "choice_trigger": {
+            "choice_type": "subclass",
+            "available_options_reference": "DD_SUBCLASSES_BARBARIAN"
+          }
+        }
+      ],
+      "resource_scaling": [
+        {
+          "target_feature_id": "DD_FEAT_BARBARO_IRA",
+          "new_total_slots": 3
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_AUMENTO_PUNTEGGI",
+          "name": "Aumento dei Punteggi di Caratteristica",
+          "activation_type": "passive",
+          "description": "Puoi aumentare di 2 un punteggio di caratteristica a tua scelta, oppure puoi aumentare di 1 due punteggi di caratteristica a tua scelta. Come di consueto, non puoi superare un punteggio di 20 utilizzando questa funzionalità.",
+          "choice_trigger": {
+            "choice_type": "asi_or_feat"
+          }
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_ATTACCO_EXTRA",
+          "name": "Attacco Extra",
+          "activation_type": "passive",
+          "description": "Puoi attaccare due volte, anziché una, ogni volta che prendi l'azione Attacco nel tuo turno.",
+          "combat_modifiers": {
+            "extra_attacks_count": 1
+          }
+        },
+        {
+          "id": "DD_FEAT_BARBARO_MOVIMENTO_VELOCE",
+          "name": "Movimento Veloce",
+          "activation_type": "passive",
+          "description": "La tua velocità aumenta di 3 metri (10 feet) purché tu non indossi un'armatura pesante.",
+          "movement_modifiers": {
+            "speed_bonus_meters": 3.0,
+            "restriction": "no_heavy_armor"
+          }
+        }
       ]
     }
-  },
-  "starting_equipment": {
-    "fixed": [
-      {"id": "itm_explorer_pack", "name": "Zaino da Esploratore"},
-      {"id": "itm_javelin_x4", "name": "4 Giavellotti"}
-    ],
-    "choices": [
-      {
-        "choose": 1,
-        "options": [
-          {"type": "specific", "id": "itm_greataxe", "name": "Ascia Bipenne"},
-          {"type": "category", "id": "martial_melee_weapons", "name": "Qualsiasi arma da guerra da mischia"}
-        ]
-      },
-      {
-        "choose": 1,
-        "options": [
-          {"type": "specific", "id": "itm_handaxe_x2", "name": "Due Asce"},
-          {"type": "category", "id": "simple_weapons", "name": "Qualsiasi arma semplice"}
-        ]
-      }
-    ]
-  },
-  "class_progression": [
-    {
-      "level": 1, 
-      "prof_bonus": 2, 
-      "class_specific": {"rages": 2, "rage_damage": 2}, 
-      "features_unlocked": ["feat_rage", "feat_unarmored_defense"],
-      "actions_required": []
-    },
-    {
-      "level": 2, 
-      "prof_bonus": 2, 
-      "class_specific": {"rages": 2, "rage_damage": 2}, 
-      "features_unlocked": ["feat_reckless_attack", "feat_danger_sense"],
-      "actions_required": []
-    },
-    {
-      "level": 3, 
-      "prof_bonus": 2, 
-      "class_specific": {"rages": 3, "rage_damage": 2}, 
-      "features_unlocked": ["feat_primal_path"],
-      "actions_required": ["choose_subclass"]
-    },
-    {
-      "level": 4, 
-      "prof_bonus": 2, 
-      "class_specific": {"rages": 3, "rage_damage": 2}, 
-      "features_unlocked": [],
-      "actions_required": ["asi_or_feat"]
-    },
-    {
-      "level": 5, 
-      "prof_bonus": 3, 
-      "class_specific": {"rages": 3, "rage_damage": 2}, 
-      "features_unlocked": ["feat_extra_attack", "feat_fast_movement"],
-      "actions_required": []
-    },
-    {
-      "level": 6, 
-      "prof_bonus": 3, 
-      "class_specific": {"rages": 4, "rage_damage": 2}, 
-      "features_unlocked": [],
-      "actions_required": ["subclass_feature"]
-    },
-    {
-      "level": 7, 
-      "prof_bonus": 3, 
-      "class_specific": {"rages": 4, "rage_damage": 2}, 
-      "features_unlocked": ["feat_feral_instinct"],
-      "actions_required": []
-    },
-    {
-      "level": 8, 
-      "prof_bonus": 3, 
-      "class_specific": {"rages": 4, "rage_damage": 2}, 
-      "features_unlocked": [],
-      "actions_required": ["asi_or_feat"]
-    },
-    {
-      "level": 9, 
-      "prof_bonus": 4, 
-      "class_specific": {"rages": 4, "rage_damage": 3}, 
-      "features_unlocked": ["feat_brutal_critical_1"],
-      "actions_required": []
-    },
-    {
-      "level": 10, 
-      "prof_bonus": 4, 
-      "class_specific": {"rages": 4, "rage_damage": 3}, 
-      "features_unlocked": [],
-      "actions_required": ["subclass_feature"]
-    },
-    {
-      "level": 11, 
-      "prof_bonus": 4, 
-      "class_specific": {"rages": 4, "rage_damage": 3}, 
-      "features_unlocked": ["feat_relentless_rage"],
-      "actions_required": []
-    },
-    {
-      "level": 12, 
-      "prof_bonus": 4, 
-      "class_specific": {"rages": 5, "rage_damage": 3}, 
-      "features_unlocked": [],
-      "actions_required": ["asi_or_feat"]
-    },
-    {
-      "level": 13, 
-      "prof_bonus": 5, 
-      "class_specific": {"rages": 5, "rage_damage": 3}, 
-      "features_unlocked": ["feat_brutal_critical_2"],
-      "actions_required": []
-    },
-    {
-      "level": 14, 
-      "prof_bonus": 5, 
-      "class_specific": {"rages": 5, "rage_damage": 3}, 
-      "features_unlocked": [],
-      "actions_required": ["subclass_feature"]
-    },
-    {
-      "level": 15, 
-      "prof_bonus": 5, 
-      "class_specific": {"rages": 5, "rage_damage": 3}, 
-      "features_unlocked": ["feat_persistent_rage"],
-      "actions_required": []
-    },
-    {
-      "level": 16, 
-      "prof_bonus": 5, 
-      "class_specific": {"rages": 5, "rage_damage": 4}, 
-      "features_unlocked": [],
-      "actions_required": ["asi_or_feat"]
-    },
-    {
-      "level": 17, 
-      "prof_bonus": 6, 
-      "class_specific": {"rages": 6, "rage_damage": 4}, 
-      "features_unlocked": ["feat_brutal_critical_3"],
-      "actions_required": []
-    },
-    {
-      "level": 18, 
-      "prof_bonus": 6, 
-      "class_specific": {"rages": 6, "rage_damage": 4}, 
-      "features_unlocked": ["feat_indomitable_might"],
-      "actions_required": []
-    },
-    {
-      "level": 19, 
-      "prof_bonus": 6, 
-      "class_specific": {"rages": 6, "rage_damage": 4}, 
-      "features_unlocked": [],
-      "actions_required": ["asi_or_feat"]
-    },
-    {
-      "level": 20, 
-      "prof_bonus": 6, 
-      "class_specific": {"rages": 999, "rage_damage": 4}, 
-      "features_unlocked": ["feat_primal_champion"],
-      "actions_required": []
-    }
-  ],
-  "features_details": {
-    "feat_rage": {
-      "name": "Ira",
-      "description": "Nel tuo turno, puoi entrare in ira come azione bonus. Finché sei in ira, ottieni vantaggio alle prove e ai tiri salvezza su Forza, un bonus ai danni in mischia con armi basate sulla Forza, e resistenza ai danni contundenti, perforanti e taglienti.",
-      "mechanics": {
-        "action_type": "bonus_action",
-        "duration_minutes": 1,
-        "modifiers": [
-          {"type": "advantage", "target": "str_saving_throws"},
-          {"type": "advantage", "target": "str_checks"},
-          {"type": "damage_bonus", "target": "str_melee_attacks", "value_source": "class_specific.rage_damage"},
-          {"type": "resistance", "target": ["bludgeoning", "piercing", "slashing"]}
-        ],
-        "restrictions": ["no_heavy_armor", "no_spellcasting"]
-      }
-    },
-    "feat_unarmored_defense": {
-      "name": "Difesa Senza Armatura",
-      "description": "Finché non indossi alcuna armatura, la tua Classe Armatura è pari a 10 + Modificatore di Destrezza + Modificatore di Costituzione.",
-      "mechanics": {
-        "ac_formula": "10 + DEX_MOD + CON_MOD",
-        "allows_shield": true
-      }
-    },
-    "feat_reckless_attack": {
-      "name": "Attacco Irruente",
-      "description": "Quando effettui il primo attacco nel tuo turno, puoi decidere di attaccare in modo irruente. Farlo ti conferisce vantaggio ai tiri per colpire in mischia basati sulla Forza in questo turno, ma i tiri per colpire contro di te hanno vantaggio fino al tuo turno successivo.",
-      "mechanics": {
-        "action_type": "free_action",
-        "modifiers": [
-          {"type": "advantage", "target": "str_melee_attacks"},
-          {"type": "grant_advantage", "target": "attacks_against_self", "duration": "until_next_turn"}
-        ]
-      }
-    },
-    "feat_danger_sense": {
-      "name": "Percezione del Pericolo",
-      "description": "Hai vantaggio ai tiri salvezza su Destrezza contro gli effetti che puoi vedere, come trappole e incantesimi. Per ottenere questo beneficio non devi essere accecato, assordato o incapacitato.",
-      "mechanics": {
-        "modifiers": [
-          {"type": "advantage", "target": "dex_saving_throws_seen"}
-        ],
-        "restrictions": ["not_blinded", "not_deafened", "not_incapacitated"]
-      }
-    },
-    "feat_primal_path": {
-      "name": "Cammino Primordiale",
-      "description": "Scegli un cammino che plasma la natura della tua ira. La scelta garantisce privilegi aggiuntivi a livelli specifici.",
-      "mechanics": {
-        "trigger": "unlock_subclass_features"
-      }
-    },
-    "feat_extra_attack": {
-      "name": "Attacco Extra",
-      "description": "Puoi attaccare due volte, anziché una volta, ogni volta che effettui l'azione di Attacco nel tuo turno.",
-      "mechanics": {
-        "attacks_per_action": 2
-      }
-    },
-    "feat_fast_movement": {
-      "name": "Movimento Veloce",
-      "description": "La tua velocità aumenta di 3 metri purché tu non indossi un'armatura pesante.",
-      "mechanics": {
-        "speed_bonus_meters": 3,
-        "restrictions": ["no_heavy_armor"]
-      }
-    },
-    "feat_feral_instinct": {
-      "name": "Istinto Selvaggio",
-      "description": "I tuoi istinti sono così affinati che hai vantaggio ai tiri per l'iniziativa. Inoltre, se sei sorpreso all'inizio del combattimento e non sei incapacitato, puoi agire normalmente nel tuo primo turno, ma solo se entri in ira prima di fare qualsiasi altra cosa in quel turno.",
-      "mechanics": {
-        "modifiers": [
-          {"type": "advantage", "target": "initiative"}
-        ],
-        "special": "surprise_override_with_rage"
-      }
-    },
-    "feat_brutal_critical_1": {
-      "name": "Critico Brutale (1 dado)",
-      "description": "Puoi tirare un dado di danno dell'arma aggiuntivo quando determini il danno extra per un colpo critico con un attacco in mischia.",
-      "mechanics": {
-        "extra_crit_dice": 1
-      }
-    },
-    "feat_relentless_rage": {
-      "name": "Ira Implacabile",
-      "description": "Se scendi a 0 punti ferita mentre sei in ira e non muori sul colpo, puoi effettuare un tiro salvezza su Costituzione con CD 10. Se lo superi, scendi invece a 1 punto ferita. Ogni volta successiva che usi questo privilegio, la CD aumenta di 5.",
-      "mechanics": {
-        "trigger": "on_zero_hp_in_rage",
-        "save": "CON",
-        "base_dc": 10,
-        "dc_increment": 5,
-        "reset": "short_or_long_rest"
-      }
-    },
-    "feat_brutal_critical_2": {
-      "name": "Critico Brutale (2 dadi)",
-      "description": "Puoi tirare due dadi di danno dell'arma aggiuntivi quando determini il danno extra per un colpo critico con un attacco in mischia.",
-      "mechanics": {
-        "extra_crit_dice": 2
-      }
-    },
-    "feat_persistent_rage": {
-      "name": "Ira Persistente",
-      "description": "La tua ira è così feroce che termina prematuramente solo se cadi privo di sensi o se scegli di farla terminare.",
-      "mechanics": {
-        "end_conditions": ["unconscious", "voluntary_end"]
-      }
-    },
-    "feat_brutal_critical_3": {
-      "name": "Critico Brutale (3 dadi)",
-      "description": "Puoi tirare tre dadi di danno dell'arma aggiuntivi quando determini il danno extra per un colpo critico con un attacco in mischia.",
-      "mechanics": {
-        "extra_crit_dice": 3
-      }
-    },
-    "feat_indomitable_might": {
-      "name": "Potenza Indomita",
-      "description": "Se il totale di una prova di Forza è inferiore al tuo punteggio di Forza, puoi usare quel punteggio al posto del totale.",
-      "mechanics": {
-        "min_roll_override": "STR_score",
-        "target": "str_checks"
-      }
-    },
-    "feat_primal_champion": {
-      "name": "Campione Primitivo",
-      "description": "I tuoi punteggi di Forza e Costituzione aumentano di 4. Il tuo massimo per questi punteggi diventa 24.",
-      "mechanics": {
-        "stat_bonus": {"STR": 4, "CON": 4},
-        "max_limit_override": 24
-      }
-    }
-  }
+  ]
 }
