@@ -17,22 +17,35 @@
           }
         },
         {
-          "id": "DD_FEAT_BARBARO_SPIRITO_TOTEMICO_ORSO",
-          "name": "Spirito Totemico: Orso",
+          "id": "DD_FEAT_BARBARO_SPIRITO_TOTEMICO_SCELTA",
+          "name": "Spirito Totemico (Scelta)",
           "activation_type": "passive",
-          "description": "Mentre sei in ira, disponi di resistenza a tutti i tipi di danno tranne il danno psichico. Lo spirito dell'orso ti rende abbastanza forte da resistere a qualsiasi punizione.",
-          "ui_override_logic": {
-            "modify_feature_id": "DD_FEAT_BARBARO_IRA",
-            "add_damage_resistances": [
-              "acido",
-              "freddo",
-              "fuoco",
-              "fulmine",
-              "tuono",
-              "forza",
-              "necrotico",
-              "radioso",
-              "veleno"
+          "description": "Scegli uno spirito totemico e ottieni i suoi benefici mentre sei in ira.",
+          "choice_trigger": {
+            "choice_type": "totem_animal_lvl_3",
+            "options": [
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_3_ORSO",
+                "name": "Orso",
+                "description": "Mentre sei in ira, disponi di resistenza a tutti i tipi di danno tranne il danno psichico.",
+                "ui_override_logic": {
+                  "modify_feature_id": "DD_FEAT_BARBARO_IRA",
+                  "add_damage_resistances": ["acido", "freddo", "fuoco", "fulmine", "tuono", "forza", "necrotico", "radioso", "veleno"]
+                }
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_3_AQUILA",
+                "name": "Aquila",
+                "description": "Mentre sei in ira e non indossi un'armatura pesante, le altre creature hanno svantaggio ai tiri per colpire di opportunità contro di te, e puoi usare l'azione di Scatto come azione bonus.",
+                "ui_override_logic": {
+                  "rage_bonus_actions": ["Scatto"]
+                }
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_3_LUPO",
+                "name": "Lupo",
+                "description": "Mentre sei in ira, i tuoi alleati dispongono di vantaggio ai tiri per colpire in mischia contro qualsiasi creatura entro 1,5 metri da te che sia a te ostile."
+              }
             ]
           }
         }
@@ -42,13 +55,33 @@
       "level": 6,
       "features_unlocked": [
         {
-          "id": "DD_FEAT_BARBARO_ASPETTO_DEL_TOTEM_LUPO",
-          "name": "Aspetto della Bestia: Lupo",
+          "id": "DD_FEAT_BARBARO_ASPETTO_DEL_TOTEM_SCELTA",
+          "name": "Aspetto della Bestia (Scelta)",
           "activation_type": "passive",
-          "description": "Acquisisci le doti di caccia di un lupo. Puoi inseguire le tracce di altre creature muovendoti a passo rapido, e puoi muoverti furtivamente a passo normale.",
-          "movement_modifiers": {
-            "fast_pace_tracking_allowed": true,
-            "normal_pace_stealth_allowed": true
+          "description": "Scegli un aspetto magico animale legato al tuo totem.",
+          "choice_trigger": {
+            "choice_type": "totem_animal_lvl_6",
+            "options": [
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_6_ORSO",
+                "name": "Orso",
+                "description": "La tua capacità di carico (inclusi il peso massimo che puoi sollevare, spingere o trascinare) è raddoppiata e disponi di vantaggio alle prove di Forza effettuate per spingere, trascinare, sollevare o rompere oggetti."
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_6_AQUILA",
+                "name": "Aquila",
+                "description": "Riesci a vedere chiaramente fino a un miglio di distanza senza difficoltà. Inoltre, la luce fioca non impone svantaggio alle tue prove di Saggezza (Percezione)."
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_6_LUPO",
+                "name": "Lupo",
+                "description": "Acquisisci le doti di caccia di un lupo. Puoi inseguire le tracce di altre creature muovendoti a passo rapido, e puoi muoverti furtivamente a passo normale.",
+                "movement_modifiers": {
+                  "fast_pace_tracking_allowed": true,
+                  "normal_pace_stealth_allowed": true
+                }
+              }
+            ]
           }
         }
       ]
@@ -60,7 +93,7 @@
           "id": "DD_FEAT_BARBARO_SINTONIA_SPIRITUALE",
           "name": "Sintonia Spirituale",
           "activation_type": "passive",
-          "description": "Puoi lanciare l'incantesimo Comunione con la Natura come rituale. Quando lo fai, una versione spettrale di uno dei tuoi spiriti totemici ti appare per fornirti le informazioni che cerchi.",
+          "description": "Puoi lanciare l'incantesimo Comunione con la Natura come rituale. Una versione spettrale di uno dei tuoi spiriti totemici ti appare per fornirti le informazioni che cerchi.",
           "ui_override_logic": {
             "unlock_ritual_spells": ["Comunione con la Natura"]
           }
@@ -71,12 +104,35 @@
       "level": 14,
       "features_unlocked": [
         {
-          "id": "DD_FEAT_BARBARO_SINTONIA_TOTEMICA_ORSO",
-          "name": "Sintonia Totemica: Orso",
+          "id": "DD_FEAT_BARBARO_SINTONIA_TOTEMICA_SCELTA",
+          "name": "Sintonia Totemica (Scelta)",
           "activation_type": "passive",
-          "description": "Mentre sei in ira, qualsiasi creatura entro 1,5 metri da te che sia a te ostile subisce svantaggio ai tiri per colpire contro creature diverse da te o da un altro personaggio che possiede questo privilegio.",
-          "combat_modifiers": {
-            "rage_aura_disadvantage_range_meters": 1.5
+          "description": "Scegli un animale per ottenere un beneficio magico mentre sei in ira.",
+          "choice_trigger": {
+            "choice_type": "totem_animal_lvl_14",
+            "options": [
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_14_ORSO",
+                "name": "Orso",
+                "description": "Mentre sei in ira, qualsiasi creatura entro 1,5 metri da te che sia a te ostile subisce svantaggio ai tiri per colpire contro creature diverse da te.",
+                "combat_modifiers": {
+                  "rage_aura_disadvantage_range_meters": 1.5
+                }
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_14_AQUILA",
+                "name": "Aquila",
+                "description": "Mentre sei in ira, ottieni una velocità di volo pari alla tua attuale velocità sul terreno. Questo beneficio funziona solo in brevi slanci: cadi se termini il tuo turno in aria e niente ti tiene sollevato."
+              },
+              {
+                "id": "DD_FEAT_BARBARO_TOTEM_14_LUPO",
+                "name": "Lupo",
+                "description": "Mentre sei in ira, puoi usare un'azione bonus nel tuo turno per atterrare una creatura di taglia Grande o inferiore quando la colpisci con un attacco con arma da mischia.",
+                "ui_override_logic": {
+                  "rage_bonus_actions": ["Atterrare creatura (azione bonus su colpo)"]
+                }
+              }
+            ]
           }
         }
       ]
