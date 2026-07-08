@@ -1,0 +1,85 @@
+{
+  "subclass_id": "DD_SUBCLASS_BARBARO_TOTEMICO",
+  "parent_class_id": "DD_CLASS_BARBARO",
+  "name": "Cammino del Combattente Totemico",
+  "description": "Un cammino spirituale che ti sintonizza con gli spiriti della natura, garantendoti una forza interiore guidata da uno spirito animale.",
+  "progression": [
+    {
+      "level": 3,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_CERCATORE_DI_SPIRITI",
+          "name": "Cercatore di Spiriti",
+          "activation_type": "passive",
+          "description": "La tua sintonizzazione con la natura ti permette di entrare in comunione con essa. Acquisisci la capacità di lanciare gli incantesimi Senso Soprannaturale e Parlare con gli Animali, ma solo come rituali.",
+          "ui_override_logic": {
+            "unlock_ritual_spells": ["Senso Soprannaturale", "Parlare con gli Animali"]
+          }
+        },
+        {
+          "id": "DD_FEAT_BARBARO_SPIRITO_TOTEMICO_ORSO",
+          "name": "Spirito Totemico: Orso",
+          "activation_type": "passive",
+          "description": "Mentre sei in ira, disponi di resistenza a tutti i tipi di danno tranne il danno psichico. Lo spirito dell'orso ti rende abbastanza forte da resistere a qualsiasi punizione.",
+          "ui_override_logic": {
+            "modify_feature_id": "DD_FEAT_BARBARO_IRA",
+            "add_damage_resistances": [
+              "acido",
+              "freddo",
+              "fuoco",
+              "fulmine",
+              "tuono",
+              "forza",
+              "necrotico",
+              "radioso",
+              "veleno"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_ASPETTO_DEL_TOTEM_LUPO",
+          "name": "Aspetto della Bestia: Lupo",
+          "activation_type": "passive",
+          "description": "Acquisisci le doti di caccia di un lupo. Puoi inseguire le tracce di altre creature muovendoti a passo rapido, e puoi muoverti furtivamente a passo normale.",
+          "movement_modifiers": {
+            "fast_pace_tracking_allowed": true,
+            "normal_pace_stealth_allowed": true
+          }
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_SINTONIA_SPIRITUALE",
+          "name": "Sintonia Spirituale",
+          "activation_type": "passive",
+          "description": "Puoi lanciare l'incantesimo Comunione con la Natura come rituale. Quando lo fai, una versione spettrale di uno dei tuoi spiriti totemici ti appare per fornirti le informazioni che cerchi.",
+          "ui_override_logic": {
+            "unlock_ritual_spells": ["Comunione con la Natura"]
+          }
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_BARBARO_SINTONIA_TOTEMICA_ORSO",
+          "name": "Sintonia Totemica: Orso",
+          "activation_type": "passive",
+          "description": "Mentre sei in ira, qualsiasi creatura entro 1,5 metri da te che sia a te ostile subisce svantaggio ai tiri per colpire contro creature diverse da te o da un altro personaggio che possiede questo privilegio.",
+          "combat_modifiers": {
+            "rage_aura_disadvantage_range_meters": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}
