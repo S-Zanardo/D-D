@@ -35,7 +35,7 @@
     },
     {
       "id": "DD_STYLE_GREAT_WEAPON_FIGHTING",
-      "name": "Combattimento con Armi Grandi",
+      "name": "Combattimento con Armi Possenti",
       "description": "Quando ottieni un 1 o un 2 al dado di danno di un attacco effettuato con un'arma da mischia impugnata a due mani, puoi ripetere il tiro del dado e devi usare il nuovo tiro, anche se ottieni di nuovo un 1 o un 2. L'arma deve avere la proprietà due mani o versatile.",
       "activation_trigger": "passive",
       "system_modifiers": {
