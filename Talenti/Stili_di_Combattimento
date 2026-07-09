@@ -1,0 +1,66 @@
+{
+  "registry_id": "DD_GLOBAL_FIGHTING_STYLES",
+  "name": "Stili di Combattimento",
+  "category": "stile_di_combattimento",
+  "options": [
+    {
+      "id": "DD_STYLE_ARCHERY",
+      "name": "Tiro",
+      "description": "Ottieni un bonus di +2 ai tiri per colpire che effettui con armi a distanza.",
+      "activation_trigger": "passive",
+      "system_modifiers": {
+        "weapon_type_restriction": "distanza",
+        "attack_bonus": 2
+      }
+    },
+    {
+      "id": "DD_STYLE_DEFENSE",
+      "name": "Difesa",
+      "description": "Mentre indossi un'armatura, ottieni un bonus di +1 alla Classe Armatura.",
+      "activation_trigger": "passive",
+      "system_modifiers": {
+        "requirement": "wearing_armor",
+        "ac_bonus": 1
+      }
+    },
+    {
+      "id": "DD_STYLE_DUELING",
+      "name": "Duellare",
+      "description": "Quando impugni un'arma da mischia in una mano e nessun'altra arma, ottieni un bonus di +2 ai tiri per i danni di quell'arma.",
+      "activation_trigger": "passive",
+      "system_modifiers": {
+        "weapon_restriction": "one_handed_melee_only",
+        "damage_bonus": 2
+      }
+    },
+    {
+      "id": "DD_STYLE_GREAT_WEAPON_FIGHTING",
+      "name": "Combattimento con Armi Grandi",
+      "description": "Quando ottieni un 1 o un 2 al dado di danno di un attacco effettuato con un'arma da mischia impugnata a due mani, puoi ripetere il tiro del dado e devi usare il nuovo tiro, anche se ottieni di nuovo un 1 o un 2. L'arma deve avere la proprietà due mani o versatile.",
+      "activation_trigger": "passive",
+      "system_modifiers": {
+        "weapon_properties_restriction": ["due mani", "versatile"],
+        "reroll_damage_dice_on": [1, 2]
+      }
+    },
+    {
+      "id": "DD_STYLE_PROTECTION",
+      "name": "Protezione",
+      "description": "Quando una creatura che puoi vedere attacca un bersaglio diverso da te e che si trova entro 1,5 metri da te, puoi usare la tua reazione per imporre svantaggio al tiro per colpire della creatura. Devi impugnare uno scudo.",
+      "activation_trigger": "active",
+      "action_type": "reaction",
+      "system_modifiers": {
+        "requirement": "wielding_shield"
+      }
+    },
+    {
+      "id": "DD_STYLE_TWO_WEAPON_FIGHTING",
+      "name": "Combattere con Due Armi",
+      "description": "Quando combatti con due armi, puoi aggiungere il tuo modificatore di caratteristica ai danni dell'attacco secondario.",
+      "activation_trigger": "passive",
+      "system_modifiers": {
+        "offhand_modifier_allow": true
+      }
+    }
+  ]
+}
