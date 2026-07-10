@@ -15,9 +15,9 @@
           "ui_override_logic": {
             "unlock_ritual_spells": [
               {
-                "id": "DD_SPELL_SENSO_SOPRANNATURALE",
-                "name": "Senso Soprannaturale",
-                "description": "Percepisci la presenza di costrutti, celestiali, elementali, folletti, demoni, diavoli o non morti entro 9 metri da te, purché non si trovino dietro una copertura totale. Conosci la posizione di ogni creatura di quel tipo ma non la sua identità specifica."
+                "id": "DD_SPELL_PERCEZIONE_DELLE_BESTIE",
+                "name": "Percezione delle Bestie",
+                "description": "L'incantatore tocca una bestia consezionete. Per la durata dell'incantesimo, può usare la sua azione per vedere attraverso gli occhi della bestia e sentire ciò che essa sente, e continuerà a farlo finchè non usa la propria azione per tornare ai suoi sensi normali. Finchè percepisce il mondo attraverso i sensi della bestia, l'incantatore ottiene i benefici di qualsiasi senso speciale posseduto da quella creatura, ma resta accecato e assordato nei confronti di ciò che accade attorno a lui."
               },
               {
                 "id": "DD_SPELL_PARLARE_CON_GLI_ANIMALI",
