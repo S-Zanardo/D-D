@@ -1,0 +1,99 @@
+{
+  "subclass_id": "DD_SUBCLASS_GUERRIERO_ECHO_KNIGHT",
+  "parent_class_id": "DD_CLASS_GUERRIERO",
+  "name": "Cavaliere dell'Eco",
+  "description": "Un maestro dell'energia temporale che impara a evocare i riflessi sbiaditi di linee temporali alternative affinché lo assistano in combattimento.",
+  "progression": [
+    {
+      "level": 3,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_GUERRIERO_MANIFESTARE_ECO",
+          "name": "Manifestare Eco",
+          "activation_type": "active",
+          "action_type": "bonus_action",
+          "description": "Puoi usare un'azione bonus per evocare magicamente un eco di te stesso in uno spazio non occupato che puoi vedere entro 4,5 metri da te. Questo eco è un'immagine magica, grigia e traslucida che dura finché non viene distrutta, finché non ne evochi un'altra, finché non vieni incapacitato o finché non la congedi (nessuna azione richiesta). L'eco ha CA 14 + il tuo bonus di competenza, 1 punto ferita e immunità a tutte le condizioni. Se si trova a più di 9 metri da te alla fine del tuo turno, viene distrutto.",
+          "ui_override_logic": {
+            "spawn_summons_indicator": "Eco"
+          }
+        },
+        {
+          "id": "DD_FEAT_GUERRIERO_ASSALTO_DELL_ECO",
+          "name": "Assalto dell'Eco",
+          "activation_type": "active",
+          "action_type": "no_action",
+          "description": "Puoi scatenare la furia del tuo eco. Quando prendi l'azione Attacco nel tuo turno, qualsiasi attacco che effettui puoi farlo partire dallo spazio del tuo eco. Inoltre, quando una creatura che puoi vedere si allontana di oltre 1,5 metri dal tuo eco, puoi usare la tua reazione per effettuare un attacco di opportunità contro di essa partendo dallo spazio dell'eco."
+        },
+        {
+          "id": "DD_FEAT_GUERRIERO_INCARNAZIONE_DELL_ATTACCO",
+          "name": "Incarnazione dell'Attacco",
+          "activation_type": "active",
+          "action_type": "no_action",
+          "description": "Quando prendi l'azione Attacco, puoi fare in modo che l'eco effettui un attacco aggiuntivo dal suo spazio. Puoi usare questo privilegio un numero di volte pari al tuo modificatore di Costituzione (minimo una volta). Riconquisti tutti gli usi spesi quando completi un riposo lungo.",
+          "resource_logic": {
+            "resource_name": "Attacchi dell'Incarnazione",
+            "total_slots_modifier_based": "Costituzione",
+            "minimum_slots": 1,
+            "recovery": "long_rest"
+          }
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_GUERRIERO_ECO_ECOANTE",
+          "name": "Eco Ecoante",
+          "activation_type": "active",
+          "action_type": "action",
+          "description": "Puoi trasferire temporaneamente la tua coscienza nel tuo eco. Come azione, puoi vedere e sentire attraverso i suoi sensi. Durante questo periodo sei accecato e assordato rispetto al tuo vero corpo. Puoi mantenere questo effetto fino a un massimo di 10 minuti, e l'eco può allontanarsi fino a 300 metri da te prima di essere distrutto."
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_GUERRIERO_MARTIRE_DELL_ECO",
+          "name": "Martire dell'Eco",
+          "activation_type": "active",
+          "action_type": "reaction",
+          "description": "Puoi fare in modo che il tuo eco si sacrifichi al posto tuo o dei tuoi alleati. Quando una creatura che puoi vedere effettua un tiro per colpire contro un bersaglio diverso dal tuo eco, puoi usare la tua reazione per far teletrasportare l'eco in uno spazio non occupato entro 1,5 metri dal bersaglio. Il tiro per colpire viene invece effettuato contro l'eco. Una volta utilizzato questo privilegio, non puoi più riutilizzarlo finché non completi un riposo breve o lungo.",
+          "resource_logic": {
+            "resource_name": "Martire dell'Eco",
+            "total_slots": 1,
+            "recovery": "short_or_long_rest"
+          }
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_GUERRIERO_POTENZIALE_RECLAMATO",
+          "name": "Potenziale Reclamato",
+          "activation_type": "passive",
+          "description": "Hai imparato ad assorbire l'energia temporale del tuo eco quando viene distrutto. Quando il tuo eco viene distrutto subendo danni, puoi ottenere un ammontare di punti ferita temporanei pari a 2d6 + il tuo modificatore di Costituzione, a condizione che tu non abbia già punti ferita temporanei. Puoi utilizzare questo privilegio un numero di volte pari al tuo bonus di competenza, e riconquisti tutti gli usi spesi quando completi un riposo lungo.",
+          "resource_logic": {
+            "resource_name": "Potenziale Reclamato",
+            "total_slots_modifier_based": "Competenza",
+            "recovery": "long_rest"
+          }
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "features_unlocked": [
+        {
+          "id": "DD_FEAT_GUERRIERO_ECO_LEGAME",
+          "name": "Eco Legame",
+          "activation_type": "passive",
+          "description": "Puoi manifestare due echi contemporaneamente anziché uno usando la tua azione bonus. Se evochi un terzo eco, i due precedenti vengono distrutti. Inoltre, quando inizi il tuo turno e non hai echi manifestati, puoi manifestarne uno immediatamente senza spendere azioni o azioni bonus."
+        }
+      ]
+    }
+  ]
+}
