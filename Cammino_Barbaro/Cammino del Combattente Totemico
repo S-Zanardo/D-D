@@ -17,11 +17,17 @@
               {
                 "id": "DD_SPELL_PERCEZIONE_DELLE_BESTIE",
                 "name": "Percezione delle Bestie",
-                "description": "L'incantatore tocca una bestia consezionete. Per la durata dell'incantesimo, può usare la sua azione per vedere attraverso gli occhi della bestia e sentire ciò che essa sente, e continuerà a farlo finchè non usa la propria azione per tornare ai suoi sensi normali. Finchè percepisce il mondo attraverso i sensi della bestia, l'incantatore ottiene i benefici di qualsiasi senso speciale posseduto da quella creatura, ma resta accecato e assordato nei confronti di ciò che accade attorno a lui."
+                "casting_time": "10 minuti (rituale)",
+                "range": "contatto",
+                "duration": "concentrazione fino a 1 ora",
+                "description": "L'incantatore tocca una bestia acconsenziente. Per la durata dell'incantesimo, può usare la sua azione per vedere attraverso gli occhi della bestia e sentire ciò che essa sente, e continuerà a farlo finché non usa la propria azione per tornare ai suoi sensi normali. Finché percepisce il mondo attraverso i sensi della bestia, l'incantatore ottiene i benefici di qualsiasi senso speciale posseduto da quella creatura, ma resta accecato e assordato nei confronti di ciò che accade attorno a lui."
               },
               {
                 "id": "DD_SPELL_PARLARE_CON_GLI_ANIMALI",
                 "name": "Parlare con gli Animali",
+                "casting_time": "10 minuti (rituale)",
+                "range": "incantatore",
+                "duration": "10 minuti",
                 "description": "Acquisisci la capacità di comprendere e comunicare verbalmente con le bestie per la durata dell'incantesimo. Le conoscenze e la consapevolezza di molte bestie sono limitate dal loro ingegno, ma possono darti informazioni sui luoghi vicini e sui mostri della zona."
               }
             ]
@@ -76,7 +82,7 @@
               {
                 "id": "DD_FEAT_BARBARO_TOTEM_6_ORSO",
                 "name": "Orso",
-                "description": "La tua capacità di carico (inclusi il peso massimo che puoi sollevare, spingere o trascinare) è raddoppiata e disponi di vantaggio alle prove di Forza effettuate per spingere, trascinare, sollevare o rompere oggetti."
+                "description": "La tua capacità di carico (inclusi il peso massimo che puoi sollevare, spingere o trascinare) è raddoppiata e disponi di vantaggio alle prove di Forza effettuate per spingere, trascinare, sollevare o romper ogggetti."
               },
               {
                 "id": "DD_FEAT_BARBARO_TOTEM_6_AQUILA",
